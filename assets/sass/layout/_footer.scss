@@ -1,0 +1,65 @@
+/* l-footer
+----------------------------------------------------------------- */
+@use "../global" as g;
+
+.l-footer {
+  padding: 2.8rem 0 2rem;
+  background: url(../images/common/footer-bg.jpg) no-repeat center center/cover;
+
+  &__inner {
+    padding: 0 3.5rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+  }
+
+  &__item {
+    //
+  }
+
+  &__link {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: var(--en);
+    color: var(--white);
+    transition: opacity 0.3s;
+
+    &:hover {
+      @include g.hover {
+        opacity: 0.65;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 9rem;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--white);
+  }
+
+  &__copyRightBox {
+    margin-top: 1.7rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: var(--en);
+    line-height: 1;
+    letter-spacing: 0.05em;
+    color: var(--white);
+  }
+
+  &__copyRight {
+    font-size: inherit;
+  }
+}

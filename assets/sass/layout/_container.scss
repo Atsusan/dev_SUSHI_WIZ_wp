@@ -1,0 +1,31 @@
+/* l-container
+----------------------------------------------------------------- */
+@use "../global" as g;
+
+// コンテンツ幅が1100pxの場合
+// sectionタグの内で使ってもいいし、外で使ってもいい、要はコンテンツ幅指定用
+// 違う幅が出てきた時はモディファイアで対応
+.l-container {
+  max-width: 809px;
+  width: 100%;
+  padding: 0 32px;
+  margin: 0 auto;
+
+  &--smallWidth {
+    @extend .l-container;
+    max-width: 792px;
+    padding: 0 40px;
+  }
+
+  &--wide {
+    @extend .l-container;
+    max-width: 1032px;
+    padding: 0 25px;
+  }
+
+  &--extraWide {
+    @extend .l-container;
+    max-width: 1259px;
+    padding: 0 50px;
+  }
+}

@@ -1,0 +1,77 @@
+/* c-pagination
+----------------------------------------------------------------- */
+@use "../../global" as g;
+
+.c-pagination {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: var(--en);
+  line-height: 1;
+  color: var(--darkGray);
+
+  a {/* プラグインで制御するため要素で指定 */
+    transition: opacity 0.4s ease;
+    &:hover {
+      @include g.hover {
+        opacity: 0.65;
+      }
+    }
+  }
+
+  &__prev,
+  &__next {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    padding: 1rem;
+  }
+
+  &__prev {
+
+    &::before {
+      content: '';
+      display: block;
+      width: 1rem;
+      height: 1.2rem;
+      background: url(../images/common/icon-arrow-roght.svg) no-repeat center center / contain;
+      transform: rotate(180deg);
+    }
+  }
+  
+  &__next {
+
+    &::after {
+      content: '';
+      display: block;
+      width: 1rem;
+      height: 1.2rem;
+      background: url(../images/common/icon-arrow-roght.svg) no-repeat center center / contain;
+    }
+  }
+  
+  &__current {
+    width: 4.4rem;
+    height: 4.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--darkGray);
+    margin: 0 -0.5rem;
+  }
+  
+  &__page {
+    padding: 1rem;
+  }
+
+  &__extend {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--darkGray);
+    margin: 0 -1.2rem;
+  }
+}

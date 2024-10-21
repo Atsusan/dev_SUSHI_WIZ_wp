@@ -1,0 +1,508 @@
+@charset "UTF-8";
+/* c-pagination
+----------------------------------------------------------------- */
+.c-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.4rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: var(--en);
+  line-height: 1;
+  color: var(--darkGray);
+}
+.c-pagination a { /* プラグインで制御するため要素で指定 */
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+@media (min-width: 767px) {
+  .c-pagination a:hover {
+    opacity: 0.65;
+  }
+}
+.c-pagination__prev, .c-pagination__next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.6rem;
+  padding: 1rem;
+}
+.c-pagination__prev::before {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1.2rem;
+  background: url(../images/common/icon-arrow-roght.svg) no-repeat center center/contain;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.c-pagination__next::after {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1.2rem;
+  background: url(../images/common/icon-arrow-roght.svg) no-repeat center center/contain;
+}
+.c-pagination__current {
+  width: 4.4rem;
+  height: 4.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--darkGray);
+  margin: 0 -0.5rem;
+}
+.c-pagination__page {
+  padding: 1rem;
+}
+.c-pagination__extend {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--darkGray);
+  margin: 0 -1.2rem;
+}
+
+/* p-articleFv
+----------------------------------------------------------------- */
+.p-articleFv {
+  margin-top: 8.7rem;
+  background: url(../images/sp/article-fv-bg.jpg) no-repeat center top/cover;
+  min-height: 48.6rem;
+  position: relative;
+}
+@media (min-width: 767px) {
+  .p-articleFv {
+    display: none;
+  }
+}
+.p-articleFv::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -66.5%;
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  opacity: 0.8;
+  -webkit-transform: skewX(20.7deg);
+          transform: skewX(20.7deg);
+}
+.p-articleFv__textContents {
+  position: relative;
+  z-index: 10;
+}
+.p-articleFv__inner {
+  padding-left: 3rem;
+}
+.p-articleFv__textBox {
+  padding-top: 34rem;
+}
+.p-articleFv__enTitle {
+  font-size: 3.2rem;
+  font-weight: 500;
+  font-family: var(--en);
+  line-height: 150%;
+  color: var(--white);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+/* p-articleContents
+----------------------------------------------------------------- */
+.p-articleContents {
+  padding-top: 5.2rem;
+  padding-bottom: 4.6rem;
+  background: url(../images/article-contents-bg.jpg) no-repeat center top/cover;
+}
+@media (min-width: 767px) {
+  .p-articleContents {
+    padding-top: 11.2rem;
+  }
+}
+.p-articleContents__filterContainer .is-current {
+  color: var(--white);
+  background-color: var(--black);
+}
+.p-articleContents__filterList {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
+.p-articleContents__filterItem {
+  width: 100%;
+}
+.p-articleContents__filterItem:nth-child(odd) {
+  border-right: 1px solid var(--black);
+}
+.p-articleContents__filterItem:nth-child(n+2) {
+  border-top: 1px solid var(--black);
+}
+.p-articleContents__filterItem:nth-last-child(2) {
+  border-bottom: 1px solid var(--black);
+}
+.p-articleContents__filterItem:last-child {
+  border-bottom: 1px solid var(--black);
+}
+.p-articleContents__filterLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  font-family: var(--en);
+  line-height: 1;
+  color: var(--black);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  min-height: 8.8rem;
+  height: 100%;
+}
+@media (min-width: 767px) {
+  .p-articleContents__filterLink:hover {
+    color: var(--white);
+    background-color: var(--black);
+  }
+}
+.p-articleContents__list {
+  margin-top: 3.7rem;
+  padding: 0 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.8rem;
+}
+.p-articleContents__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.6rem;
+}
+.p-articleContents__imgBox {
+  width: 100%;
+  height: 100%;
+  max-width: 30rem;
+  aspect-ratio: 3/2;
+  overflow: hidden;
+}
+.p-articleContents__img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+.p-articleContents__link:hover .p-articleContents__img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.p-articleContents__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.4rem;
+}
+.p-articleContents__tagBox {
+  width: 100%;
+  max-width: 6.1rem;
+}
+.p-articleContents__tag {
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: var(--en);
+  line-height: 1;
+  color: var(--white);
+  background: var(--black);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 0.1rem;
+  min-width: 6.1rem;
+}
+.p-articleContents__textBox {
+  margin-top: 0.4rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.p-articleContents__title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--black);
+}
+.p-articleContents__date {
+  display: inline-block;
+  margin-right: 1.2rem;
+}
+.p-articleContents__paginationBox {
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* p-articleSingle
+----------------------------------------------------------------- */
+.p-articleSingle {
+  padding-top: 14.4rem;
+  padding-bottom: 4.6rem;
+  background: url(../images/article-contents-bg.jpg) no-repeat center top/cover;
+}
+.p-articleSingle__inner {
+  padding: 0 4.5rem;
+}
+.p-articleSingle__titleBox {
+  text-align: center;
+}
+.p-articleSingle__title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--black);
+  padding-bottom: 2rem; /* サムネイルがない場合対策 */
+}
+.p-articleSingle__thumbnailBox {
+  width: 100%;
+  aspect-ratio: 3/2;
+  overflow: hidden;
+  margin-bottom: 0.6rem; /* サムネイルがなく、日付とタグとh1タグとの余白がおかしくなるので対策 */
+}
+.p-articleSingle__thumbnail {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.p-articleSingle__tagBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 1.4rem;
+  padding-bottom: 1.5rem; /* コンテンツの上部がh2とは限らないため、こちらに余白を指定 */
+}
+.p-articleSingle__tag {
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: var(--en);
+  line-height: 1;
+  color: var(--white);
+  background: var(--black);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 0.1rem;
+  min-width: 6.1rem;
+}
+.p-articleSingle__date {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--black);
+}
+.p-articleSingle__contents h1, .p-articleSingle__contents h2, .p-articleSingle__contents h3, .p-articleSingle__contents h4, .p-articleSingle__contents h5, .p-articleSingle__contents h6 {
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--black);
+}
+.p-articleSingle__contents h1 {
+  font-size: 2.4rem;
+}
+.p-articleSingle__contents h2 {
+  font-size: 2rem;
+}
+.p-articleSingle__contents h3, .p-articleSingle__contents h4, .p-articleSingle__contents h5, .p-articleSingle__contents h6 {
+  font-size: 1.8rem;
+}
+.p-articleSingle__contents p, .p-articleSingle__contents li, .p-articleSingle__contents span, .p-articleSingle__contents div {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.7142857143;
+  color: var(--black);
+}
+.p-articleSingle__contents strong {
+  font-weight: bold;
+}
+.p-articleSingle__contents em {
+  font-style: italic;
+}
+.p-articleSingle__contents ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+.p-articleSingle__contents img {
+  display: block;
+  width: 100%;
+  margin: 1.6rem auto 0;
+  aspect-ratio: 3/2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.p-articleSingle__btnBox {
+  margin-top: 6.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.6rem;
+}
+.p-articleSingle__prev, .p-articleSingle__next {
+  max-width: 2.8rem;
+  width: 100%;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+@media (min-width: 767px) {
+  .p-articleSingle__prev:hover, .p-articleSingle__next:hover {
+    opacity: 0.65;
+  }
+}
+.p-articleSingle__next {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.p-articleSingle__arrowImg {
+  width: 100%;
+}
+.p-articleSingle__btnLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 21rem;
+  min-height: 4.6rem;
+  background: var(--black);
+  border: 0.1rem solid var(--black);
+  color: var(--white);
+  -webkit-transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.4s, color 0.4s;
+}
+@media (min-width: 767px) {
+  .p-articleSingle__btnLink:hover {
+    background-color: var(--white);
+    color: var(--black);
+  }
+}
+.p-articleSingle__btnText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--en);
+  line-height: 1;
+}
+
+/* u-display-none
+----------------------------------------------------------------- */
+.u-displayNone--PU {
+  display: none;
+}
+@media (min-width: 767px) {
+  .u-displayNone--PU {
+    display: block;
+  }
+}
+.u-displayNone--PO {
+  display: block;
+}
+@media (min-width: 767px) {
+  .u-displayNone--PO {
+    display: none;
+  }
+}
+.u-displayNone--flexPU {
+  display: none;
+}
+@media (min-width: 767px) {
+  .u-displayNone--flexPU {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.u-displayNone--flexPO {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (min-width: 767px) {
+  .u-displayNone--flexPO {
+    display: none;
+  }
+}
