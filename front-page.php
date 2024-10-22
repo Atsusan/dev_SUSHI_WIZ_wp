@@ -2,23 +2,23 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUSHI WIZ</title>
   <!-- GoogleFonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Sawarabi+Gothic&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet">
 
   <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="./assets/css/common.css" />
-  <link rel="stylesheet" href="./assets/css/top.css" />
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <link rel="stylesheet" href="./assets/css/top.css">
 </head>
 
 <body class="top">
@@ -85,10 +85,10 @@
     <div class="l-fv__textBox">
       <p class="l-fv__mainText">
         今日、
-        <br />
+        <br>
         あなた <span class="l-fv__mainText--mlSmallLittleFz">が</span><span class="l-fv__mainText--smallFz">いる</span>場所<span
           class="l-fv__mainText--littleSmallFz">が</span>
-        <br />
+        <br>
         <span class="l-fv__mainText--bigFz">鮨屋</span><span class="l-fv__mainText--littleSmallFz">に</span>なる。
       </p>
     </div>
@@ -99,83 +99,83 @@
           <ul class="swiper-wrapper c-loopImages__imagesWrapper">
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item1.jpg" alt="item-1" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item2.jpg" alt="item-2" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item3.jpg" alt="item-3" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item4.jpg" alt="item-4" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item5.jpg" alt="item-5" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item6.jpg" alt="item-6" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item7.jpg" alt="item-7" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item8.jpg" alt="item-8" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item9.jpg" alt="item-9" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item10.jpg" alt="item-10" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item1.jpg" alt="item-1" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item2.jpg" alt="item-2" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item3.jpg" alt="item-3" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item4.jpg" alt="item-4" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item5.jpg" alt="item-5" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item6.jpg" alt="item-6" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item7.jpg" alt="item-7" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item8.jpg" alt="item-8" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item9.jpg" alt="item-9" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
             <li class="swiper-slide c-loopImages__imagesSlide">
               <img src="./assets/images/fv-item10.jpg" alt="item-10" class="c-loopImages__ImagesSlideItem" width="404"
-                height="404" />
+                height="404">
             </li>
           </ul>
         </div>
@@ -193,7 +193,7 @@
         <h1 class="l-header__logo u-displayNone--PO">
           <a href="./index.html" class="l-header__logoLink">
             <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="l-header__logoImg" width="69"
-              height="64" />
+              height="64">
           </a>
         </h1>
         <!-- ▼ drawer -->
@@ -212,7 +212,7 @@
         <div class="c-drawerMenu__wrap">
           <a href="./index.html" class="c-drawerMenu__logoLink u-displayNone--PU">
             <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="c-drawerMenu__logoImg" width="69"
-              height="64" />
+              height="64">
           </a>
           <div class="c-drawerMenu__inner">
             <div class="c-drawerMenu__headingBox">
@@ -242,7 +242,7 @@
                 </li>
                 <li class="c-drawerMenu__menuItem u-displayNone--PO">
                   <img src="./assets/images/common/drawer-item.jpg" alt="出張 寿司" class="c-drawerMenu__img" width="390"
-                    height="166" />
+                    height="166">
                 </li>
               </ul>
             </nav>
@@ -265,13 +265,13 @@
                 <li class="c-drawerMenu__snsItem">
                   <a href="" class="c-drawerMenu__snsLink">
                     <img class="c-drawerMenu__snsImg" src="./assets/images/common/sns-line.png" alt="LINE" width="118"
-                      height="118" />
+                      height="118">
                   </a>
                 </li>
                 <li class="c-drawerMenu__snsItem">
                   <a href="" class="c-drawerMenu__snsLink">
                     <img class="c-drawerMenu__snsImg" src="./assets/images/common/sns-Instagram.svg" alt="Instagram"
-                      width="20" height="19" />
+                      width="20" height="19">
                   </a>
                 </li>
               </ul>
@@ -397,16 +397,16 @@
         <div class="p-topFv__textContents">
           <div class="p-topFv__inner">
             <div class="p-topFv__textBox">
-              <p class="p-topFv__mainText">
+              <h2 class="p-topFv__mainText">
                 今日、
-                <br />
+                <br>
                 あなた
                 <span class="p-topFv__mainText--mlSmallLittleFz">が</span><span
                   class="p-topFv__mainText--smallFz">いる</span>場所<span class="p-topFv__mainText--littleSmallFz">が</span>
-                <br />
+                <br>
                 <span class="p-topFv__mainText--bigFz">鮨屋</span><span
                   class="p-topFv__mainText--littleSmallFz">に</span>なる。
-              </p>
+              </h2>
             </div>
           </div>
         </div>
@@ -417,43 +417,43 @@
               <ul class="swiper-wrapper c-loopImages__imagesWrapper">
                 <li class="swiper-slide c-loopImages__imagesSlide">
                   <img src="./assets/images/fv-item1.jpg" alt="item-1" class="c-loopImages__ImagesSlideItem" width="404"
-                    height="404" />
+                    height="404">
                 </li>
                 <li class="swiper-slide c-loopImages__imagesSlide">
                   <img src="./assets/images/fv-item2.jpg" alt="item-2" class="c-loopImages__ImagesSlideItem" width="404"
-                    height="404" />
+                    height="404">
                 </li>
                 <li class="swiper-slide c-loopImages__imagesSlide">
                   <img src="./assets/images/fv-item3.jpg" alt="item-3" class="c-loopImages__ImagesSlideItem" width="404"
-                    height="404" />
+                    height="404">
                 </li>
                 <li class="swiper-slide c-loopImages__imagesSlide">
                   <img src="./assets/images/fv-item4.jpg" alt="item-4" class="c-loopImages__ImagesSlideItem" width="404"
-                    height="404" />
+                    height="404">
                 </li>
                 <li class="swiper-slide c-loopImages__imagesSlide">
                   <img src="./assets/images/fv-item5.jpg" alt="item-5" class="c-loopImages__ImagesSlideItem" width="404"
-                    height="404" />
+                    height="404">
                 </li>
                 <li class="swiper-slide c-loopImages__imagesSlide">
                   <img src="./assets/images/fv-item6.jpg" alt="item-6" class="c-loopImages__ImagesSlideItem" width="404"
-                    height="404" />
+                    height="404">
                 </li>
                 <li class="swiper-slide c-loopImages__imagesSlide">
                   <img src="./assets/images/fv-item7.jpg" alt="item-7" class="c-loopImages__ImagesSlideItem" width="404"
-                    height="404" />
+                    height="404">
                 </li>
                 <li class="swiper-slide c-loopImages__imagesSlide">
                   <img src="./assets/images/fv-item8.jpg" alt="item-8" class="c-loopImages__ImagesSlideItem" width="404"
-                    height="404" />
+                    height="404">
                 </li>
                 <li class="swiper-slide c-loopImages__imagesSlide">
                   <img src="./assets/images/fv-item9.jpg" alt="item-9" class="c-loopImages__ImagesSlideItem" width="404"
-                    height="404" />
+                    height="404">
                 </li>
                 <li class="swiper-slide c-loopImages__imagesSlide">
                   <img src="./assets/images/fv-item10.jpg" alt="item-10" class="c-loopImages__ImagesSlideItem"
-                    width="404" height="404" />
+                    width="404" height="404">
                 </li>
               </ul>
             </div>
@@ -467,20 +467,20 @@
       <section class="p-topFvContents">
         <div class="p-topFvContents__inner">
           <div class="p-topFvContents__textBox">
-            <p class="p-topFvContents__mainText">
+            <h2 class="p-topFvContents__mainText">
               握りたての鮨で
-              <br />
+              <br>
               心躍る
-              <br />
+              <br>
               祭りのような
-              <br />
+              <br>
               ライブ体験を。
-            </p>
+            </h2>
           </div>
         </div>
         <div class="p-topFvContents__imgBox">
           <img src="./assets/images/top-fv-content-item.jpg" alt="" class="p-topFvContents__img" width="604"
-            height="606" />
+            height="606">
         </div>
         <div class="p-topFvContents__scrollBox">
           <div class="c-scrollDown__box">
@@ -497,13 +497,13 @@
           <div class="p-topConcept__titleBox">
             <h2 class="p-topConcept__title">
               鮨で人を笑顔にしたい
-              <br />
+              <br>
               鮨で人とを繋げたい
             </h2>
           </div>
           <div class="p-topConcept__imgBox">
             <img src="./assets/images/top-concept-bg.jpg" alt="concept-bg" class="p-topConcept__img" width="780"
-              height="676" />
+              height="676">
           </div>
         </div>
         <div class="p-topConcept__inner">
@@ -529,19 +529,19 @@
             </div>
             <div class="p-topProfile__imgBox">
               <img src="./assets/images/top-profile-img.jpg" alt="高橋 元気" class="p-topProfile__img" width="660"
-                height="440" />
+                height="440">
             </div>
             <div class="p-topProfile__textBox">
               <h3 class="p-topProfile__title">
                 とびっきりのお鮨を
-                <br />
+                <br>
                 楽しく握ります
               </h3>
               <p class="p-topProfile__text">
                 現職の中央区議会議員でもある異色の経歴をもつ
                 職人・高橋元気が名店で腕を磨いた確かな技術で
-                独創的かつエンターテイメント性の高い鮨で<br />
-                皆様の特別な日もいつもの日常にも<br />
+                独創的かつエンターテイメント性の高い鮨で<br>
+                皆様の特別な日もいつもの日常にも<br>
                 祭りのようなワクワクする時間を提供します。
               </p>
             </div>
@@ -563,7 +563,7 @@
           </div>
           <p class="p-topPlan__read">
             リーズナブルで多種多様な
-            <br />
+            <br>
             プランをご用意しております。
           </p>
         </div>
@@ -580,7 +580,7 @@
               <div class="p-topPlan__moreBox">
                 <span class="p-topPlan__more">VIEW MORE</span>
                 <img src="./assets/images/common/icon-btn-more.svg" alt="view more" class="p-topPlan__moreImg"
-                  width="137" height="11" />
+                  width="137" height="11">
               </div>
             </a>
           </li>
@@ -596,7 +596,7 @@
               <div class="p-topPlan__moreBox">
                 <span class="p-topPlan__more">VIEW MORE</span>
                 <img src="./assets/images/common/icon-btn-more.svg" alt="view more" class="p-topPlan__moreImg"
-                  width="137" height="11" />
+                  width="137" height="11">
               </div>
             </a>
           </li>
@@ -606,14 +606,14 @@
                 <h3 class="p-topPlan__title">日本酒プラン</h3>
                 <p class="p-topPlan__text">
                   SAKE DIPLOMA の資格を持つスタッフが厳選した
-                  <br />
+                  <br>
                   日本酒をペアリングしたコース。
                 </p>
               </div>
               <div class="p-topPlan__moreBox">
                 <span class="p-topPlan__more">VIEW MORE</span>
                 <img src="./assets/images/common/icon-btn-more.svg" alt="view more" class="p-topPlan__moreImg"
-                  width="137" height="11" />
+                  width="137" height="11">
               </div>
             </a>
           </li>
@@ -633,37 +633,37 @@
             <li class="p-topInsta__item">
               <a href="#" class="p-topInsta__link">
                 <img src="./assets/images/top-insta-item1.jpg" alt="" class="p-topInsta__img" width="346"
-                  height="346" />
+                  height="346">
               </a>
             </li>
             <li class="p-topInsta__item">
               <a href="#" class="p-topInsta__link">
                 <img src="./assets/images/top-insta-item2.jpg" alt="" class="p-topInsta__img" width="346"
-                  height="346" />
+                  height="346">
               </a>
             </li>
             <li class="p-topInsta__item">
               <a href="#" class="p-topInsta__link">
                 <img src="./assets/images/top-insta-item3.jpg" alt="" class="p-topInsta__img" width="346"
-                  height="346" />
+                  height="346">
               </a>
             </li>
             <li class="p-topInsta__item">
               <a href="#" class="p-topInsta__link">
                 <img src="./assets/images/top-insta-item4.jpg" alt="" class="p-topInsta__img" width="346"
-                  height="346" />
+                  height="346">
               </a>
             </li>
             <li class="p-topInsta__item">
               <a href="#" class="p-topInsta__link">
                 <img src="./assets/images/top-insta-item5.jpg" alt="" class="p-topInsta__img" width="346"
-                  height="346" />
+                  height="346">
               </a>
             </li>
             <li class="p-topInsta__item">
               <a href="#" class="p-topInsta__link">
                 <img src="./assets/images/top-insta-item6.jpg" alt="" class="p-topInsta__img" width="346"
-                  height="346" />
+                  height="346">
               </a>
             </li>
           </ul>
@@ -790,7 +790,7 @@
           </div>
         </div>
         <div class="p-topFaq__imgBox">
-          <img src="./assets/images/top-faq-item.jpg" alt="お寿司" class="p-topFaq__img" width="780" height="434" />
+          <img src="./assets/images/top-faq-item.jpg" alt="お寿司" class="p-topFaq__img" width="780" height="434">
         </div>
       </section>
       <!-- ▲ p-topFaq -->
@@ -873,106 +873,106 @@
                 <a href="#" class="p-topNews__link">
                   <span class="p-topNews__imgBox">
                     <img src="./assets/images/top-news-item1.jpg" alt="news-item-img" class="p-topNews__img" width="600"
-                      height="401" />
+                      height="401">
                   </span>
-                  <span class="p-topNews__textBox">
+                  <div class="p-topNews__textBox">
                     <span class="p-topNews__tag">NEWS</span>
-                    <span class="p-topNews__box">
+                    <div class="p-topNews__box">
                       <!-- <span class="p-topNews__date"></span> -->
                       <h3 class="p-topNews__title">
                         年末年始のご予約について。
                       </h3>
-                    </span>
-                  </span>
+                    </div>
+                  </div>
                 </a>
               </div>
               <div class="swiper-slide p-topNews__swiperSlide">
                 <a href="./article-single.html" class="p-topNews__link">
                   <span class="p-topNews__imgBox">
                     <img src="./assets/images/top-news-item2.jpg" alt="news-item-img" class="p-topNews__img" width="600"
-                      height="400" />
+                      height="400">
                   </span>
-                  <span class="p-topNews__textBox">
+                  <div class="p-topNews__textBox">
                     <span class="p-topNews__tag">NEWS</span>
-                    <span class="p-topNews__box">
+                    <div class="p-topNews__box">
                       <span class="p-topNews__date">
                         <time datetime="2024-11-05">2024.11.05</time>
                       </span>
                       <h3 class="p-topNews__title">
                         新コースが登場しました！
                       </h3>
-                    </span>
-                  </span>
+                    </div>
+                  </div>
                 </a>
               </div>
               <div class="swiper-slide p-topNews__swiperSlide">
                 <a href="./article-single.html" class="p-topNews__link">
                   <span class="p-topNews__imgBox">
                     <img src="./assets/images/top-news-item3.jpg" alt="news-item-img" class="p-topNews__img" width="600"
-                      height="401" />
+                      height="401">
                   </span>
-                  <span class="p-topNews__textBox">
+                  <div class="p-topNews__textBox">
                     <span class="p-topNews__tag">CASE</span>
-                    <span class="p-topNews__box">
+                    <div class="p-topNews__box">
                       <!-- <span class="p-topNews__date"></span> -->
                       <h3 class="p-topNews__title">
                         企業様の懇親会にて出張してきました
                       </h3>
-                    </span>
-                  </span>
+                    </div>
+                  </div>
                 </a>
               </div>
               <div class="swiper-slide p-topNews__swiperSlide">
                 <a href="./article-single.html" class="p-topNews__link">
                   <span class="p-topNews__imgBox">
                     <img src="./assets/images/top-news-item1.jpg" alt="news-item-img" class="p-topNews__img" width="600"
-                      height="401" />
+                      height="401">
                   </span>
-                  <span class="p-topNews__textBox">
+                  <div class="p-topNews__textBox">
                     <span class="p-topNews__tag">NEWS</span>
-                    <span class="p-topNews__box">
+                    <div class="p-topNews__box">
                       <!-- <span class="p-topNews__date"></span> -->
                       <h3 class="p-topNews__title">
                         年末年始のご予約について。
                       </h3>
-                    </span>
-                  </span>
+                    </div>
+                  </div>
                 </a>
               </div>
               <div class="swiper-slide p-topNews__swiperSlide">
                 <a href="./article-single.html" class="p-topNews__link">
                   <span class="p-topNews__imgBox">
                     <img src="./assets/images/top-news-item2.jpg" alt="news-item-img" class="p-topNews__img" width="600"
-                      height="400" />
+                      height="400">
                   </span>
-                  <span class="p-topNews__textBox">
+                  <div class="p-topNews__textBox">
                     <span class="p-topNews__tag">NEWS</span>
-                    <span class="p-topNews__box">
+                    <div class="p-topNews__box">
                       <span class="p-topNews__date">
                         <time datetime="2024-11-05">2024.11.05</time>
                       </span>
                       <h3 class="p-topNews__title">
                         新コースが登場しました！
                       </h3>
-                    </span>
-                  </span>
+                    </div>
+                  </div>
                 </a>
               </div>
               <div class="swiper-slide p-topNews__swiperSlide">
                 <a href="./article-single.html" class="p-topNews__link">
                   <span class="p-topNews__imgBox">
                     <img src="./assets/images/top-news-item3.jpg" alt="news-item-img" class="p-topNews__img" width="600"
-                      height="400" />
+                      height="400">
                   </span>
-                  <span class="p-topNews__textBox">
+                  <div class="p-topNews__textBox">
                     <span class="p-topNews__tag">CASE</span>
-                    <span class="p-topNews__box">
+                    <div class="p-topNews__box">
                       <!-- <span class="p-topNews__date"></span> -->
                       <h3 class="p-topNews__title">
                         企業様の懇親会にて出張してきました
                       </h3>
-                    </span>
-                  </span>
+                    </div>
+                  </div>
                 </a>
               </div>
               <!-- ▲ topNews Slide Contents End -->
@@ -1002,7 +1002,7 @@
             <h2 class="c-cta__title">RESERVATION</h2>
             <p class="c-cta__read">
               無料でお見積りやご相談を承ります。
-              <br />
+              <br>
               お気軽にご連絡ください。
             </p>
           </div>
@@ -1023,7 +1023,7 @@
           <div class="c-cta__snsBox">
             <a href="#" class="c-cta__line">
               <img src="./assets/images/common/sns-line.png" alt="LINE" class="c-cta__lineImg" width="118"
-                height="118" />
+                height="118">
             </a>
             <p class="c-cta__snsText">
               <span class="c-cta__snsText--en">LINE</span>でのお問合せも承っております

@@ -175,6 +175,11 @@
     font-family: var(--en);
     line-height: 150%;
     color: var(--white);
+    
+    &--fzSmall {
+      @extend .l-fv__enTitle;
+      font-size: clamp(3.8rem, 5vw, 5.6rem);
+    }
   }
 
   &__loopImagesContainer {

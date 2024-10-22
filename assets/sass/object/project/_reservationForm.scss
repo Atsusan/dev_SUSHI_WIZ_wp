@@ -3,13 +3,17 @@
 @use "../../global" as g;
 
 .p-reservationForm {
-  padding-top: 10rem;
   width: 100%;
   height: min(100%, 100vh);
+  @include g.tabletS {
+    padding-top: 10rem;
+  }
+
   &__wrap {
     width: 100%;
     height: 100vh;
   }
+
   &__form {
     width: 100%;
     height: 100vh;

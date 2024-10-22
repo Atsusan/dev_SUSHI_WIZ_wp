@@ -907,13 +907,16 @@ a {
 .l-fv__mainText--bigFz {
   font-size: 1.1667em;
 }
-.l-fv__enTitle {
+.l-fv__enTitle, .l-fv__enTitle--fzSmall {
   /* TOPページ以外の見出し 設定共通 */
   font-size: 5.6rem;
   font-weight: 500;
   font-family: var(--en);
   line-height: 150%;
   color: var(--white);
+}
+.l-fv__enTitle--fzSmall {
+  font-size: clamp(3.8rem, 5vw, 5.6rem);
 }
 @media (min-width: 767px) {
   .l-fv__loopImagesContainer {
@@ -1087,6 +1090,12 @@ a {
   visibility: hidden;
   -webkit-transition: opacity 0.8s ease, visibility 0.8s ease;
   transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+@media screen and (min-width: 1920px) {
+  .c-drawerMenu {
+    max-width: 192rem;
+    margin: 0 auto;
+  }
 }
 .c-drawerMenu::after {
   content: "";

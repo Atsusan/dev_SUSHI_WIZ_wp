@@ -2,35 +2,35 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUSHI WIZ</title>
   <!-- GoogleFonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Sawarabi+Gothic&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet">
 
   <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="./assets/css/common.css" />
-  <link rel="stylesheet" href="./assets/css/article.css" />
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <link rel="stylesheet" href="./assets/css/profile.css">
 </head>
 
-<body class="article">
+<body class="profile">
   <!-- ▼ PC FV Start -->
-  <div class="l-fv--article u-displayNone--PU">
+  <div class="l-fv--profile u-displayNone--PU">
     <h1 class="l-header__logoPc">
-      <a href="/index.html" class="l-header__logoLink">
-        <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="l-header__logoImg" width="69" height="64" />
+      <a href="./index.html" class="l-header__logoLink">
+        <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="l-header__logoImg" width="69" height="64">
       </a>
     </h1>
     <div class="l-fv__textBox">
-      <p class="l-fv__enTitle">ARTICLE</p>
+      <p class="l-fv__enTitle">PROFILE</p>
     </div>
   </div>
   <!-- ▲ PC FV End-->
@@ -43,7 +43,7 @@
         <h1 class="l-header__logo u-displayNone--PO">
           <a href="./index.html" class="l-header__logoLink">
             <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="l-header__logoImg" width="69"
-              height="64" />
+              height="64">
           </a>
         </h1>
         <!-- ▼ drawer -->
@@ -62,7 +62,7 @@
         <div class="c-drawerMenu__wrap">
           <a href="./index.html" class="c-drawerMenu__logoLink u-displayNone--PU">
             <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="c-drawerMenu__logoImg" width="69"
-              height="64" />
+              height="64">
           </a>
           <div class="c-drawerMenu__inner">
             <div class="c-drawerMenu__headingBox">
@@ -92,7 +92,7 @@
                 </li>
                 <li class="c-drawerMenu__menuItem u-displayNone--PO">
                   <img src="./assets/images/common/drawer-item.jpg" alt="出張 寿司" class="c-drawerMenu__img" width="390"
-                    height="166" />
+                    height="166">
                 </li>
               </ul>
             </nav>
@@ -115,13 +115,13 @@
                 <li class="c-drawerMenu__snsItem">
                   <a href="" class="c-drawerMenu__snsLink">
                     <img class="c-drawerMenu__snsImg" src="./assets/images/common/sns-line.png" alt="LINE" width="118"
-                      height="118" />
+                      height="118">
                   </a>
                 </li>
                 <li class="c-drawerMenu__snsItem">
                   <a href="" class="c-drawerMenu__snsLink">
                     <img class="c-drawerMenu__snsImg" src="./assets/images/common/sns-Instagram.svg" alt="Instagram"
-                      width="20" height="19" />
+                      width="20" height="19">
                   </a>
                 </li>
               </ul>
@@ -135,60 +135,70 @@
 
     <!-- ▼ main -->
     <main>
-      <!-- ▼ p-articleFv SP -->
-      <!-- <section class="p-articleFv">
-        <div class="p-articleFv__textContents">
-          <div class="p-articleFv__inner">
-            <div class="p-articleFv__textBox">
-              <p class="p-articleFv__enTitle">ARTICLE</p>
+      <!-- ▼ p-profileFv SP -->
+      <section class="p-profileFv">
+        <div class="p-profileFv__textContents">
+          <div class="p-profileFv__inner">
+            <div class="p-profileFv__textBox">
+              <h2 class="p-profileFv__enTitle">PROFILE</h2>
             </div>
           </div>
-        </div>
-      </section> -->
-      <!-- ▲ p-articleFv SP -->
-
-      <!-- ▼ p-articleSingle -->
-      <section class="p-articleSingle">
-        <div class="p-articleSingle__inner">
-          <div class="p-articleSingle__titleBox">
-            <h2 class="p-articleSingle__title">年末年始のご予約について</h2>
-          </div>
-          <div class="p-articleSingle__thumbnailBox">
-            <img src="./assets/images/article-item1.jpg" alt="サムネイルタイトル" class="p-articleSingle__thumbnail" width="600"
-              height="400">
-          </div>
-          <div class="p-articleSingle__tagBox">
-            <span class="p-articleSingle__tag">NEWS</span>
-            <div class="p-articleSingle__dateBox">
-              <p class="p-articleSingle__date"><span class="p-articleSingle__date">2024.9.20</span></p>
-            </div>
-          </div>
-          <div class="p-articleSingle__contents">
-            <h2>年末年始の特別なひとときを、鮨で彩りませんか？</h2>
-            <p>SUSHI
-              WIZでは、年末年始のご予約を承っております。お正月や忘年会、新年会など、大切なご家族やご友人との集まりをさらに華やかにする握りたての鮨をご提供いたします。築地や豊洲から仕入れる新鮮なネタと、職人こだわりの酢飯が織りなす特別な味わいで、心温まるひとときをお届けします。
-            </p>
-            <br>
-            <h2>人気の時期につき、早めのご予約をおすすめいたします。</h2>
-            <p>特別な日を彩る鮨のご用命は、ぜひお早めに。</p>
-            <img src="./assets/images/single-item.jpg" alt="" width="600" height="400">
-          </div>
-        </div>
-        <div class="p-articleSingle__btnBox">
-          <a href="#" class="p-articleSingle__prev">
-            <img src="./assets/images/common/icon-single-arrow.svg" alt="" class="p-articleSingle__arrowImg" width="28"
-              height="28">
-          </a>
-          <a href="./article.html" class="p-articleSingle__btnLink">
-            <span class="p-articleSingle__btnText">BACK</span>
-          </a>
-          <a href="#" class="p-articleSingle__next">
-            <img src="./assets/images/common/icon-single-arrow.svg" alt="" class="p-articleSingle__arrowImg" width="28"
-              height="28">
-          </a>
         </div>
       </section>
-      <!-- ▲ p-articleSingle -->
+      <!-- ▲ p-profileFv SP -->
+
+      <!-- ▼ p-profileContents -->
+      <section class="p-profileContents">
+        <div class="p-profileContents__inner">
+          <div class="p-profileContents__head">
+            <div class="p-profileContents__headImgBox">
+              <img src="./assets/images/profile-contents-item1.jpg" alt="" class="p-profileContents__headImg"
+                width="660" height="440">
+            </div>
+            <div class="p-profileContents__headTextBox">
+              <div class="p-profileContents__headTitleBox">
+                <h2 class="p-profileContents__headTitle">
+                  鮨も政治もまつりごと
+                </h2>
+                <p class="p-profileContents__headName">
+                  高橋<span class="p-profileContents__headName--mlLarge">元気</span>
+                  <span class="p-profileContents__headNameEn">TAKAHASHI<span
+                      class="p-profileContents__headNameEn--mlLarge">GENKI</span></span>
+                </p>
+              </div>
+              <p class="p-profileContents__headText">
+                お鮨、日本酒が大好きで、様々なお店を巡り自分で作ってみたりと自炊が趣味。
+                <br>
+                築地や銀座を抱える中央区で働く身として、<span
+                  class="p-profileContents__headText--bold">鮨文化を更に街の強みとして世界にアピールしたい、大好きなお鮨で人と人を繋げたいという想いから、2023年に東京すしアカデミーへ入学。鮨職人として必要な技術や心構えを体系的に学ぶ。</span>
+                <br>
+                在学中から本業の傍ら都内の寿司名店に籍を置き修行すると共に、友人の繋がりで個人宅や法人の記念パーティー等で出張寿司の経験を積む。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="p-profileContents__imgBox">
+          <img src="./assets/images/profile-contents-item2.jpg" alt="出張寿司で集う人々" class="p-profileContents__footerImg"
+            width="780" height="366">
+        </div>
+        <div class="p-profileContents__inner">
+          <div class="p-profileContents__footer">
+            <p class="p-profileContents__footerText">
+              元来の明るい性格を武器にしつつ、幼少期から愛読していた漫画「将太の寿司」に登場した寿司ネタを再現するなど、<span
+                class="p-profileContents__footerText--bold">既成概念に捉われない、独創的かつエンターテインメント性の高い寿司の提供を目標とする。</span>
+            </p>
+            <p class="p-profileContents__footerText">
+              そして、鮨だけでなく政治や政治家をもっと身近に感じて貰いたいという想いから、多くの人とお鮨を通じて知り合うため東京湾岸出張寿司・議員出張寿司「SUSHI
+              WIZARDS」を開業。
+              <br>
+              <span class="p-profileContents__footerText--bold">住民と鮨を食べながら街の課題も解決する、前代未聞の出張寿司職人/政治家として活動中。</span>
+              <br>
+              鮨の話題も、政治に関するご相談も何でも承ります。
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- ▲ p-profileContents -->
 
       <!-- ▼ CTA -->
       <section class="c-cta">
@@ -197,7 +207,7 @@
             <h2 class="c-cta__title">RESERVATION</h2>
             <p class="c-cta__read">
               無料でお見積りやご相談を承ります。
-              <br />
+              <br>
               お気軽にご連絡ください。
             </p>
           </div>
@@ -209,7 +219,7 @@
               </a>
             </div>
             <div class="c-cta__btnResevation">
-              <a href="#" class="c-cta__link--bgImage">
+              <a href="./reservation.html" class="c-cta__link--bgImage">
                 <span class="c-cta__subText">予約</span>
                 <span class="c-cta__mainText">RESERVATION</span>
               </a>
@@ -218,7 +228,7 @@
           <div class="c-cta__snsBox">
             <a href="#" class="c-cta__line">
               <img src="./assets/images/common/sns-line.png" alt="LINE" class="c-cta__lineImg" width="118"
-                height="118" />
+                height="118">
             </a>
             <p class="c-cta__snsText">
               <span class="c-cta__snsText--en">LINE</span>でのお問合せも承っております
@@ -235,7 +245,7 @@
       <div class="l-footer__inner">
         <ul class="l-footer__list">
           <li class="l-footer__item">
-            <a href="/index.html" class="l-footer__link">TOP</a>
+            <a href="./index.html" class="l-footer__link">TOP</a>
           </li>
           <li class="l-footer__item">
             <a href="./concept.html" class="l-footer__link">CONCEPT</a>

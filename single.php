@@ -2,35 +2,35 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUSHI WIZ</title>
   <!-- GoogleFonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Sawarabi+Gothic&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet">
 
   <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="./assets/css/common.css" />
-  <link rel="stylesheet" href="./assets/css/concept.css" />
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <link rel="stylesheet" href="./assets/css/article.css">
 </head>
 
-<body class="concept">
+<body class="article">
   <!-- ▼ PC FV Start -->
-  <div class="l-fv--concept u-displayNone--PU">
+  <div class="l-fv--article u-displayNone--PU">
     <h1 class="l-header__logoPc">
-      <a href="./index.html" class="l-header__logoLink">
-        <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="l-header__logoImg" width="69" height="64" />
+      <a href="/index.html" class="l-header__logoLink">
+        <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="l-header__logoImg" width="69" height="64">
       </a>
     </h1>
     <div class="l-fv__textBox">
-      <p class="l-fv__enTitle">CONCEPT</p>
+      <p class="l-fv__enTitle">ARTICLE</p>
     </div>
   </div>
   <!-- ▲ PC FV End-->
@@ -43,7 +43,7 @@
         <h1 class="l-header__logo u-displayNone--PO">
           <a href="./index.html" class="l-header__logoLink">
             <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="l-header__logoImg" width="69"
-              height="64" />
+              height="64">
           </a>
         </h1>
         <!-- ▼ drawer -->
@@ -62,7 +62,7 @@
         <div class="c-drawerMenu__wrap">
           <a href="./index.html" class="c-drawerMenu__logoLink u-displayNone--PU">
             <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="c-drawerMenu__logoImg" width="69"
-              height="64" />
+              height="64">
           </a>
           <div class="c-drawerMenu__inner">
             <div class="c-drawerMenu__headingBox">
@@ -92,7 +92,7 @@
                 </li>
                 <li class="c-drawerMenu__menuItem u-displayNone--PO">
                   <img src="./assets/images/common/drawer-item.jpg" alt="出張 寿司" class="c-drawerMenu__img" width="390"
-                    height="166" />
+                    height="166">
                 </li>
               </ul>
             </nav>
@@ -115,13 +115,13 @@
                 <li class="c-drawerMenu__snsItem">
                   <a href="" class="c-drawerMenu__snsLink">
                     <img class="c-drawerMenu__snsImg" src="./assets/images/common/sns-line.png" alt="LINE" width="118"
-                      height="118" />
+                      height="118">
                   </a>
                 </li>
                 <li class="c-drawerMenu__snsItem">
                   <a href="" class="c-drawerMenu__snsLink">
                     <img class="c-drawerMenu__snsImg" src="./assets/images/common/sns-Instagram.svg" alt="Instagram"
-                      width="20" height="19" />
+                      width="20" height="19">
                   </a>
                 </li>
               </ul>
@@ -135,120 +135,48 @@
 
     <!-- ▼ main -->
     <main>
-      <!-- ▼ p-conceptFv SP -->
-      <section class="p-conceptFv">
-        <div class="p-conceptFv__textContents">
-          <div class="p-conceptFv__inner">
-            <div class="p-conceptFv__textBox">
-              <p class="p-conceptFv__enTitle">CONCEPT</p>
+      <!-- ▼ p-articleSingle -->
+      <section class="p-articleSingle">
+        <div class="p-articleSingle__inner">
+          <div class="p-articleSingle__titleBox">
+            <h2 class="p-articleSingle__title">年末年始のご予約について</h2>
+          </div>
+          <div class="p-articleSingle__thumbnailBox">
+            <img src="./assets/images/article-item1.jpg" alt="サムネイルタイトル" class="p-articleSingle__thumbnail" width="600"
+              height="400">
+          </div>
+          <div class="p-articleSingle__tagBox">
+            <span class="p-articleSingle__tag">NEWS</span>
+            <div class="p-articleSingle__dateBox">
+              <p class="p-articleSingle__date"><span class="p-articleSingle__date">2024.9.20</span></p>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- ▲ p-conceptFv SP -->
-
-      <!-- ▼ p-concept1 -->
-      <section class="p-concept1">
-        <p class="p-concept1__bigText">
-          CONCEPT<span class="p-concept1__bigNumber">1</span>
-        </p>
-        <div class="p-concept1__imgBox">
-          <img src="./assets/images/concept1-item.jpg" alt="鮨で人を笑顔にしたい 鮨で人を繋げたい" class="p-concept1__img" width="620"
-            height="468" />
-        </div>
-        <div class="p-concept1__inner">
-          <div class="p-concept1__textBox">
-            <h2 class="p-concept1__title">
-              鮨で人を笑顔にしたい
-              <br />
-              鮨で人を繋げたい
-            </h2>
-            <p class="p-concept1__text">
-              日本人はお鮨が大好きです。
-              <br />
-              お祝い事やお祭りの席で必ずお鮨は楽しまれます。
+          <div class="p-articleSingle__contents">
+            <h2>年末年始の特別なひとときを、鮨で彩りませんか？</h2>
+            <p>SUSHI
+              WIZでは、年末年始のご予約を承っております。お正月や忘年会、新年会など、大切なご家族やご友人との集まりをさらに華やかにする握りたての鮨をご提供いたします。築地や豊洲から仕入れる新鮮なネタと、職人こだわりの酢飯が織りなす特別な味わいで、心温まるひとときをお届けします。
             </p>
-            <p class="p-concept1__text">
-              今の時代だからこそ、誰もがご自宅で気軽に美味しいお鮨を食べて欲しい。
-              <br />
-              鮨は日本人にとって宝であり、魔法のようなもの。
-              <br />
-              <span class="p-concept1__text--bold">
-                鮨は人を笑顔にし、人と人を繋げます。
-              </span>
-            </p>
-            <p class="p-concept1__text">
-              SUSHI WIZ
-              という名前には、どこへでも寄り添うという意味（WITH）と、寿司職人は魔法のようなお鮨と時間をお届けする魔法使い（WIZARDS）であるという意味を込めています。
-              <br />
-              大切な人と魔法のような時間を過ごして頂くため、皆様の心を幸せで満たすため、
-              <br />
-              今日もあなたのご自宅で飛びっきりのお鮨を楽しく握ります。
-            </p>
+            <br>
+            <h2>人気の時期につき、早めのご予約をおすすめいたします。</h2>
+            <p>特別な日を彩る鮨のご用命は、ぜひお早めに。</p>
+            <img src="./assets/images/single-item.jpg" alt="" width="600" height="400">
           </div>
         </div>
-      </section>
-      <!-- ▲ p-concept1 -->
-
-      <!-- ▼ p-concept2 -->
-      <section class="p-concept2">
-        <p class="p-concept2__bigText">
-          CONCEPT<span class="p-concept2__bigNumber">2</span>
-        </p>
-        <div class="p-concept2__imgBox">
-          <img src="./assets/images/concept2-item.jpg" alt="新鮮で美味しいお鮨を お手軽な価格で" class="p-concept2__img" width="546"
-            height="508" />
-        </div>
-        <div class="p-concept2__inner">
-          <div class="p-concept2__textBox">
-            <h2 class="p-concept2__title">
-              新鮮で美味しいお鮨を
-              <br />
-              お手軽な価格で
-            </h2>
-            <p class="p-concept2__text">
-              新鮮で美味しいお鮨を出来る限りリーズナブルなお値段で提供するため、ご予約の当日に築地や豊洲市場で新鮮な魚を調達し、職人が仕込みます。
-              <br />
-              鮨の生命線である酢飯にもこだわり、赤酢、米酢、黒酢などを独自にブレンド、ネタに合わせた最適の味付けを追求しています。
-            </p>
-            <p class="p-concept2__text">
-              利益よりも味を追及する、をモットーに必ずひと手間を加えて、日々究極の美味しさを求め、進化する出張寿司を目指しています。
-            </p>
-          </div>
+        <div class="p-articleSingle__btnBox">
+          <a href="#" class="p-articleSingle__prev">
+            <img src="./assets/images/common/icon-single-arrow.svg" alt="" class="p-articleSingle__arrowImg" width="28"
+              height="28">
+          </a>
+          <a href="./article.html" class="p-articleSingle__btnLink">
+            <span class="p-articleSingle__btnText">BACK</span>
+          </a>
+          <a href="#" class="p-articleSingle__next">
+            <img src="./assets/images/common/icon-single-arrow.svg" alt="" class="p-articleSingle__arrowImg" width="28"
+              height="28">
+          </a>
         </div>
       </section>
-      <!-- ▲ p-concept2 -->
-
-      <!-- ▼ p-concept3 -->
-      <section class="p-concept3">
-        <p class="p-concept3__bigText">
-          CONCEPT<span class="p-concept3__bigNumber">3</span>
-        </p>
-        <div class="p-concept3__imgBox">
-          <img src="./assets/images/concept3-item.jpg" alt="いつでも、どこでも、どなたでも" class="p-concept3__img" width="620"
-            height="508" />
-        </div>
-        <div class="p-concept3__inner">
-          <div class="p-concept3__textBox">
-            <h2 class="p-concept3__title">
-              いつでも、どこでも、
-              <br />
-              どなたでも
-            </h2>
-            <p class="p-concept3__text">
-              小さなお子様を子育て中で外食が難しい。足腰が不安で外出が出来ない。会社の大切な仲間達とお祝いパーティーを開きたいけど、人数が多くてお店に入れない。お寿司は食べたいが高級寿司はハードルが高い。それでも今日はお寿司が食べたい、というお客様の声にお応えします。
-            </p>
-            <p class="p-concept3__text">
-              お子様が大好きなツナや玉子焼き、いくらなどに特化した親子プランや、生ものが苦手な場合は火を通したお寿司メニュー、外国の方向けプラン、大人数パーティー向けプランなど、お一人おひとりのニーズに合わせながら、<span
-                class="p-concept3__text--bold">リーズナブルで美味しいお鮨をいつでも、どこでも、どなたでも楽しめるように。</span>
-            </p>
-            <p class="p-concept3__text">
-              <span class="p-concept3__text--bold">こんな出張寿司は全国どこにもありません。</span>
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- ▲ p-concept3 -->
+      <!-- ▲ p-articleSingle -->
 
       <!-- ▼ CTA -->
       <section class="c-cta">
@@ -257,7 +185,7 @@
             <h2 class="c-cta__title">RESERVATION</h2>
             <p class="c-cta__read">
               無料でお見積りやご相談を承ります。
-              <br />
+              <br>
               お気軽にご連絡ください。
             </p>
           </div>
@@ -278,7 +206,7 @@
           <div class="c-cta__snsBox">
             <a href="#" class="c-cta__line">
               <img src="./assets/images/common/sns-line.png" alt="LINE" class="c-cta__lineImg" width="118"
-                height="118" />
+                height="118">
             </a>
             <p class="c-cta__snsText">
               <span class="c-cta__snsText--en">LINE</span>でのお問合せも承っております
@@ -295,7 +223,7 @@
       <div class="l-footer__inner">
         <ul class="l-footer__list">
           <li class="l-footer__item">
-            <a href="./index.html" class="l-footer__link">TOP</a>
+            <a href="/index.html" class="l-footer__link">TOP</a>
           </li>
           <li class="l-footer__item">
             <a href="./concept.html" class="l-footer__link">CONCEPT</a>

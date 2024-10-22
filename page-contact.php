@@ -2,23 +2,23 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUSHI WIZ</title>
   <!-- GoogleFonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Sawarabi+Gothic&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet">
 
   <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="./assets/css/common.css" />
-  <link rel="stylesheet" href="./assets/css/contact.css" />
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <link rel="stylesheet" href="./assets/css/contact.css">
 </head>
 
 <body class="contact">
@@ -26,7 +26,7 @@
   <div class="l-fv--contact u-displayNone--PU">
     <h1 class="l-header__logoPc">
       <a href="./index.html" class="l-header__logoLink">
-        <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="l-header__logoImg" width="69" height="64" />
+        <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="l-header__logoImg" width="69" height="64">
       </a>
     </h1>
     <div class="l-fv__textBox">
@@ -43,7 +43,7 @@
         <h1 class="l-header__logo u-displayNone--PO">
           <a href="./index.html" class="l-header__logoLink">
             <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="l-header__logoImg" width="69"
-              height="64" />
+              height="64">
           </a>
         </h1>
         <!-- ▼ drawer -->
@@ -62,7 +62,7 @@
         <div class="c-drawerMenu__wrap">
           <a href="./index.html" class="c-drawerMenu__logoLink u-displayNone--PU">
             <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="c-drawerMenu__logoImg" width="69"
-              height="64" />
+              height="64">
           </a>
           <div class="c-drawerMenu__inner">
             <div class="c-drawerMenu__headingBox">
@@ -92,7 +92,7 @@
                 </li>
                 <li class="c-drawerMenu__menuItem u-displayNone--PO">
                   <img src="./assets/images/common/drawer-item.jpg" alt="出張 寿司" class="c-drawerMenu__img" width="390"
-                    height="166" />
+                    height="166">
                 </li>
               </ul>
             </nav>
@@ -115,13 +115,13 @@
                 <li class="c-drawerMenu__snsItem">
                   <a href="" class="c-drawerMenu__snsLink">
                     <img class="c-drawerMenu__snsImg" src="./assets/images/common/sns-line.png" alt="LINE" width="118"
-                      height="118" />
+                      height="118">
                   </a>
                 </li>
                 <li class="c-drawerMenu__snsItem">
                   <a href="" class="c-drawerMenu__snsLink">
                     <img class="c-drawerMenu__snsImg" src="./assets/images/common/sns-Instagram.svg" alt="Instagram"
-                      width="20" height="19" />
+                      width="20" height="19">
                   </a>
                 </li>
               </ul>
@@ -140,7 +140,7 @@
         <div class="p-contactFv__textContents">
           <div class="p-contactFv__inner">
             <div class="p-contactFv__textBox">
-              <p class="p-contactFv__enTitle">CONTACT</p>
+              <h2 class="p-contactFv__enTitle">CONTACT</h2>
             </div>
           </div>
         </div>
@@ -148,11 +148,11 @@
       <!-- ▲ p-contactFv SP -->
 
       <!-- ▼ p-contactForm -->
-      <section class="p-contactForm">
+      <div class="p-contactForm">
         <div class="p-contactForm__head">
           <div class="p-contactForm__inner">
             <p class="p-contactForm__read">
-              当サイトをご覧いただきありがとうございます。<br />
+              当サイトをご覧いただきありがとうございます。<br>
               下記フォームよりお気軽にお問い合わせください。
             </p>
           </div>
@@ -167,7 +167,7 @@
                     <p class="p-contactForm__name">お名前</p>
                   </dt>
                   <dd class="p-contactForm__dd">
-                    <input class="p-contactForm__input" type="text" name="name" required placeholder="山田　太郎" />
+                    <input class="p-contactForm__input" type="text" name="name" required placeholder="山田　太郎">
                   </dd>
                 </div>
                 <div class="p-contactForm__item">
@@ -176,7 +176,7 @@
                     <p class="p-contactForm__name">メールアドレス</p>
                   </dt>
                   <dd class="p-contactForm__dd">
-                    <input class="p-contactForm__input" type="email" name="email" required placeholder="abcd@aa.com" />
+                    <input class="p-contactForm__input" type="email" name="email" required placeholder="abcd@aa.com">
                   </dd>
                 </div>
                 <div class="p-contactForm__item">
@@ -186,7 +186,7 @@
                   </dt>
                   <dd class="p-contactForm__dd">
                     <input class="p-contactForm__input" type="tel" name="telephone" required
-                      placeholder="000-1234-5678" />
+                      placeholder="000-1234-5678">
                   </dd>
                 </div>
                 <div class="p-contactForm__item">
@@ -195,7 +195,7 @@
                     <p class="p-contactForm__name">住所</p>
                   </dt>
                   <dd class="p-contactForm__dd">
-                    <input class="p-contactForm__input" type="text" name="address" required placeholder="東京都中央区00-0" />
+                    <input class="p-contactForm__input" type="text" name="address" required placeholder="東京都中央区00-0">
                   </dd>
                 </div>
                 <div class="p-contactForm__item">
@@ -206,9 +206,9 @@
                   <dd class="p-contactForm__dd">
                     <div class="p-contactForm__radioBox">
                       <label class="p-contactForm__radioLabel"><input class="p-contactForm__radioInput" type="radio"
-                          name="radio" required />出張寿司について</label>
+                          name="radio" required >出張寿司について</label>
                       <label class="p-contactForm__radioLabel"><input class="p-contactForm__radioInput" type="radio"
-                          name="radio" />その他</label>
+                          name="radio">その他</label>
                     </div>
                   </dd>
                 </div>
@@ -224,12 +224,12 @@
                 </div>
               </dl>
               <div class="p-contactForm__submitBox">
-                <input class="p-contactForm__submit" type="submit" value="入力内容をする" />
+                <input class="p-contactForm__submit" type="submit" value="入力内容をする">
               </div>
             </form>
           </div>
         </div>
-      </section>
+      </div>
       <!-- ▲ p-contactForm -->
     </main>
     <!-- ▲ main -->

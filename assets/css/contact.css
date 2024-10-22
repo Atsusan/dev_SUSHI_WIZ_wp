@@ -260,9 +260,13 @@
 /* p-reservationForm
 ----------------------------------------------------------------- */
 .p-reservationForm {
-  padding-top: 10rem;
   width: 100%;
   height: min(100%, 100vh);
+}
+@media (min-width: 767px) {
+  .p-reservationForm {
+    padding-top: 10rem;
+  }
 }
 .p-reservationForm__wrap {
   width: 100%;

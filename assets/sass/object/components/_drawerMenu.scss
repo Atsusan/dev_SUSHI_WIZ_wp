@@ -19,7 +19,11 @@
   transition:
     opacity 0.8s ease,
     visibility 0.8s ease;
-  
+  @media screen and (min-width: 1920px) {
+    max-width: 192rem;
+    margin: 0 auto;
+  }
+
   &::after { // ドロワーを開いた時の背景
     content: "";
     position: absolute;

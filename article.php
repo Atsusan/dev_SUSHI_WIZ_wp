@@ -2,23 +2,23 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUSHI WIZ</title>
   <!-- GoogleFonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Sawarabi+Gothic&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet">
 
   <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="./assets/css/common.css" />
-  <link rel="stylesheet" href="./assets/css/article.css" />
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <link rel="stylesheet" href="./assets/css/article.css">
 </head>
 
 <body class="article">
@@ -26,7 +26,7 @@
   <div class="l-fv--article u-displayNone--PU">
     <h1 class="l-header__logoPc">
       <a href="./index.html" class="l-header__logoLink">
-        <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="l-header__logoImg" width="69" height="64" />
+        <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="l-header__logoImg" width="69" height="64">
       </a>
     </h1>
     <div class="l-fv__textBox">
@@ -43,7 +43,7 @@
         <h1 class="l-header__logo u-displayNone--PO">
           <a href="./index.html" class="l-header__logoLink">
             <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="l-header__logoImg" width="69"
-              height="64" />
+              height="64">
           </a>
         </h1>
         <!-- ▼ drawer -->
@@ -62,7 +62,7 @@
         <div class="c-drawerMenu__wrap">
           <a href="./index.html" class="c-drawerMenu__logoLink u-displayNone--PU">
             <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="c-drawerMenu__logoImg" width="69"
-              height="64" />
+              height="64">
           </a>
           <div class="c-drawerMenu__inner">
             <div class="c-drawerMenu__headingBox">
@@ -92,7 +92,7 @@
                 </li>
                 <li class="c-drawerMenu__menuItem u-displayNone--PO">
                   <img src="./assets/images/common/drawer-item.jpg" alt="出張 寿司" class="c-drawerMenu__img" width="390"
-                    height="166" />
+                    height="166">
                 </li>
               </ul>
             </nav>
@@ -115,13 +115,13 @@
                 <li class="c-drawerMenu__snsItem">
                   <a href="" class="c-drawerMenu__snsLink">
                     <img class="c-drawerMenu__snsImg" src="./assets/images/common/sns-line.png" alt="LINE" width="118"
-                      height="118" />
+                      height="118">
                   </a>
                 </li>
                 <li class="c-drawerMenu__snsItem">
                   <a href="" class="c-drawerMenu__snsLink">
                     <img class="c-drawerMenu__snsImg" src="./assets/images/common/sns-Instagram.svg" alt="Instagram"
-                      width="20" height="19" />
+                      width="20" height="19">
                   </a>
                 </li>
               </ul>
@@ -140,7 +140,7 @@
         <div class="p-articleFv__textContents">
           <div class="p-articleFv__inner">
             <div class="p-articleFv__textBox">
-              <p class="p-articleFv__enTitle">ARTICLE</p>
+              <h2 class="p-articleFv__enTitle">ARTICLE</h2>
             </div>
           </div>
         </div>
@@ -332,7 +332,7 @@
             <h2 class="c-cta__title">RESERVATION</h2>
             <p class="c-cta__read">
               無料でお見積りやご相談を承ります。
-              <br />
+              <br>
               お気軽にご連絡ください。
             </p>
           </div>
@@ -353,7 +353,7 @@
           <div class="c-cta__snsBox">
             <a href="#" class="c-cta__line">
               <img src="./assets/images/common/sns-line.png" alt="LINE" class="c-cta__lineImg" width="118"
-                height="118" />
+                height="118">
             </a>
             <p class="c-cta__snsText">
               <span class="c-cta__snsText--en">LINE</span>でのお問合せも承っております
