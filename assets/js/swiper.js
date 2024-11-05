@@ -17,28 +17,35 @@ const swiperImages = new Swiper(".js-swiperImages", {
 });
 
 // top slide News
-const swiperNews = new Swiper(".js-swiperNews", {
-  centeredSlides: true,
-  slidesPerView: "auto",
-  loop: true,
-  spaceBetween: -25,
-  speed: 1000,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  // ページネーション
-  pagination: {
-    el: ".js-swiperNews__pagination",
-    clickable: true,
-    type: "fraction",
-  },
-  // 前後の矢印
-  navigation: {
-    nextEl: ".js-swiperNews__next",
-    prevEl: ".js-swiperNews__prev",
-  },
+document.addEventListener("DOMContentLoaded", function () {
+  const swiperContainer = document.querySelector('.js-swiperNews');
+  const slides = swiperContainer.querySelectorAll('.swiper-slide');
+
+  const swiperNews = new Swiper(".js-swiperNews", {
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: slides.length > 3,
+    spaceBetween: slides.length > 1 ? -25 : 0,
+    speed: 1000,
+    autoplay: slides.length > 3 ? {
+      delay: 3000,
+      disableOnInteraction: false,
+    } : false,
+    // ページネーション
+    pagination: {
+      el: ".js-swiperNews__pagination",
+      clickable: true,
+      type: "fraction",
+    },
+    // 前後の矢印
+    navigation: {
+      nextEl: ".js-swiperNews__next",
+      prevEl: ".js-swiperNews__prev",
+    },
+  });
+
 });
+
 
 // Planページの共通swiper設定
 const defaultSwiperSettings = {

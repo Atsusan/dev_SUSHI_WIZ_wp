@@ -24,6 +24,11 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (max-height: 600px) {
+  .c-modal { /* tablet見切れ対策 */
+    display: block;
+  }
+}
 .c-modal__flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -38,9 +43,9 @@
   height: -moz-fit-content;
   height: fit-content;
 }
-@media screen and (min-width: 500px) {
+@media screen and (max-height: 600px) {
   .c-modal__flex { /* tablet見切れ対策 */
-    height: 100%;
+    height: auto;
   }
 }
 .c-modal__card {

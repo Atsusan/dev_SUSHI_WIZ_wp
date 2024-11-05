@@ -1,10 +1,12 @@
 "use strict";
 
+console.log("Hello, Accordion!");
 /* アコーディオンの開閉機能の処理 */
 document.addEventListener("DOMContentLoaded", function () {
   const accordionTitles = document.querySelectorAll(
     '[data-accordion="header"]',
   );
+  console.log(accordionTitles);
 
   function toggleAccordionItem(title) {
     const content = title.nextElementSibling;

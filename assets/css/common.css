@@ -1683,3 +1683,94 @@ a {
 .c-secondHeading__title--white {
   color: var(--white);
 }
+
+/* c-pagination
+----------------------------------------------------------------- */
+.c-pagination {
+  /* プラグイン用のクラス */
+}
+.c-pagination .wp-pagenavi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.4rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: var(--en);
+  line-height: 1;
+  color: var(--darkGray);
+}
+.c-pagination .wp-pagenavi a { /* プラグインで制御するため要素で指定 */
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+@media (min-width: 767px) {
+  .c-pagination .wp-pagenavi a:hover {
+    opacity: 0.65;
+  }
+}
+.c-pagination .previouspostslink,
+.c-pagination .nextpostslink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.6rem;
+  padding: 1rem;
+}
+.c-pagination .previouspostslink::before {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1.2rem;
+  background: url(../images/common/icon-arrow-roght.svg) no-repeat center center/contain;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.c-pagination .nextpostslink::after {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1.2rem;
+  background: url(../images/common/icon-arrow-roght.svg) no-repeat center center/contain;
+}
+.c-pagination .current {
+  width: 4.4rem;
+  height: 4.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--darkGray);
+  margin: 0 -0.5rem;
+}
+.c-pagination .page {
+  padding: 1rem;
+}
+.c-pagination .extend {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--darkGray);
+  margin: 0 -1.2rem;
+}
+
+/* c-noneTitle
+----------------------------------------------------------------- */
+.c-noneTitle {
+  font-size: 1.4rem;
+  color: var(--black);
+  text-align: center;
+  margin: 0 auto;
+}

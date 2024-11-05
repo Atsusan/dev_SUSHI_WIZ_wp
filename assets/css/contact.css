@@ -69,6 +69,7 @@
 }
 .p-contactForm__form {
   padding: 6.2rem 0;
+  font-size: 1.4rem;
 }
 .p-contactForm__list {
   display: -webkit-box;
@@ -104,7 +105,7 @@
   font-weight: 400;
   line-height: 1;
   color: var(--red);
-  padding: 0.15rem 0.7rem 0.25rem;
+  padding: 0 0.7rem;
   border: 1px solid var(--red);
   border-radius: 1rem;
 }
@@ -121,6 +122,7 @@
   width: 100%;
   border: 1px solid var(--liteGray);
   background: var(--white2);
+  color: var(--black);
   border-radius: 0.8rem;
   min-height: 4.6rem;
   padding: 0.2em 0.5em;
@@ -148,8 +150,7 @@
   color: var(--liteGray);
   opacity: 1;
 }
-.p-contactForm__radioBox {
-  margin-top: 0.8rem;
+.p-contactForm__radioBox .wpcf7-list-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,14 +159,19 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2.2rem;
+  margin: 0;
+  margin-top: 0.8rem;
 }
-.p-contactForm__radioLabel {
+.p-contactForm__radioBox .wpcf7-list-item:nth-child(2) {
+  margin-top: 2.4rem;
+}
+.p-contactForm__radioBox label {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1;
   color: var(--darkGray);
 }
-.p-contactForm__radioInput {
+.p-contactForm__radioBox input {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -179,7 +185,7 @@
   margin-top: -0.4rem;
   position: relative;
 }
-.p-contactForm__radioInput::before {
+.p-contactForm__radioBox input::before {
   content: "";
   display: block;
   width: 1.1rem;
@@ -196,7 +202,7 @@
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
-.p-contactForm__radioInput:checked::before {
+.p-contactForm__radioBox input:checked::before {
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
 }
@@ -243,6 +249,17 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.p-contactForm__submitBox p {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+.wpcf7-response-output {
+  color: black;
+}
+.wpcf7-not-valid-tip {
+  margin-top: 0.5em;
 }
 .p-contactForm__submit {
   -webkit-appearance: none;

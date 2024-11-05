@@ -582,11 +582,6 @@
 }
 .p-topInsta__list {
   margin-top: 2.8rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 0.4rem 1fr;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.4rem;
 }
 .p-topInsta__link {
   display: block;
@@ -867,6 +862,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.p-topNews__title--none {
+  margin: 0 auto;
+  font-size: 1.4rem;
 }
 .p-topNews__swiperController {
   position: relative;

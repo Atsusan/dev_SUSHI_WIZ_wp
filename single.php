@@ -1,266 +1,68 @@
-<!doctype html>
-<html lang="ja">
+<?php get_header(); ?>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SUSHI WIZ</title>
-  <!-- GoogleFonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Sawarabi+Gothic&display=swap"
-    rel="stylesheet">
-
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- CSS -->
-  <link rel="stylesheet" href="./assets/css/common.css">
-  <link rel="stylesheet" href="./assets/css/article.css">
-</head>
-
-<body class="article">
-  <!-- ▼ PC FV Start -->
-  <div class="l-fv--article u-displayNone--PU">
-    <h1 class="l-header__logoPc">
-      <a href="/index.html" class="l-header__logoLink">
-        <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="l-header__logoImg" width="69" height="64">
-      </a>
-    </h1>
-    <div class="l-fv__textBox">
-      <p class="l-fv__enTitle">ARTICLE</p>
-    </div>
-  </div>
-  <!-- ▲ PC FV End-->
-
-  <!-- ▼ contents Start -->
-  <div class="l-bigWrapper">
-    <!-- ▼ header -->
-    <div class="l-header">
-      <div class="l-header__inner">
-        <h1 class="l-header__logo u-displayNone--PO">
-          <a href="./index.html" class="l-header__logoLink">
-            <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="l-header__logoImg" width="69"
-              height="64">
-          </a>
-        </h1>
-        <!-- ▼ drawer -->
-        <div id="js-headerBtn" class="l-header__hamburgerBtn" onclick="drawerToggle(event, 'drawerMenu')">
-          <div id="drawerBtn" class="l-header__hamburgerBox">
-            <span class="l-header__bar"></span>
-            <span class="l-header__bar"></span>
-            <span class="l-header__bar"></span>
-          </div>
-        </div>
-        <!-- ▲ drawer -->
-      </div>
-
-      <!-- ▼ drawer contents -->
-      <div id="drawerMenu" class="c-drawerMenu">
-        <div class="c-drawerMenu__wrap">
-          <a href="./index.html" class="c-drawerMenu__logoLink u-displayNone--PU">
-            <img src="./assets/images/common/logo.svg" alt="SUSHI WIZ" class="c-drawerMenu__logoImg" width="69"
-              height="64">
-          </a>
-          <div class="c-drawerMenu__inner">
-            <div class="c-drawerMenu__headingBox">
-              <p class="c-drawerMenu__heading">MENU</p>
-            </div>
-            <nav class="c-drawerMenu__nav">
-              <ul class="c-drawerMenu__menu">
-                <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
-                  <a href="./concept.html" class="c-drawerMenu__menuLink" onclick="drawerClose('drawerMenu')"><span
-                      class="c-drawerMenu__subText">コンセプト</span>CONCEPT</a>
-                </li>
-                <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
-                  <a href="./plan.html" class="c-drawerMenu__menuLink" onclick="drawerClose('drawerMenu')"><span
-                      class="c-drawerMenu__subText">プラン</span>PLAN</a>
-                </li>
-                <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
-                  <a href="./profile.html" class="c-drawerMenu__menuLink" onclick="drawerClose('drawerMenu')"><span
-                      class="c-drawerMenu__subText">シェフについて</span>PROFILE</a>
-                </li>
-                <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
-                  <a href="./faq.html" class="c-drawerMenu__menuLink" onclick="drawerClose('drawerMenu')"><span
-                      class="c-drawerMenu__subText">よくある質問</span>FAQ</a>
-                </li>
-                <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
-                  <a href="./article.html" class="c-drawerMenu__menuLink" onclick="drawerClose('drawerMenu')"><span
-                      class="c-drawerMenu__subText">トピックス</span>ARTICLE</a>
-                </li>
-                <li class="c-drawerMenu__menuItem u-displayNone--PO">
-                  <img src="./assets/images/common/drawer-item.jpg" alt="出張 寿司" class="c-drawerMenu__img" width="390"
-                    height="166">
-                </li>
-              </ul>
-            </nav>
-            <div class="c-drawerMenu__bottomContents">
-              <div class="c-drawerMenu__btnWrap">
-                <div class="c-drawerMenu__btnContact">
-                  <a href="./contact.html" class="c-drawerMenu__btnLink">
-                    <span class="c-drawerMenu__btnSubText">お問い合わせ</span>
-                    <span class="c-drawerMenu__btnMainText">CONTACT</span>
-                  </a>
-                </div>
-                <div class="c-drawerMenu__btnResevation">
-                  <a href="./reservation.html" class="c-drawerMenu__btnLink--bgImage">
-                    <span class="c-drawerMenu__btnSubText">予約</span>
-                    <span class="c-drawerMenu__btnMainText">RESERVATION</span>
-                  </a>
-                </div>
-              </div>
-              <ul class="c-drawerMenu__snsBox">
-                <li class="c-drawerMenu__snsItem">
-                  <a href="" class="c-drawerMenu__snsLink">
-                    <img class="c-drawerMenu__snsImg" src="./assets/images/common/sns-line.png" alt="LINE" width="118"
-                      height="118">
-                  </a>
-                </li>
-                <li class="c-drawerMenu__snsItem">
-                  <a href="" class="c-drawerMenu__snsLink">
-                    <img class="c-drawerMenu__snsImg" src="./assets/images/common/sns-Instagram.svg" alt="Instagram"
-                      width="20" height="19">
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- ▲ drawer contents -->
-    </div>
-    <!-- ▲ header -->
-
-    <!-- ▼ main -->
-    <main>
-      <!-- ▼ p-articleSingle -->
-      <section class="p-articleSingle">
-        <div class="p-articleSingle__inner">
+<!-- ▼ main -->
+<main>
+  <!-- ▼ p-articleSingle -->
+  <section class="p-articleSingle">
+    <div class="p-articleSingle__inner">
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
           <div class="p-articleSingle__titleBox">
-            <h2 class="p-articleSingle__title">年末年始のご予約について</h2>
+            <h2 class="p-articleSingle__title"><?php the_title(); ?></h2>
           </div>
           <div class="p-articleSingle__thumbnailBox">
-            <img src="./assets/images/article-item1.jpg" alt="サムネイルタイトル" class="p-articleSingle__thumbnail" width="600"
-              height="400">
+            <?php if (has_post_thumbnail()): ?>
+              <?php the_post_thumbnail('large', array('class' => 'p-articleSingle__thumbnail')); ?>
+            <?php else: ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo-image.jpg" alt="" class="p-articleSingle__thumbnail" width="600" height="400">
+            <?php endif; ?>
           </div>
           <div class="p-articleSingle__tagBox">
-            <span class="p-articleSingle__tag">NEWS</span>
+            <span class="p-articleSingle__tag"><?php the_category(' '); ?></span>
             <div class="p-articleSingle__dateBox">
-              <p class="p-articleSingle__date"><span class="p-articleSingle__date">2024.9.20</span></p>
+              <time class="p-articleSingle__date" datetime="<?php echo get_the_date('c'); ?>"><?php the_time('Y.m.d'); ?></time>
             </div>
           </div>
           <div class="p-articleSingle__contents">
-            <h2>年末年始の特別なひとときを、鮨で彩りませんか？</h2>
-            <p>SUSHI
-              WIZでは、年末年始のご予約を承っております。お正月や忘年会、新年会など、大切なご家族やご友人との集まりをさらに華やかにする握りたての鮨をご提供いたします。築地や豊洲から仕入れる新鮮なネタと、職人こだわりの酢飯が織りなす特別な味わいで、心温まるひとときをお届けします。
-            </p>
-            <br>
-            <h2>人気の時期につき、早めのご予約をおすすめいたします。</h2>
-            <p>特別な日を彩る鮨のご用命は、ぜひお早めに。</p>
-            <img src="./assets/images/single-item.jpg" alt="" width="600" height="400">
+            <?php the_content(); ?>
           </div>
-        </div>
-        <div class="p-articleSingle__btnBox">
-          <a href="#" class="p-articleSingle__prev">
-            <img src="./assets/images/common/icon-single-arrow.svg" alt="" class="p-articleSingle__arrowImg" width="28"
-              height="28">
-          </a>
-          <a href="./article.html" class="p-articleSingle__btnLink">
-            <span class="p-articleSingle__btnText">BACK</span>
-          </a>
-          <a href="#" class="p-articleSingle__next">
-            <img src="./assets/images/common/icon-single-arrow.svg" alt="" class="p-articleSingle__arrowImg" width="28"
-              height="28">
-          </a>
-        </div>
-      </section>
-      <!-- ▲ p-articleSingle -->
+    </div>
+  <?php endwhile; ?>
+<?php else: ?>
+  <p class="c-noneTitle">記事はありません</p>
+<?php endif; ?>
 
-      <!-- ▼ CTA -->
-      <section class="c-cta">
-        <div class="c-cta__inner">
-          <div class="c-cta__textBox">
-            <h2 class="c-cta__title">RESERVATION</h2>
-            <p class="c-cta__read">
-              無料でお見積りやご相談を承ります。
-              <br>
-              お気軽にご連絡ください。
-            </p>
-          </div>
-          <div class="c-cta__btnWarap">
-            <div class="c-cta__btnContact">
-              <a href="./contact.html" class="c-cta__link">
-                <span class="c-cta__subText">お問い合わせ</span>
-                <span class="c-cta__mainText">CONTACT</span>
-              </a>
-            </div>
-            <div class="c-cta__btnResevation">
-              <a href="#" class="c-cta__link--bgImage">
-                <span class="c-cta__subText">予約</span>
-                <span class="c-cta__mainText">RESERVATION</span>
-              </a>
-            </div>
-          </div>
-          <div class="c-cta__snsBox">
-            <a href="#" class="c-cta__line">
-              <img src="./assets/images/common/sns-line.png" alt="LINE" class="c-cta__lineImg" width="118"
-                height="118">
-            </a>
-            <p class="c-cta__snsText">
-              <span class="c-cta__snsText--en">LINE</span>でのお問合せも承っております
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- ▲ CTA -->
-    </main>
-    <!-- ▲ main -->
+<div class="p-articleSingle__btnBox">
+  <?php
+  $prev_post = get_previous_post();
+  $next_post = get_next_post();
+  ?>
+  <?php if ($next_post): ?>
+    <a href="<?php echo get_permalink($next_post->ID); ?>" class="p-articleSingle__next">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-single-arrow.svg" alt="" class="p-articleSingle__arrowImg" width="28"
+        height="28">
+    </a>
+  <?php else: ?>
+    <div class="p-articleSingle__next" style="opacity: 0; visibility: hidden;">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-single-arrow.svg" alt="" class="p-articleSingle__arrowImg" width="28"
+        height="28">
+    </div>
+  <?php endif; ?>
+  <a href="<?php echo esc_url(home_url('/archive')); ?>" class="p-articleSingle__btnLink">
+    <span class="p-articleSingle__btnText">BACK</span>
+  </a>
+  <?php if ($prev_post): ?>
+    <a href="<?php echo get_permalink($prev_post->ID); ?>" class="p-articleSingle__prev">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-single-arrow.svg" alt="" class="p-articleSingle__arrowImg" width="28"
+        height="28">
+    </a>
+  <?php else: ?>
+    <div class="p-articleSingle__prev" style="opacity: 0; visibility: hidden;">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-single-arrow.svg" alt="" class="p-articleSingle__arrowImg" width="28"
+        height="28">
+    </div>
+  <?php endif; ?>
+</div>
+  </section>
+  <!-- ▲ p-articleSingle -->
 
-    <!-- ▼ footer -->
-    <footer class="l-footer">
-      <div class="l-footer__inner">
-        <ul class="l-footer__list">
-          <li class="l-footer__item">
-            <a href="/index.html" class="l-footer__link">TOP</a>
-          </li>
-          <li class="l-footer__item">
-            <a href="./concept.html" class="l-footer__link">CONCEPT</a>
-          </li>
-          <li class="l-footer__item">
-            <a href="./profile.html" class="l-footer__link">PROFILE</a>
-          </li>
-          <li class="l-footer__item">
-            <a href="./plan.html" class="l-footer__link">PLAN</a>
-          </li>
-          <li class="l-footer__item">
-            <a href="./article.html" class="l-footer__link">ARTICLE</a>
-          </li>
-          <li class="l-footer__item">
-            <a href="./contact.html" class="l-footer__link">CONTACT</a>
-          </li>
-          <li class="l-footer__item">
-            <a href="./reservation.html" class="l-footer__link">RESERVATION</a>
-          </li>
-        </ul>
-        <div class="l-footer__bottom">
-          <p class="l-footer__text">プライバシーポリシー</p>
-          <p class="l-footer__copyRightBox">
-            <small class="l-footer__copyRight">© 2024 SUSHI WIZ</small>
-          </p>
-        </div>
-      </div>
-    </footer>
-    <!-- ▲ footer -->
-  </div>
-  <!-- ▲ contents End -->
-
-  <script src="./assets/js/scroll.js"></script>
-  <script src="./assets/js/drawer.js"></script>
-  <script src="./assets/js/loopSlide.js"></script>
-  <script src="./assets/js/swiper.js"></script>
-  <script src="./assets/js/accordion.js"></script>
-</body>
-
-</html>
+  <?php get_footer(); ?>
