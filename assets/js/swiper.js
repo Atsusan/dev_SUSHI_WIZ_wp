@@ -19,7 +19,7 @@ const swiperImages = new Swiper(".js-swiperImages", {
 // top slide News
 document.addEventListener("DOMContentLoaded", function () {
   const swiperContainer = document.querySelector('.js-swiperNews');
-  const slides = swiperContainer.querySelectorAll('.swiper-slide');
+  const slides = swiperContainer.querySelectorAll('.p-topNews__swiperSlide');
 
   const swiperNews = new Swiper(".js-swiperNews", {
     centeredSlides: true,

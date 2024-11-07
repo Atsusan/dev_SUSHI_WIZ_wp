@@ -27,7 +27,7 @@
     <div class="c-cta__snsBox">
       <?php $line_url = get_option('line_url', '')?>
       <?php if($line_url): ?>
-      <a href="<?php echo esc_url($line_url); ?>" class="c-cta__line">
+      <a href="<?php echo esc_url($line_url); ?>" class="c-cta__line" target="_blank" rel="noopener noreferrer">
         <img src="<?php echo get_template_directory_uri();?>/assets/images/common/sns-line.png" alt="LINE" class="c-cta__lineImg" width="118"
           height="118">
       </a>
@@ -70,7 +70,7 @@
       </li>
     </ul>
     <div class="l-footer__bottom">
-      <p class="l-footer__text">プライバシーポリシー</p>
+      <a href="<?php echo esc_url(home_url('/privacypolicy')); ?>" class="l-footer__link">プライバシーポリシー</a>
       <p class="l-footer__copyRightBox">
         <small class="l-footer__copyRight">© 2024 SUSHI WIZ</small>
       </p>

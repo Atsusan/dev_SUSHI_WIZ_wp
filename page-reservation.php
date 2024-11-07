@@ -29,7 +29,5 @@ Template Name: Reservation Page
     <!-- ▲ SELECT TYPE END -->
   </div>
   <!-- ▲ p-reservationForm -->
-</main>
-<!-- ▲ main -->
 
 <?php get_footer(); ?>

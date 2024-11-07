@@ -109,15 +109,6 @@
   border: 1px solid var(--red);
   border-radius: 1rem;
 }
-.p-contactForm__mast--gray {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1;
-  padding: 0 0.7rem;
-  border-radius: 1rem;
-  color: #888;
-  border: 1px solid #888;
-}
 .p-contactForm__name {
   font-size: 1.6rem;
   font-weight: 500;

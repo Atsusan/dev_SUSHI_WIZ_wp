@@ -61,8 +61,7 @@ Template Name: Profile Page
                 class="p-profileContents__footerText--bold">既成概念に捉われない、独創的かつエンターテインメント性の高い寿司の提供を目標とする。</span>
             </p>
             <p class="p-profileContents__footerText">
-              そして、鮨だけでなく政治や政治家をもっと身近に感じて貰いたいという想いから、多くの人とお鮨を通じて知り合うため東京湾岸出張寿司・議員出張寿司「SUSHI
-              WIZARDS」を開業。
+              そして、鮨だけでなく政治や政治家をもっと身近に感じて貰いたいという想いから、多くの人とお鮨を通じて知り合うため東京湾岸出張寿司・議員出張寿司「SUSHI WIZ」を開業。
               <br>
               <span class="p-profileContents__footerText--bold">住民と鮨を食べながら街の課題も解決する、前代未聞の出張寿司職人/政治家として活動中。</span>
               <br>

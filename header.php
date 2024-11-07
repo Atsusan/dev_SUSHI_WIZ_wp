@@ -16,7 +16,7 @@
         'plan' => is_page('page-plan'),
         'profile' => is_page('page-profile'),
         'faq' => is_page('page-faq'),
-        'archive' => is_archive() || is_single(),
+        'archive' => is_archive() || is_single() || is_404() || is_page('page-privacypolicy'),
       );
       foreach ($body_classes as $class => $condition) {
         if ($condition) {
@@ -38,6 +38,7 @@
                       'faq' => 'faq',
                       'contact' => 'contact',
                       'reservation' => 'contact',
+                      'privacypolicy' => 'article',
                     );
                     $class_output = false; // ここで変数を初期化
                     foreach ($page_slugs as $page => $class) {
@@ -48,7 +49,7 @@
                       }
                     }
                     if (!$class_output) {
-                      if (is_archive() || is_single()) {
+                      if (is_archive() || is_single() || is_404()) {
                         echo esc_html('article');
                       }
                     }
@@ -59,7 +60,7 @@
         </a>
       </h1>
       <div class="l-fv__textBox">
-        <p class="l-fv__enTitle">
+        <p class="l-fv__enTitle<?php if(is_page('privacypolicy') || is_page('reservation')) {echo esc_html('--fzSmall');} ?>">
         <?php
           $page_titles = array(
             'concept' => 'CONCEPT',
@@ -68,17 +69,21 @@
             'faq' => 'FAQ',
             'contact' => 'CONTACT',
             'reservation' => 'RESERVATION',
+            'privacypolicy' => 'PRIVACY POLICY',
           );
+          $title_output = false;
           foreach ($page_titles as $page => $title) {
             if (is_page($page)) {
               echo esc_html($title);
-              $class_output = true; // クラスが出力されたことを示すフラグを設定
+              $title_output = true;
               break;
             }
           }
-          if (!$class_output) {
+          if (!$title_output) {
             if (is_archive() || is_single()) {
               echo esc_html('ARTICLE');
+            } elseif(is_404()) {
+              echo esc_html('404 PAGE');
             }
           }
         ?>

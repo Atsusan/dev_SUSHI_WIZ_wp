@@ -39,6 +39,5 @@ Template Name: Contact Page
     </div>
   </div>
   <!-- ▲ p-contactForm -->
-</main>
-<!-- ▲ main -->
+
 <?php get_footer(); ?>

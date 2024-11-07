@@ -4,20 +4,11 @@
 <section class="p-topFvContents">
   <div class="p-topFvContents__inner">
     <div class="p-topFvContents__textBox">
-      <h2 class="p-topFvContents__mainText">
-        握りたての鮨で
-        <br>
-        心躍る
-        <br>
-        祭りのような
-        <br>
-        ライブ体験を。
-      </h2>
+      <h2 class="p-topFvContents__mainText">握りたての鮨で<br>心躍る<br>祭りのような<br>ライブ体験を。</h2>
     </div>
   </div>
   <div class="p-topFvContents__imgBox">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-fv-content-item.jpg" alt="" class="p-topFvContents__img" width="604"
-      height="606">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-fv-content-item.jpg" alt="" class="p-topFvContents__img" width="604" height="606">
   </div>
   <div class="p-topFvContents__scrollBox">
     <div class="c-scrollDown__box">
@@ -32,22 +23,14 @@
 <section class="p-topConcept">
   <div class="p-topConcept__head">
     <div class="p-topConcept__titleBox">
-      <h2 class="p-topConcept__title">
-        鮨で人を笑顔にしたい
-        <br>
-        鮨で人とを繋げたい
-      </h2>
+      <h2 class="p-topConcept__title">鮨で人を笑顔にしたい<br>人と人を繋げたい</h2>
     </div>
     <div class="p-topConcept__imgBox">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-concept-bg.jpg" alt="concept-bg" class="p-topConcept__img" width="780"
-        height="676">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-concept-bg.jpg" alt="concept-bg" class="p-topConcept__img" width="780" height="676">
     </div>
   </div>
   <div class="p-topConcept__inner">
-    <p class="p-topConcept__text">
-      SUSHI
-      WIZは、新鮮で美味しいお鮨を、ご自宅で手軽に楽しんでいただける出張寿司サービスです。こだわり抜いた食材とリーズナブルな価格、お客様のニーズに合わせた多彩なプランで、どこでも誰とでも美味しいお鮨を楽しめます。
-    </p>
+    <p class="p-topConcept__text">SUSHI WIZは、新鮮で美味しいお鮨を、ご自宅で手軽に楽しんでいただける出張寿司サービスです。こだわり抜いた食材とリーズナブルな価格、お客様のニーズに合わせた多彩なプランで、どこでも誰とでも美味しいお鮨を楽しめます。</p>
     <div class="p-topConcept__btnBox">
       <div class="c-btn">
         <a href="<?php echo esc_url(home_url('/concept')); ?>" class="c-btn__link">MORE</a>
@@ -65,22 +48,11 @@
         <h2 class="c-secondHeading__title">PROFILE</h2>
       </div>
       <div class="p-topProfile__imgBox">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-profile-img.jpg" alt="高橋 元気" class="p-topProfile__img" width="660"
-          height="440">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-profile-img.jpg" alt="高橋 元気" class="p-topProfile__img" width="660" height="440">
       </div>
       <div class="p-topProfile__textBox">
-        <h3 class="p-topProfile__title">
-          とびっきりのお鮨を
-          <br>
-          楽しく握ります
-        </h3>
-        <p class="p-topProfile__text">
-          現職の中央区議会議員でもある異色の経歴をもつ
-          職人・高橋元気が名店で腕を磨いた確かな技術で
-          独創的かつエンターテイメント性の高い鮨で<br>
-          皆様の特別な日もいつもの日常にも<br>
-          祭りのようなワクワクする時間を提供します。
-        </p>
+        <h3 class="p-topProfile__title">とびっきりのお鮨を<br>楽しく握ります</h3>
+        <p class="p-topProfile__text">現職の中央区議会議員でもある異色の経歴をもつ職人・高橋元気が名店で腕を磨いた確かな技術で独創的かつエンターテイメント性の高い鮨で<br>皆様の特別な日もいつもの日常にも<br>祭りのようなワクワクする時間を提供します。</p>
       </div>
       <div class="p-topProfile__btnBox">
         <div class="c-btn--black">
@@ -98,11 +70,7 @@
     <div class="c-secondHeading">
       <h2 class="c-secondHeading__title--white">PLAN</h2>
     </div>
-    <p class="p-topPlan__read">
-      リーズナブルで多種多様な
-      <br>
-      プランをご用意しております。
-    </p>
+    <p class="p-topPlan__read">リーズナブルで多種多様な<br>プランをご用意しております。</p>
   </div>
   <ul class="p-topPlan__list">
     <li class="p-topPlan__item">
@@ -110,14 +78,11 @@
         <div class="p-topPlan__textBox">
           <h3 class="p-topPlan__title">個人宅プラン</h3>
           <span class="p-topPlan__headCount">( 1～８名様 )</span>
-          <p class="p-topPlan__text">
-            全16種類のコースからお選びいただけます。
-          </p>
+          <p class="p-topPlan__text">全16種類のコースからお選びいただけます。</p>
         </div>
         <div class="p-topPlan__moreBox">
           <span class="p-topPlan__more">VIEW MORE</span>
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-btn-more.svg" alt="view more" class="p-topPlan__moreImg"
-            width="137" height="11">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-btn-more.svg" alt="view more" class="p-topPlan__moreImg" width="137" height="11">
         </div>
       </a>
     </li>
@@ -126,14 +91,11 @@
         <div class="p-topPlan__textBox">
           <h3 class="p-topPlan__title">パーティープラン</h3>
           <span class="p-topPlan__headCount">( ８名様～ )</span>
-          <p class="p-topPlan__text">
-            お客様のご希望に合わせてメニューを考えます。
-          </p>
+          <p class="p-topPlan__text">お客様のご希望に合わせてメニューを考えます。</p>
         </div>
         <div class="p-topPlan__moreBox">
           <span class="p-topPlan__more">VIEW MORE</span>
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-btn-more.svg" alt="view more" class="p-topPlan__moreImg"
-            width="137" height="11">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-btn-more.svg" alt="view more" class="p-topPlan__moreImg" width="137" height="11">
         </div>
       </a>
     </li>
@@ -141,16 +103,11 @@
       <a href="<?php echo esc_url(home_url('/plan')); ?>#alcohol" class="p-topPlan__link">
         <div class="p-topPlan__textBox">
           <h3 class="p-topPlan__title">日本酒プラン</h3>
-          <p class="p-topPlan__text">
-            SAKE DIPLOMA の資格を持つスタッフが厳選した
-            <br>
-            日本酒をペアリングしたコース。
-          </p>
+          <p class="p-topPlan__text">SAKE DIPLOMA の資格を持つスタッフが厳選した<br>日本酒をペアリングしたコース。</p>
         </div>
         <div class="p-topPlan__moreBox">
           <span class="p-topPlan__more">VIEW MORE</span>
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-btn-more.svg" alt="view more" class="p-topPlan__moreImg"
-            width="137" height="11">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-btn-more.svg" alt="view more" class="p-topPlan__moreImg" width="137" height="11">
         </div>
       </a>
     </li>
@@ -175,8 +132,7 @@
         <?php if ($instagram_url): ?>
           <a href="<?php echo esc_url($instagram_url); ?>" class="c-btn__link">
             <span class="c-btn__text">VIEW ON</span>
-            <svg class="c-btn__img" width="20" height="19" viewBox="0 0 20 19" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+            <svg class="c-btn__img" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_84_1380)">
                 <path
                   d="M9.5271 1.71074C12.0654 1.71074 12.366 1.72187 13.3642 1.76641C14.2919 1.80723 14.7929 1.96309 15.1269 2.09297C15.5685 2.26367 15.8876 2.47148 16.2179 2.80176C16.5519 3.13574 16.756 3.45117 16.9267 3.89277C17.0566 4.22676 17.2125 4.73145 17.2533 5.65547C17.2978 6.65742 17.3089 6.95801 17.3089 9.49258C17.3089 12.0309 17.2978 12.3314 17.2533 13.3297C17.2125 14.2574 17.0566 14.7584 16.9267 15.0924C16.756 15.534 16.5482 15.8531 16.2179 16.1834C15.8839 16.5174 15.5685 16.7215 15.1269 16.8922C14.7929 17.0221 14.2882 17.1779 13.3642 17.2188C12.3623 17.2633 12.0617 17.2744 9.5271 17.2744C6.98882 17.2744 6.68823 17.2633 5.68999 17.2188C4.76226 17.1779 4.26128 17.0221 3.92729 16.8922C3.48569 16.7215 3.16655 16.5137 2.83628 16.1834C2.50229 15.8494 2.29819 15.534 2.12749 15.0924C1.99761 14.7584 1.84175 14.2537 1.80093 13.3297C1.7564 12.3277 1.74526 12.0271 1.74526 9.49258C1.74526 6.9543 1.7564 6.65371 1.80093 5.65547C1.84175 4.72773 1.99761 4.22676 2.12749 3.89277C2.29819 3.45117 2.50601 3.13203 2.83628 2.80176C3.17026 2.46777 3.48569 2.26367 3.92729 2.09297C4.26128 1.96309 4.76597 1.80723 5.68999 1.76641C6.68823 1.72187 6.98882 1.71074 9.5271 1.71074ZM9.5271 0C6.948 0 6.62515 0.0111328 5.61206 0.0556641C4.60269 0.100195 3.90874 0.263477 3.30757 0.497266C2.68042 0.742188 2.14976 1.06504 1.6228 1.5957C1.09214 2.12266 0.769287 2.65332 0.524365 3.27676C0.290576 3.88164 0.127295 4.57187 0.0827637 5.58125C0.0382324 6.59805 0.0270996 6.9209 0.0270996 9.5C0.0270996 12.0791 0.0382324 12.402 0.0827637 13.415C0.127295 14.4244 0.290576 15.1184 0.524365 15.7195C0.769287 16.3467 1.09214 16.8773 1.6228 17.4043C2.14976 17.9312 2.68042 18.2578 3.30386 18.499C3.90874 18.7328 4.59897 18.8961 5.60835 18.9406C6.62144 18.9852 6.94429 18.9963 9.52339 18.9963C12.1025 18.9963 12.4253 18.9852 13.4384 18.9406C14.4478 18.8961 15.1417 18.7328 15.7429 18.499C16.3664 18.2578 16.897 17.9312 17.424 17.4043C17.9509 16.8773 18.2775 16.3467 18.5187 15.7232C18.7525 15.1184 18.9158 14.4281 18.9603 13.4188C19.0048 12.4057 19.016 12.0828 19.016 9.50371C19.016 6.92461 19.0048 6.60176 18.9603 5.58867C18.9158 4.5793 18.7525 3.88535 18.5187 3.28418C18.2849 2.65332 17.9621 2.12266 17.4314 1.5957C16.9044 1.06875 16.3738 0.742188 15.7503 0.500977C15.1455 0.267187 14.4552 0.103906 13.4458 0.059375C12.4291 0.0111328 12.1062 0 9.5271 0Z" />
@@ -288,9 +244,7 @@
         </div>
         <div class="p-topFlow__textBox">
           <h3 class="p-topFlow__title">予約確認</h3>
-          <p class="p-topFlow__text">
-            ご希望の内容、日時、場所についてヒアリングいたします。
-          </p>
+          <p class="p-topFlow__text">ご希望の内容、日時、場所についてヒアリングいたします。</p>
         </div>
       </li>
       <li class="p-topFlow__item">
@@ -300,9 +254,7 @@
         </div>
         <div class="p-topFlow__textBox">
           <h3 class="p-topFlow__title">予約確定</h3>
-          <p class="p-topFlow__text">
-            内容に問題がなければ、ご予約の確定となります。
-          </p>
+          <p class="p-topFlow__text">内容に問題がなければ、ご予約の確定となります。</p>
         </div>
       </li>
       <li class="p-topFlow__item">
@@ -312,9 +264,7 @@
         </div>
         <div class="p-topFlow__textBox">
           <h3 class="p-topFlow__title">当日の実施</h3>
-          <p class="p-topFlow__text">
-            開始の1時間前から準備～片付けまでさせて頂きます。自慢の鮨をお楽しみください。
-          </p>
+          <p class="p-topFlow__text">開始の1時間前から準備～片付けまでさせて頂きます。自慢の鮨をお楽しみください。</p>
         </div>
       </li>
     </ul>
@@ -380,14 +330,15 @@
           </div>
           <div class="swiper-button-next js-swiperNews__next p-topNews__swiperNext"></div>
         </div>
+      <?php endif; ?>
     </div>
     <!-- ▲ topNews Slide End -->
-    <div class="p-topNews__btnBox">
-      <div class="c-btn--black">
-        <a href="<?php echo esc_url(home_url('/archive')); ?>" class="c-btn__link">MORE</a>
-      </div>
+  </div>
+  <div class="p-topNews__btnBox">
+    <div class="c-btn--black">
+      <a href="<?php echo esc_url(home_url('/archive')); ?>" class="c-btn__link">MORE</a>
     </div>
-  <?php endif; ?>
+  </div>
 </section>
 <!-- ▲ p-topNews -->
 

@@ -155,9 +155,9 @@ Template Name: Plan Page
                       </div>
                       <div class="c-modal__imgBox">
                         <?php if (!empty($plan_image_url)): ?>
-                          <img src="<?php echo esc_url($plan_image_url); ?>" alt="" class="c-modal__img" width="660" height="440">
+                          <img src="<?php echo esc_url($plan_image_url); ?>" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
                         <?php else: ?>
-                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-image.jpg" alt="" class="c-modal__img" width="660" height="440">
+                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-image.jpg" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
                         <?php endif; ?>
                       </div>
                       <div class="c-modal__textBox">
@@ -186,7 +186,7 @@ Template Name: Plan Page
               <?php foreach ($plan_images as $image_url): // 画像URLの配列をループ
               ?>
                 <li class="swiper-slide p-planPersonal__slide">
-                  <img src="<?php echo esc_url($image_url); ?>" class="p-planPersonal__imgBox" width="660" height="440">
+                  <img src="<?php echo esc_url($image_url); ?>" class="p-planPersonal__imgBox" width="660" height="440" loading="lazy">
                 </li>
               <?php endforeach; ?>
             </ul>
@@ -256,9 +256,9 @@ Template Name: Plan Page
                       </div>
                       <div class="c-modal__imgBox">
                         <?php if (!empty($plan_image_url)): ?>
-                          <img src="<?php echo esc_url($plan_image_url); ?>" alt="" class="c-modal__img" width="660" height="440">
+                          <img src="<?php echo esc_url($plan_image_url); ?>" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
                         <?php else: ?>
-                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-image.jpg" alt="" class="c-modal__img" width="660" height="440">
+                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-image.jpg" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
                         <?php endif; ?>
                       </div>
                       <div class="c-modal__textBox">
@@ -282,12 +282,12 @@ Template Name: Plan Page
 
         <!-- ▼ Slide Stat -->
         <div class="p-planPersonal__swiperContainer">
-          <div id="planPersonal1" class="swiper p-planPersonal__swiper">
+          <div id="planPersonal2" class="swiper p-planPersonal__swiper">
             <ul class="swiper-wrapper p-planPersonal__wrapper">
               <?php foreach ($plan_images as $image_url): // 画像URLの配列をループ
               ?>
                 <li class="swiper-slide p-planPersonal__slide">
-                  <img src="<?php echo esc_url($image_url); ?>" class="p-planPersonal__imgBox" width="660" height="440">
+                  <img src="<?php echo esc_url($image_url); ?>" class="p-planPersonal__imgBox" width="660" height="440" loading="lazy">
                 </li>
               <?php endforeach; ?>
             </ul>
@@ -357,9 +357,9 @@ Template Name: Plan Page
                       </div>
                       <div class="c-modal__imgBox">
                         <?php if (!empty($plan_image_url)): ?>
-                          <img src="<?php echo esc_url($plan_image_url); ?>" alt="" class="c-modal__img" width="660" height="440">
+                          <img src="<?php echo esc_url($plan_image_url); ?>" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
                         <?php else: ?>
-                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-image.jpg" alt="" class="c-modal__img" width="660" height="440">
+                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-image.jpg" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
                         <?php endif; ?>
                       </div>
                       <div class="c-modal__textBox">
@@ -383,12 +383,12 @@ Template Name: Plan Page
 
         <!-- ▼ Slide Stat -->
         <div class="p-planPersonal__swiperContainer">
-          <div id="planPersonal1" class="swiper p-planPersonal__swiper">
+          <div id="planPersonal3" class="swiper p-planPersonal__swiper">
             <ul class="swiper-wrapper p-planPersonal__wrapper">
               <?php foreach ($plan_images as $image_url): // 画像URLの配列をループ
               ?>
                 <li class="swiper-slide p-planPersonal__slide">
-                  <img src="<?php echo esc_url($image_url); ?>" class="p-planPersonal__imgBox" width="660" height="440">
+                  <img src="<?php echo esc_url($image_url); ?>" class="p-planPersonal__imgBox" width="660" height="440" loading="lazy">
                 </li>
               <?php endforeach; ?>
             </ul>
@@ -457,9 +457,9 @@ Template Name: Plan Page
                       </div>
                       <div class="c-modal__imgBox">
                         <?php if (!empty($plan_image_url)): ?>
-                          <img src="<?php echo esc_url($plan_image_url); ?>" alt="" class="c-modal__img" width="660" height="440">
+                          <img src="<?php echo esc_url($plan_image_url); ?>" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
                         <?php else: ?>
-                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-image.jpg" alt="" class="c-modal__img" width="660" height="440">
+                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-image.jpg" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
                         <?php endif; ?>
                       </div>
                       <div class="c-modal__textBox">
@@ -483,12 +483,12 @@ Template Name: Plan Page
 
         <!-- ▼ Slide Stat -->
         <div class="p-planPersonal__swiperContainer">
-          <div id="planPersonal1" class="swiper p-planPersonal__swiper">
+          <div id="planPersonal4" class="swiper p-planPersonal__swiper">
             <ul class="swiper-wrapper p-planPersonal__wrapper">
               <?php foreach ($plan_images as $image_url): // 画像URLの配列をループ
               ?>
                 <li class="swiper-slide p-planPersonal__slide">
-                  <img src="<?php echo esc_url($image_url); ?>" class="p-planPersonal__imgBox" width="660" height="440">
+                  <img src="<?php echo esc_url($image_url); ?>" class="p-planPersonal__imgBox" width="660" height="440" loading="lazy">
                 </li>
               <?php endforeach; ?>
             </ul>
@@ -507,7 +507,7 @@ Template Name: Plan Page
     <div class="p-planAlcohol__inner">
       <h2 class="p-planAlcohol__title">日本酒</h2>
       <p class="p-planAlcohol__read">
-        厳選日本酒とお好きな10,000円コースとペアリングプラン
+        厳選日本酒とお好きな10,000円コースのペアリングプラン
       </p>
 
       <div id="plan5" class="p-planAlcohol__planContainer">
@@ -570,9 +570,9 @@ Template Name: Plan Page
                       </div>
                       <div class="c-modal__imgBox">
                         <?php if (!empty($plan_image_url)): ?>
-                          <img src="<?php echo esc_url($plan_image_url); ?>" alt="" class="c-modal__img" width="660" height="440">
+                          <img src="<?php echo esc_url($plan_image_url); ?>" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
                         <?php else: ?>
-                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-image.jpg" alt="" class="c-modal__img" width="660" height="440">
+                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-image.jpg" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
                         <?php endif; ?>
                       </div>
                       <div class="c-modal__textBox">
@@ -598,12 +598,12 @@ Template Name: Plan Page
         <div class="p-planAlcohol__swiperContainer">
           <div id="planAlcohol1" class="swiper p-planAlcohol__swiper">
             <ul class="swiper-wrapper p-planAlcohol__wrapper">
-              <?php foreach ($plan_images as $image_url): // 画像URLの配列をループ
-              ?>
                 <li class="swiper-slide p-planAlcohol__slide">
-                  <img src="<?php echo esc_url($image_url); ?>" class="p-planAlcohol__imgBox" width="660" height="440">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/images/plan-alcohol-item1.jpg" class="p-planAlcohol__imgBox" width="660" height="440" loading="lazy">
                 </li>
-              <?php endforeach; ?>
+                <li class="swiper-slide p-planAlcohol__slide">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/images/plan-alcohol-item3.jpg" class="p-planAlcohol__imgBox" width="660" height="440" loading="lazy">
+                </li>
             </ul>
             <div class="p-planAlcohol__paginationBox">
               <div class="swiper-pagination p-planAlcohol__pagination"></div>
@@ -627,7 +627,7 @@ Template Name: Plan Page
         </p>
         <div class="p-planAlcohol__planImgBox">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/plan-alcohol-item2.jpg" alt="パーティープラン" class="p-planAlcohol__planImg"
-            width="660" height="440">
+            width="660" height="440" loading="lazy">
         </div>
       </div>
     </div>

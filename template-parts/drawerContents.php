@@ -56,7 +56,7 @@
            <li class="c-drawerMenu__snsItem">
              <?php $line_url = get_option('line_url', '') ?>
              <?php if ($line_url): ?>
-               <a href="<?php echo esc_url($line_url); ?>" class="c-drawerMenu__snsLink">
+               <a href="<?php echo esc_url($line_url); ?>" class="c-drawerMenu__snsLink" target="_blank" rel="noopener noreferrer">
                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/sns-line.png" alt="LINE" class="c-drawerMenu__snsImg" width="118"
                    height="118">
                </a>
@@ -65,7 +65,7 @@
            <li class="c-drawerMenu__snsItem">
              <?php $instagram_url = get_option('instagram_url', '') ?>
              <?php if ($instagram_url): ?>
-               <a href="<?php echo esc_url($instagram_url); ?>" class="c-drawerMenu__snsLink">
+               <a href="<?php echo esc_url($instagram_url); ?>" class="c-drawerMenu__snsLink" target="_blank" rel="noopener noreferrer">
                  <img class="c-drawerMenu__snsImg" src="<?php echo get_template_directory_uri(); ?>/assets/images/common/sns-Instagram.svg" alt="Instagram"
                    width="20" height="19">
                </a>

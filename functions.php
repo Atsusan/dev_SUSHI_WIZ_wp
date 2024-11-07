@@ -66,8 +66,8 @@ function add_files() {
   if (is_page('faq')) {
     wp_enqueue_style('faq-css', get_template_directory_uri() . '/assets/css/faq.css', array('common-style'), '1.0.0');
   }
-  // Archive and Single CSS
-  if (is_archive() || is_single()) {
+  // Archive and Single amd 404 and PrivacyPolicy CSS
+  if (is_archive() || is_single() || is_404() || is_page('privacypolicy')) {
     wp_enqueue_style('archive-css', get_template_directory_uri() . '/assets/css/article.css', array('common-style'), '1.0.0');
   }
   // Contact and Reservation CSS
@@ -84,15 +84,22 @@ function add_files() {
   wp_enqueue_script('scroll', get_template_directory_uri() . '/assets/js/scroll.js', array(), '1.0.0', true);
   // Drawer
   wp_enqueue_script('drawer', get_template_directory_uri() . '/assets/js/drawer.js', array(), '1.0.0', true);
-  // Loop Slide
-  wp_enqueue_script('loop-slide', get_template_directory_uri() . '/assets/js/loopSlide.js', array(), '1.0.0', true);
-  // Swiper JS
-  wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), '11', true);
-  wp_enqueue_script('swiper-js', get_template_directory_uri() . '/assets/js/swiper.js', array(), '1.0.0', true);
+  if(is_front_page() || is_page('plan')) {
+    // Loop Slide
+    wp_enqueue_script('loop-slide', get_template_directory_uri() . '/assets/js/loopSlide.js', array(), '1.0.0', true);
+    // Swiper JS
+    wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), '11', true);
+    wp_enqueue_script('swiper-js', get_template_directory_uri() . '/assets/js/swiper.js', array(), '1.0.0', true);
+  }
   // Accordion
-  wp_enqueue_script('accordion-js', get_template_directory_uri() . '/assets/js/accordion.js', array(), '1.0.0', true);
+  if(is_front_page() || is_page('faq')) {
+    wp_enqueue_script('accordion-js', get_template_directory_uri() . '/assets/js/accordion.js', array(), '1.0.0', true);
+  }
   // modal JS
-  wp_enqueue_script('modal-js', get_template_directory_uri() .'/assets/js/modal.js', array(), '1.0.0', true);
+  if(is_page('plan')) {
+    wp_enqueue_script('modal-js', get_template_directory_uri() .'/assets/js/modal.js', array(), '1.0.0', true);
+  }
+
 }
 add_action('wp_enqueue_scripts', 'add_files');
 
@@ -159,7 +166,7 @@ function change_post_menu_label() {
 add_action( 'save_post', 'assign_default_category', 10, 3 );
 
 /*------------------------------------------
- *  LINE URL設定項目を追加
+ * URL設定項目を追加
  *----------------------------------------*/
 // LINE URL設定項目を追加
 function add_line_url_setting() {

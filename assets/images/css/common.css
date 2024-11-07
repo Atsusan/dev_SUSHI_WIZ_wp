@@ -916,7 +916,7 @@ a {
   color: var(--white);
 }
 .l-fv__enTitle--fzSmall {
-  font-size: clamp(3rem, 4.2vw, 5.6rem);
+  font-size: clamp(3.8rem, 5vw, 5.6rem);
 }
 @media (min-width: 767px) {
   .l-fv__loopImagesContainer {
