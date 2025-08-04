@@ -1,0 +1,33 @@
+/* u-display-none
+----------------------------------------------------------------- */
+@use "../../global" as g;
+
+.u-displayNone {
+  &--PU {
+    display: block;
+    @include g.tabletS {
+      display: none;
+    }
+  }
+
+  &--PO {
+    display: none;
+    @include g.tabletS {
+      display: block;
+    }
+  }
+
+  &--flexPU {
+    display: flex;
+    @include g.tabletS {
+      display: none;
+    }
+  }
+
+  &--flexPO {
+    display: none;
+    @include g.tabletS {
+      display: flex;
+    }
+  }
+}

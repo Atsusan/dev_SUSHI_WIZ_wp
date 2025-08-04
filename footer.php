@@ -72,7 +72,7 @@
     <div class="l-footer__bottom">
       <a href="<?php echo esc_url(home_url('/privacypolicy')); ?>" class="l-footer__link">プライバシーポリシー</a>
       <p class="l-footer__copyRightBox">
-        <small class="l-footer__copyRight">© 2024 SUSHI WIZ</small>
+        <small class="l-footer__copyRight">© <?php echo esc_html( date("Y") ); ?> SUSHI WIZ</small>
       </p>
     </div>
   </div>

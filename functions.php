@@ -80,8 +80,6 @@ function add_files() {
   // JS読込み
   // Smooth Scroll
   wp_enqueue_script('smooth-scroll', get_template_directory_uri() . '/assets/js/smooth-scroll.js', array(), '1.0.0', true);
-  // Scroll
-  wp_enqueue_script('scroll', get_template_directory_uri() . '/assets/js/scroll.js', array(), '1.0.0', true);
   // Drawer
   wp_enqueue_script('drawer', get_template_directory_uri() . '/assets/js/drawer.js', array(), '1.0.0', true);
   if(is_front_page() || is_page('plan')) {

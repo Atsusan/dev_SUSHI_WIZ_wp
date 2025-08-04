@@ -19,33 +19,33 @@ const swiperImages = new Swiper(".js-swiperImages", {
 // top slide News
 document.addEventListener("DOMContentLoaded", function () {
   const swiperContainer = document.querySelector('.js-swiperNews');
-  const slides = swiperContainer.querySelectorAll('.p-topNews__swiperSlide');
+  if (swiperContainer) {
+    const slides = swiperContainer.querySelectorAll('.p-topNews__swiperSlide');
 
-  const swiperNews = new Swiper(".js-swiperNews", {
-    centeredSlides: true,
-    slidesPerView: "auto",
-    loop: slides.length > 3,
-    spaceBetween: slides.length > 1 ? -25 : 0,
-    speed: 1000,
-    autoplay: slides.length > 3 ? {
-      delay: 3000,
-      disableOnInteraction: false,
-    } : false,
-    // ページネーション
-    pagination: {
-      el: ".js-swiperNews__pagination",
-      clickable: true,
-      type: "fraction",
-    },
-    // 前後の矢印
-    navigation: {
-      nextEl: ".js-swiperNews__next",
-      prevEl: ".js-swiperNews__prev",
-    },
-  });
-
+    const swiperNews = new Swiper(".js-swiperNews", {
+      centeredSlides: true,
+      slidesPerView: "auto",
+      loop: slides.length > 3,
+      spaceBetween: slides.length > 1 ? -25 : 0,
+      speed: 1000,
+      autoplay: slides.length > 3 ? {
+        delay: 3000,
+        disableOnInteraction: false,
+      } : false,
+      // ページネーション
+      pagination: {
+        el: ".js-swiperNews__pagination",
+        clickable: true,
+        type: "fraction",
+      },
+      // 前後の矢印
+      navigation: {
+        nextEl: ".js-swiperNews__next",
+        prevEl: ".js-swiperNews__prev",
+      },
+    });
+  }
 });
-
 
 // Planページの共通swiper設定
 const defaultSwiperSettings = {

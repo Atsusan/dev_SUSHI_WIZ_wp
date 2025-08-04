@@ -1,0 +1,50 @@
+//pxをvwに変換する関数
+@function vw($size, $viewport: 1366){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@function vw_ds($size, $viewport: 1280){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@function vw_tm($size, $viewport: 1180){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@function vw_ts($size, $viewport: 1035){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@function vw_sp($size, $viewport: 430){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+//デスクトップラージサイズのclampを生成する関数
+@function cldl($sp, $pc) {
+  @return clamp(#{$sp}px, vw($pc), #{$pc}px);
+}
+
+//デスクトップサイズのclampを生成する関数
+@function cld($sp, $pc) {
+  @return clamp(#{$sp}px, vw_ds($pc), #{$pc}px);
+}
+
+//タブレットサイズのclampを生成する関数
+@function clt($sp, $pc) {
+  @return clamp(#{$sp}px, vw_tm($pc), #{$pc}px);
+}
+
+// スマホサイズのclampを生成する関数
+@function cls($sp, $pc) {
+  @return clamp(#{$sp}px, vw_ts($pc), #{$pc}px);
+}
+
+//pxからvhの値を取得する関数
+@function vh($px_value) {
+  @return calc($px_value / var(--windowHeight) * 100vh);
+}
