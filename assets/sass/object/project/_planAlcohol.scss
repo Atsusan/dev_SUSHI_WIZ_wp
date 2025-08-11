@@ -1,0 +1,157 @@
+/* p-planAlcohol
+----------------------------------------------------------------- */
+@use "../../global" as g;
+
+.p-planAlcohol {
+  padding: 6rem 0 0;
+  background: url(../images/planDrink.webp) no-repeat center top/cover;
+
+  &__inner {
+    padding: 0 3rem;
+  }
+
+  /* Common START */
+
+  &__list {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__item {
+    //
+  }
+
+  &__headingBox {
+    min-height: 9rem;
+    padding-inline: 2rem;
+    padding-block: 1.6rem 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--liteWhite);
+  }
+
+  &__heading {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0;
+    color: var(--black);
+  }
+
+  &__sub {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0;
+    color: var(--black);
+
+    &--fzBig {
+      @extend .p-planAlcohol__heading;
+      font-family: var(--en);
+      font-size: calc(36 / 20 * 1em);
+    }
+    &--fzMidLarge {
+      @extend .p-planAlcohol__heading;
+      font-size: calc(24 / 20 * 1em);
+    }
+  }
+  /* Common END */
+
+  &RiceWine {
+    padding-bottom: 8rem;
+
+    &__title {
+      font-size: 4.8rem;
+      font-weight: 600;
+      line-height: 150%;
+      color: var(--white);
+      text-align: left;
+      font-weight: var(-en);
+    }
+
+    &__read {
+      margin-top: 3rem;
+      font-size: 2.4rem;
+      font-weight: 500;
+      line-height: 150%;
+      color: var(--white);
+    }
+
+    &__text {
+      margin-top: 0.8rem;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 180%;
+      color: var(--white);
+    }
+
+    &__imgBox {
+      margin-top: 3rem;
+      height: 100%;
+      width: 100%;
+      aspect-ratio: 330 / 220;
+      overflow: hidden;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &Wine {
+    padding-block: 8rem 11.5rem;
+    background: url(../images/planWine.webp) no-repeat center top/cover;
+
+    &__title {
+      font-size: 4.8rem;
+      font-weight: 600;
+      line-height: 150%;
+      color: var(--black);
+      text-align: left;
+      font-weight: var(-en);
+    }
+
+    &__read {
+      margin-top: 3rem;
+      font-size: 2.4rem;
+      font-weight: 500;
+      line-height: 150%;
+      color: var(--black);
+    }
+
+    &__text {
+      margin-top: 0.8rem;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 180%;
+      color: var(--black);
+    }
+
+    &__planRead {
+      margin-top: 3rem;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 1.44;
+      color: var(--black);
+    }
+
+    &__imgBox {
+      margin-top: 3rem;
+      height: 100%;
+      width: 100%;
+      aspect-ratio: 330 / 220;
+      overflow: hidden;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

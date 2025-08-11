@@ -102,8 +102,8 @@
     <li class="p-topPlan__item">
       <a href="<?php echo esc_url(home_url('/plan')); ?>#alcohol" class="p-topPlan__link">
         <div class="p-topPlan__textBox">
-          <h3 class="p-topPlan__title">日本酒プラン</h3>
-          <p class="p-topPlan__text">SAKE DIPLOMA の資格を持つスタッフが厳選した<br>日本酒をペアリングしたコース。</p>
+          <h3 class="p-topPlan__title">ペアリングプラン</h3>
+          <p class="p-topPlan__text">SAKE DIPLOMA の資格を持つスタッフが厳選した日本酒・ワインをペアリングしたコース。</p>
         </div>
         <div class="p-topPlan__moreBox">
           <span class="p-topPlan__more">VIEW MORE</span>

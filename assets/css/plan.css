@@ -227,17 +227,17 @@
 }
 .p-planCourse__list {
   margin-top: 4.3rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .p-planCourse__item {
   width: 100%;
   border-top: 1px solid var(--white);
-}
-.p-planCourse__item:nth-child(odd) {
-  border-right: 1px solid var(--white);
 }
 .p-planCourse__link, .p-planCourse__link--party {
   display: -webkit-box;
@@ -250,12 +250,33 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   min-height: 8.9rem;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  position: relative;
+  padding-inline: 2rem;
+}
+.p-planCourse__link::before, .p-planCourse__link--party::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  background: url(../images/common/icon_arrowRight.svg) no-repeat center center/contain;
+}
+@media (min-width: 767px) {
+  .p-planCourse__link:hover, .p-planCourse__link--party:hover {
+    background-color: var(--white);
+    color: var(--black);
+  }
+}
+@media (min-width: 767px) {
+  .p-planCourse__link:hover::before, .p-planCourse__link--party:hover::before {
+    background-image: url(../images/common/icon_arrowRight-hover.svg);
+  }
 }
 .p-planCourse__link--party .p-planCourse__price, .p-planCourse__link--party .p-planCourse__price--fzSmall {
   margin-top: 0;
@@ -270,18 +291,10 @@
   font-family: var(--en);
   line-height: 1;
 }
-@media (min-width: 767px) {
-  .p-planCourse__link:hover, .p-planCourse__link--party:hover {
-    background-color: var(--white);
-    color: var(--black);
-  }
-}
 .p-planCourse__price, .p-planCourse__price--fzSmall {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 600;
-  font-family: var(--en);
   line-height: 1;
-  color: var(--en);
   margin-top: -0.1rem;
 }
 .p-planCourse__price--fzSmall {
@@ -294,6 +307,7 @@
   line-height: 1;
 }
 .p-planCourse__plan--en {
+  font-size: 1.6rem;
   font-weight: 600;
   font-family: var(--en);
 }
@@ -316,6 +330,16 @@
   line-height: 150%;
   color: var(--black);
   text-align: center;
+}
+.p-planPersonal__titleBox {
+  margin-top: 8rem;
+}
+.p-planPersonal__text {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--black);
 }
 .p-planPersonal__planContainer {
   margin-top: 3rem;
@@ -442,36 +466,39 @@
   margin-left: 1.2rem;
 }
 
-/* p-planAlcohol
+/* p-planBuffet
 ----------------------------------------------------------------- */
-.p-planAlcohol {
-  padding: 6rem 0 5.8rem;
-  background: url(../images/plan-alcohol-bg.jpg) no-repeat center top/cover;
+.p-planBuffet {
+  padding: 6rem 0 4.8rem;
+  background: url(../images/planBuffet.webp) no-repeat center top/cover;
   /* その他バレット調整 */
   /* アクティブなバレットの調整 */
   /* バレットの余白調整 */
 }
-.p-planAlcohol__inner {
+.p-planBuffet__inner {
   padding: 0 3rem;
 }
-.p-planAlcohol__title {
+.p-planBuffet__title {
   font-size: 3.2rem;
   font-weight: 500;
   line-height: 150%;
-  color: var(--white);
+  color: var(--black);
   text-align: center;
 }
-.p-planAlcohol__read {
-  margin-top: 3rem;
-  font-size: 2rem;
+.p-planBuffet__text {
+  margin-top: 2rem;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 150%;
-  color: var(--white);
+  color: var(--black);
 }
-.p-planAlcohol__planContainer {
+.p-planBuffet__planContainer {
   margin-top: 3rem;
 }
-.p-planAlcohol__headingBox {
+.p-planBuffet__planContainer + .p-planBuffet__planContainer {
+  margin-top: 4rem;
+}
+.p-planBuffet__headingBox {
   min-height: 9rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -486,53 +513,29 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--liteWhite);
+  background-color: var(--liteBlack);
 }
-.p-planAlcohol__heading, .p-planAlcohol__heading--fzJp, .p-planAlcohol__heading--fzSmall {
+.p-planBuffet__heading, .p-planBuffet__heading--fzSmall {
   margin-top: 0.4rem;
   font-size: 3.2rem;
   font-weight: 500;
   font-family: var(--en);
   line-height: 1;
-  color: var(--black);
+  color: var(--white);
 }
-.p-planAlcohol__heading--fzSmall {
+.p-planBuffet__heading--fzSmall {
   font-size: 0.75em;
   font-weight: 500;
   font-family: var(--jp);
 }
-.p-planAlcohol__heading--fzJp {
-  margin-top: 0.2rem;
-  font-size: 2.4rem;
-  font-weight: 500;
-  font-family: var(--jp);
-  line-height: 150%;
-}
-.p-planAlcohol__sub, .p-planAlcohol__sub--mtSmall {
+.p-planBuffet__sub {
   margin-top: 0.8rem;
   font-size: 2rem;
   font-weight: 500;
   line-height: 1;
-  color: var(--black);
-}
-.p-planAlcohol__sub--mtSmall {
-  margin-top: 0.2rem;
-}
-.p-planAlcohol__planRead, .p-planAlcohol__planRead--mtSmall {
-  margin-top: 3rem;
-  font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 1.44;
   color: var(--white);
 }
-.p-planAlcohol__planRead--mtSmall {
-  margin-top: 2rem;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.7142857143;
-  color: var(--white);
-}
-.p-planAlcohol__textList {
+.p-planBuffet__textList {
   margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -542,11 +545,11 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.p-planAlcohol__textItem {
+.p-planBuffet__textItem {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.7142857143;
-  color: var(--white);
+  color: var(--black);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -554,71 +557,208 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.p-planAlcohol__textItem::before {
+.p-planBuffet__textItem::before {
   content: "・";
   display: block;
 }
-.p-planAlcohol__textButton {
+.p-planBuffet__textButton {
   text-decoration: underline;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
 }
 @media (min-width: 767px) {
-  .p-planAlcohol__textButton:hover {
+  .p-planBuffet__textButton:hover {
     opacity: 0.65;
   }
 }
-.p-planAlcohol__swiperContainer {
+.p-planBuffet__swiperContainer {
   margin-top: 3rem;
   overflow: hidden;
   position: relative;
 }
-.p-planAlcohol__swiper {
+.p-planBuffet__swiper {
   overflow: visible;
 }
-.p-planAlcohol__slide {
+.p-planBuffet__slide {
   width: 100%;
 }
-.p-planAlcohol__imgBox {
+.p-planBuffet__imgBox {
   width: 100%;
 }
-.p-planAlcohol__paginationBox {
+.p-planBuffet__paginationBox {
   position: relative;
   margin-top: 3rem;
 }
-.p-planAlcohol__pagination {
+.p-planBuffet__pagination {
   position: relative;
   top: unset !important;
   bottom: unset !important;
 }
-.p-planAlcohol .swiper-pagination-bullet {
+.p-planBuffet .swiper-pagination-bullet {
   width: 1rem;
   height: 1rem;
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
   background-color: transparent;
   opacity: 1;
   margin: 0;
 }
-.p-planAlcohol .swiper-pagination-bullet + .p-planAlcohol .swiper-pagination-bullet {
+.p-planBuffet .swiper-pagination-bullet + .p-planBuffet .swiper-pagination-bullet {
   margin-left: 12rem !important;
 }
-.p-planAlcohol .swiper-pagination-bullet-active {
-  background-color: var(--white);
+.p-planBuffet .swiper-pagination-bullet-active {
+  background-color: var(--black);
 }
-.p-planAlcohol .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet .swiper-pagination-bullet,
-.p-planAlcohol .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.p-planBuffet .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet .swiper-pagination-bullet,
+.p-planBuffet .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0;
 }
-.p-planAlcohol .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet .swiper-pagination-bullet:not(:first-child),
-.p-planAlcohol .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:first-child) {
+.p-planBuffet .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet .swiper-pagination-bullet:not(:first-child),
+.p-planBuffet .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:first-child) {
   margin-left: 1.2rem;
 }
-.p-planAlcohol__planImgBox {
-  margin-top: 2rem;
-  width: 100%;
+
+/* p-planAlcohol
+----------------------------------------------------------------- */
+.p-planAlcohol {
+  padding: 6rem 0 0;
+  background: url(../images/planDrink.webp) no-repeat center top/cover;
+  /* Common START */
+  /* Common END */
 }
-.p-planAlcohol__planImg {
+.p-planAlcohol__inner {
+  padding: 0 3rem;
+}
+.p-planAlcohol__list {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+.p-planAlcohol__headingBox {
+  min-height: 9rem;
+  padding-inline: 2rem;
+  padding-block: 1.6rem 0.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--liteWhite);
+}
+.p-planAlcohol__heading, .p-planAlcohol__sub--fzMidLarge, .p-planAlcohol__sub--fzBig {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: var(--black);
+}
+.p-planAlcohol__sub {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: var(--black);
+}
+.p-planAlcohol__sub--fzBig {
+  font-family: var(--en);
+  font-size: 1.8em;
+}
+.p-planAlcohol__sub--fzMidLarge {
+  font-size: 1.2em;
+}
+.p-planAlcoholRiceWine {
+  padding-bottom: 8rem;
+}
+.p-planAlcoholRiceWine__title {
+  font-size: 4.8rem;
+  font-weight: 600;
+  line-height: 150%;
+  color: var(--white);
+  text-align: left;
+  font-weight: var(-en);
+}
+.p-planAlcoholRiceWine__read {
+  margin-top: 3rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--white);
+}
+.p-planAlcoholRiceWine__text {
+  margin-top: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 180%;
+  color: var(--white);
+}
+.p-planAlcoholRiceWine__imgBox {
+  margin-top: 3rem;
+  height: 100%;
   width: 100%;
+  aspect-ratio: 330/220;
+  overflow: hidden;
+}
+.p-planAlcoholRiceWine__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-planAlcoholWine {
+  padding-block: 8rem 11.5rem;
+  background: url(../images/planWine.webp) no-repeat center top/cover;
+}
+.p-planAlcoholWine__title {
+  font-size: 4.8rem;
+  font-weight: 600;
+  line-height: 150%;
+  color: var(--black);
+  text-align: left;
+  font-weight: var(-en);
+}
+.p-planAlcoholWine__read {
+  margin-top: 3rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--black);
+}
+.p-planAlcoholWine__text {
+  margin-top: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 180%;
+  color: var(--black);
+}
+.p-planAlcoholWine__planRead {
+  margin-top: 3rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.44;
+  color: var(--black);
+}
+.p-planAlcoholWine__imgBox {
+  margin-top: 3rem;
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 330/220;
+  overflow: hidden;
+}
+.p-planAlcoholWine__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* p-planTrip

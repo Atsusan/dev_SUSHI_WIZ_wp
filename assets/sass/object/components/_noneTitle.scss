@@ -1,0 +1,10 @@
+/* c-noneTitle
+----------------------------------------------------------------- */
+@use "../../global" as g;
+
+.c-noneTitle {
+  font-size: 1.4rem;
+  color: var(--black);
+  text-align: center;
+  margin: 0 auto;
+}

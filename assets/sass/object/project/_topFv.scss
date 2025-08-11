@@ -1,0 +1,101 @@
+/* p-topFv
+----------------------------------------------------------------- */
+@use "../../global" as g;
+
+.p-topFv {
+  margin-top: 8.7rem;
+  // background: url(../images/sp/fv.jpg) no-repeat center top/cover;
+  // height: calc(100vh - 8.7rem); // svhが効かない時の保険
+  // height: calc(100svh - 8.7rem);
+  position: relative;
+  @include g.tabletM {
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -68.7%;
+    width: 100%;
+    height: 100%;
+    background: var(--black);
+    opacity: 0.8;
+    transform: skewX(12.5deg);
+  }
+
+  &__textSwiperBox {
+    //
+  }
+
+  &__textContents {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__inner {
+    padding-left: 1.9rem;
+  }
+
+  &__textBox {
+    margin-top: g.vh_sp(294);
+  }
+
+  &__mainText {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--white);
+
+    &--littleSmallFz {
+      font-size: 0.75em;
+    }
+
+    &--mlSmallLittleFz {
+      font-size: 0.75em;
+      margin-left: -0.5rem;
+    }
+
+    &--smallFz {
+      font-size: 0.875em;
+    }
+
+    &--bigFz {
+      @extend .p-topFv__mainText;
+      font-size: 1.25em;
+      font-weight: bold;
+    }
+  }
+
+  &__imagesSwiperContainer {
+    margin-top: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 920px) {
+  .p-topFv {
+    position: relative;
+    background: url(../images/fv-tablet.jpg) no-repeat center top/cover;
+    height: 65rem;
+
+    &::before {
+      content: "";
+      display: block;
+      background-color: var(--black);
+      transform: translateY(-8.7rem);
+      width: 100%;
+      height: 8.7rem;
+    }
+
+    &::after {
+      content: "";
+      display: none;
+    }
+
+    &__textSwiperBox,
+    &__textContents,
+    &__imagesSwiperContainer {
+      display: none;
+    }
+  }
+}

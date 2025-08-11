@@ -1,0 +1,168 @@
+/* p-planPersonal
+----------------------------------------------------------------- */
+@use "../../global" as g;
+
+.p-planPersonal {
+  padding: 6rem 0 4.8rem;
+  background: url(../images/plan-personal-bg.jpg) no-repeat center top/cover;
+
+  &__inner {
+    padding: 0 3rem;
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--black);
+    text-align: center;
+  }
+
+  &__titleBox {
+    margin-top: 8rem;
+  }
+
+  &__text {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--black);
+  }
+
+  &__planContainer {
+    margin-top: 3rem;
+
+    & + & {
+      margin-top: 4rem;
+    }
+  }
+
+  &__headingBox {
+    min-height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--liteBlack);
+  }
+
+  &__heading {
+    margin-top: 0.4rem;
+    font-size: 3.2rem;
+    font-weight: 500;
+    font-family: var(--en);
+    line-height: 1;
+    color: var(--white);
+
+    &--fzSmall {
+      @extend .p-planPersonal__heading;
+      font-size: 0.75em;
+      font-weight: 500;
+      font-family: var(--jp);
+    }
+  }
+
+  &__sub {
+    margin-top: 0.8rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--white);
+  }
+
+  &__textList {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__textItem {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: calc(24 / 14);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "・";
+      display: block;
+    }
+  }
+
+  &__textButton {
+    text-decoration: underline;
+    transition: opacity 0.4s;
+
+    &:hover {
+      @include g.hover {
+      opacity: 0.65;
+      }
+    }
+  }
+
+  &__swiperContainer {
+    margin-top: 3rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__swiper {
+    overflow: visible;
+  }
+
+  &__wrapper {
+    //
+  }
+
+  &__slide {
+    width: 100%;
+  }
+
+  &__imgBox {
+    width: 100%;
+  }
+
+  &__paginationBox {
+    position: relative;
+    margin-top: 3rem;
+  }
+
+  &__pagination {
+    position: relative;
+    top: unset !important;
+    bottom: unset !important;
+  }
+
+  /* その他バレット調整 */
+  .swiper-pagination-bullet {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid var(--black);
+    background-color: transparent;
+    opacity: 1;
+    margin: 0;
+
+    & + & {
+      margin-left: 12rem !important;
+    }
+  }
+
+  /* アクティブなバレットの調整 */
+  .swiper-pagination-bullet-active {
+    background-color: var(--black);
+  }
+
+  /* バレットの余白調整 */
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets {
+    .swiper-pagination-bullet {
+      margin: 0;
+    }
+
+    .swiper-pagination-bullet:not(:first-child) {
+      margin-left: 1.2rem;
+    }
+  }
+}

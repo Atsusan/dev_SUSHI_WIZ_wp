@@ -1,0 +1,49 @@
+/* p-articleFv
+----------------------------------------------------------------- */
+@use "../../global" as g;
+
+.p-articleFv {
+  margin-top: 8.7rem;
+  background: url(../images/sp/article-fv-bg.jpg) no-repeat center top/cover;
+  // height: calc(100vh - 8.7rem); // svhが効かない時の保険
+  // height: calc(100svh - 8.7rem);
+  min-height: 48.6rem;
+  position: relative;
+  @include g.tabletS {
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -66.5%;
+    width: 100%;
+    height: 100%;
+    background: var(--black);
+    opacity: 0.8;
+    transform: skewX(20.7deg);
+  }
+
+  &__textContents {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__inner {
+    padding-left: 3rem;
+  }
+
+  &__textBox {
+    padding-top: 34rem;
+  }
+
+  &__enTitle {
+    font-size: 3.2rem;
+    font-weight: 500;
+    font-family: var(--en);
+    line-height: 150%;
+    color: var(--white);
+    width: fit-content;
+  }
+}

@@ -1,0 +1,50 @@
+/* c-entry404
+-----------------------------------------------
+------------------ */
+@use "../../global" as g;
+
+.c-entry404 {
+  font-size: 1.6rem;
+  margin: 10rem 0;
+
+  &__head {
+    font-size: 2.4rem;
+    font-weight: 700;
+    font-family: var(--en);
+    margin-bottom: 1.6rem;
+    span {
+      font-size: 1.4em;
+      margin-right: 0.5em;
+    }
+  }
+
+  &__lead {
+    font-size: 1.4em;
+    font-weight: 500;
+    font-family: var(--ja);
+    margin-bottom: 1.6rem;
+  }
+  
+  &__content {
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: var(--ja);
+    margin-bottom: 1.6rem;
+  }
+
+  &__btn {
+    margin: 2rem auto 0;
+    display: flex;
+    justify-content: center;
+    border: .2rem solid var(--white);
+    padding: 1rem 0.5rem;
+    transition: background-color 0.2s;
+
+    &:hover {
+      @include g.hover {
+        background: var(--white);
+        color: var(--black);
+      }
+    }
+  }
+}

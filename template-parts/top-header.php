@@ -1,5 +1,24 @@
   <!-- ▼ PC FV Start -->
   <div class="l-fv u-displayNone--flexPU">
+
+    <!-- ▼ Slide l-fvBg Start -->
+    <div class="l-fvBg">
+      <div class="swiper js-swiperFv l-fvBg__swiper">
+        <div class="swiper-wrapper l-fvBg__wrapper">
+          <div class="swiper-slide l-fvBg__slide">
+            <img class="l-fvBg__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/fv.webp" alt="" width="2880" height="1774">
+          </div>
+          <div class="swiper-slide l-fvBg__slide">
+            <img class="l-fvBg__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/fv2.webp" alt="" width="2880" height="1774">
+          </div>
+          <div class="swiper-slide l-fvBg__slide">
+            <img class="l-fvBg__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/fv3.webp" alt="" width="2880" height="1774">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ▲ Slide l-fvBg END -->
+
     <div class="l-fv__loopTextContainer">
       <!-- ▼ Slide Loop Text Start -->
       <div class="c-loopText__textSwiperContainer">

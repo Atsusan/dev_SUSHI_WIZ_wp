@@ -36,17 +36,17 @@ Template Name: Plan Page
       <li class="p-planCourse__item">
         <a href="#plan1" class="p-planCourse__link">
           <p class="p-planCourse__price">
-            3,000<span class="p-planCourse__price--fzSmall">円</span>
+            個人プラン
           </p>
           <p class="p-planCourse__plan">
-            <span class="p-planCourse__plan--en">1-8</span>名様プラン
+            <span class="p-planCourse__plan--en">1-8</span>名様
           </p>
         </a>
       </li>
       <li class="p-planCourse__item">
         <a href="#plan2" class="p-planCourse__link">
           <p class="p-planCourse__price">
-            5,000<span class="p-planCourse__price--fzSmall">円</span>
+            食べ放題プラン
           </p>
           <p class="p-planCourse__plan">
             <span class="p-planCourse__plan--en">1-8</span>名様プラン
@@ -56,36 +56,14 @@ Template Name: Plan Page
       <li class="p-planCourse__item">
         <a href="#plan3" class="p-planCourse__link">
           <p class="p-planCourse__price">
-            7,000<span class="p-planCourse__price--fzSmall">円</span>
-          </p>
-          <p class="p-planCourse__plan">
-            <span class="p-planCourse__plan--en">1-8</span>名様プラン
+            日本酒ペアリングプラン
           </p>
         </a>
       </li>
       <li class="p-planCourse__item">
         <a href="#plan4" class="p-planCourse__link">
           <p class="p-planCourse__price">
-            10,000<span class="p-planCourse__price--fzSmall">円</span>
-          </p>
-          <p class="p-planCourse__plan">
-            <span class="p-planCourse__plan--en">1-8</span>名様プラン
-          </p>
-        </a>
-      </li>
-      <li class="p-planCourse__item">
-        <a href="#plan5" class="p-planCourse__link">
-          <p class="p-planCourse__price">
-            20,000<span class="p-planCourse__price--fzSmall">円</span>
-          </p>
-          <p class="p-planCourse__plan">厳選日本酒とペアリング</p>
-        </a>
-      </li>
-      <li class="p-planCourse__item">
-        <a href="#plan6" class="p-planCourse__link--party">
-          <p class="p-planCourse__price">パーティープラン</p>
-          <p class="p-planCourse__plan">
-            <span class="p-planCourse__plan--en">8</span>名様～
+            ワインペアリングプラン
           </p>
         </a>
       </li>
@@ -98,107 +76,6 @@ Template Name: Plan Page
     <div class="p-planPersonal__inner">
       <h2 class="p-planPersonal__title">個人宅プラン</h2>
       <div id="plan1" class="p-planPersonal__planContainer">
-        <div class="p-planPersonal__headingBox">
-          <h3 class="p-planPersonal__heading">
-            3,000<span class="p-planPersonal__heading--fzSmall">円プラン</span>
-          </h3>
-          <span class="p-planPersonal__sub">1名様あたり</span>
-        </div>
-        <div class="p-planPersonal__textList">
-
-          <?php
-          $plan_images = array();
-          $args = array(
-            'post_type' => 'plan-cat',
-            'posts_per_page' => -1,
-            'meta_query' => array(
-              array(
-                'key' => 'plan_radio',
-                'value' => 'plan_3000',
-                'compare' => '=',
-              ),
-            ),
-          );
-          $the_query = new WP_Query($args); ?>
-          <?php if ($the_query->have_posts()): $modal_count = 1; // モーダルのカウンターを初期化
-          ?>
-            <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
-
-              <?php
-              $plan_name = get_field('plan_name');
-              $plan_image_url = get_field('plan_image');
-              $plan_text = get_field('plan_text');
-              if ($plan_image_url) {
-                $plan_images[] = $plan_image_url;
-              }
-              $post_id = get_the_ID();
-              $modal_id = 'modal' . $post_id . '_' . $modal_count;
-              ?>
-
-              <div class="p-planPersonal__textItem">
-                <button class="p-planPersonal__textButton" data-modal-target="#<?php echo $modal_id; ?>">
-                  <?php echo esc_html($plan_name); ?>
-                </button>
-              </div>
-
-              <div id="<?php echo $modal_id; ?>" class="c-modal js-modal" data-modal-target="#<?php echo $modal_id; ?>">
-                <div class="c-modal__flex">
-                  <!-- ▼ Modal Contents Stat -->
-                  <div class="c-modal__card">
-                    <button class="c-modal__close js-close">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-close.svg" alt="" class="c-modal__closeIcon" width="63" height="63">
-                    </button>
-                    <div class="c-modal__container">
-                      <p class="c-modal__tag">3,000<span class="c-modal__tag--fzSmall">円プラン</span></p>
-                      <div class="c-modal__titleBox">
-                        <p class="c-modal__title"><?php echo esc_html($plan_name); ?></p>
-                      </div>
-                      <div class="c-modal__imgBox">
-                        <?php if (!empty($plan_image_url)): ?>
-                          <img src="<?php echo esc_url($plan_image_url); ?>" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
-                        <?php else: ?>
-                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-image.jpg" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
-                        <?php endif; ?>
-                      </div>
-                      <div class="c-modal__textBox">
-                        <p class="c-modal__text"><?php echo nl2br(esc_html($plan_text)); ?></p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- ▲ Modal Contents End -->
-                </div>
-              </div>
-              <!-- ▲ Modal End -->
-
-            <?php
-              $modal_count++; // モーダルカウンターをインクリメント
-            endwhile; ?>
-          <?php else: ?>
-            <p class="c-noneTitle">コンテンツがありません。</p>
-          <?php wp_reset_postdata();
-          endif; ?>
-        </div>
-
-        <!-- ▼ Slide Stat -->
-        <div class="p-planPersonal__swiperContainer">
-          <div id="planPersonal1" class="swiper p-planPersonal__swiper">
-            <ul class="swiper-wrapper p-planPersonal__wrapper">
-              <?php foreach ($plan_images as $image_url): // 画像URLの配列をループ
-              ?>
-                <li class="swiper-slide p-planPersonal__slide">
-                  <img src="<?php echo esc_url($image_url); ?>" class="p-planPersonal__imgBox" width="660" height="440" loading="lazy">
-                </li>
-              <?php endforeach; ?>
-            </ul>
-            <div class="p-planPersonal__paginationBox">
-              <div class="swiper-pagination p-planPersonal__pagination"></div>
-            </div>
-          </div>
-        </div>
-        <!-- ▲ Slide End -->
-      </div>
-
-      <div id="plan2" class="p-planPersonal__planContainer">
         <div class="p-planPersonal__headingBox">
           <h3 class="p-planPersonal__heading">
             5,000<span class="p-planPersonal__heading--fzSmall">円プラン</span>
@@ -221,7 +98,7 @@ Template Name: Plan Page
             ),
           );
           $the_query = new WP_Query($args); ?>
-          <?php if ($the_query->have_posts()): $modal_count = 1;
+          <?php if ($the_query->have_posts()): $modal_count = 1; // モーダルのカウンターを初期化
           ?>
             <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
 
@@ -282,7 +159,7 @@ Template Name: Plan Page
 
         <!-- ▼ Slide Stat -->
         <div class="p-planPersonal__swiperContainer">
-          <div id="planPersonal2" class="swiper p-planPersonal__swiper">
+          <div id="planPersonal1" class="swiper p-planPersonal__swiper">
             <ul class="swiper-wrapper p-planPersonal__wrapper">
               <?php foreach ($plan_images as $image_url): // 画像URLの配列をループ
               ?>
@@ -299,7 +176,7 @@ Template Name: Plan Page
         <!-- ▲ Slide End -->
       </div>
 
-      <div id="plan3" class="p-planPersonal__planContainer">
+      <div id="plan2" class="p-planPersonal__planContainer">
         <div class="p-planPersonal__headingBox">
           <h3 class="p-planPersonal__heading">
             7,000<span class="p-planPersonal__heading--fzSmall">円プラン</span>
@@ -383,7 +260,7 @@ Template Name: Plan Page
 
         <!-- ▼ Slide Stat -->
         <div class="p-planPersonal__swiperContainer">
-          <div id="planPersonal3" class="swiper p-planPersonal__swiper">
+          <div id="planPersonal2" class="swiper p-planPersonal__swiper">
             <ul class="swiper-wrapper p-planPersonal__wrapper">
               <?php foreach ($plan_images as $image_url): // 画像URLの配列をループ
               ?>
@@ -400,7 +277,7 @@ Template Name: Plan Page
         <!-- ▲ Slide End -->
       </div>
 
-      <div id="plan4" class="p-planPersonal__planContainer">
+      <div id="plan3" class="p-planPersonal__planContainer">
         <div class="p-planPersonal__headingBox">
           <h3 class="p-planPersonal__heading">
             10,000<span class="p-planPersonal__heading--fzSmall">円プラン</span>
@@ -423,7 +300,8 @@ Template Name: Plan Page
             ),
           );
           $the_query = new WP_Query($args); ?>
-          <?php if ($the_query->have_posts()): $modal_count = 1; ?>
+          <?php if ($the_query->have_posts()): $modal_count = 1;
+          ?>
             <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
 
               <?php
@@ -483,7 +361,7 @@ Template Name: Plan Page
 
         <!-- ▼ Slide Stat -->
         <div class="p-planPersonal__swiperContainer">
-          <div id="planPersonal4" class="swiper p-planPersonal__swiper">
+          <div id="planPersonal3" class="swiper p-planPersonal__swiper">
             <ul class="swiper-wrapper p-planPersonal__wrapper">
               <?php foreach ($plan_images as $image_url): // 画像URLの配列をループ
               ?>
@@ -499,28 +377,15 @@ Template Name: Plan Page
         </div>
         <!-- ▲ Slide End -->
       </div>
-    </div>
-  </section>
 
-  <!-- ▼ p-planAlcohol -->
-  <section id="alcohol" class="p-planAlcohol">
-    <div class="p-planAlcohol__inner">
-      <h2 class="p-planAlcohol__title">日本酒</h2>
-      <p class="p-planAlcohol__read">
-        厳選日本酒とお好きな10,000円コースのペアリングプラン
-      </p>
-
-      <div id="plan5" class="p-planAlcohol__planContainer">
-        <div class="p-planAlcohol__headingBox">
-          <h3 class="p-planAlcohol__heading">
-            20,000<span class="p-planAlcohol__heading--fzSmall">円プラン</span>
+      <div id="plan4" class="p-planPersonal__planContainer">
+        <div class="p-planPersonal__headingBox">
+          <h3 class="p-planPersonal__heading">
+            12,000<span class="p-planPersonal__heading--fzSmall">円プラン</span>
           </h3>
-          <span class="p-planAlcohol__sub">1名様あたり</span>
+          <span class="p-planPersonal__sub">1名様あたり</span>
         </div>
-        <p class="p-planAlcohol__planRead">
-          SAKE DIPLOMAの資格を持つスタッフが厳選した日本酒をお持ちします。寿司のコースは下記からお選びいただけます。
-        </p>
-        <div class="p-planAlcohol__textList">
+        <div class="p-planPersonal__textList">
 
           <?php
           $plan_images = array();
@@ -530,7 +395,7 @@ Template Name: Plan Page
             'meta_query' => array(
               array(
                 'key' => 'plan_radio',
-                'value' => 'plan_20000',
+                'value' => 'plan_12000',
                 'compare' => '=',
               ),
             ),
@@ -550,8 +415,211 @@ Template Name: Plan Page
               $modal_id = 'modal' . $post_id . '_' . $modal_count;
               ?>
 
-              <div class="p-planAlcohol__textItem">
-                <button class="p-planAlcohol__textButton" data-modal-target="#<?php echo $modal_id; ?>">
+              <div class="p-planPersonal__textItem">
+                <button class="p-planPersonal__textButton" data-modal-target="#<?php echo $modal_id; ?>">
+                  <?php echo esc_html($plan_name); ?>
+                </button>
+              </div>
+
+              <div id="<?php echo $modal_id; ?>" class="c-modal js-modal" data-modal-target="#<?php echo $modal_id; ?>">
+                <div class="c-modal__flex">
+                  <!-- ▼ Modal Contents Stat -->
+                  <div class="c-modal__card">
+                    <button class="c-modal__close js-close">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-close.svg" alt="" class="c-modal__closeIcon" width="63" height="63">
+                    </button>
+                    <div class="c-modal__container">
+                      <p class="c-modal__tag">12,000<span class="c-modal__tag--fzSmall">円プラン</span></p>
+                      <div class="c-modal__titleBox">
+                        <p class="c-modal__title"><?php echo esc_html($plan_name); ?></p>
+                      </div>
+                      <div class="c-modal__imgBox">
+                        <?php if (!empty($plan_image_url)): ?>
+                          <img src="<?php echo esc_url($plan_image_url); ?>" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
+                        <?php else: ?>
+                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-image.jpg" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
+                        <?php endif; ?>
+                      </div>
+                      <div class="c-modal__textBox">
+                        <p class="c-modal__text"><?php echo nl2br(esc_html($plan_text)); ?></p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ▲ Modal Contents End -->
+                </div>
+              </div>
+              <!-- ▲ Modal End -->
+
+            <?php
+              $modal_count++; // モーダルカウンターをインクリメント
+            endwhile; ?>
+          <?php else: ?>
+            <p class="c-noneTitle">コンテンツがありません。</p>
+          <?php wp_reset_postdata();
+          endif; ?>
+        </div>
+
+        <!-- ▼ Slide Stat -->
+        <div class="p-planPersonal__swiperContainer">
+          <div id="planPersonal4" class="swiper p-planPersonal__swiper">
+            <ul class="swiper-wrapper p-planPersonal__wrapper">
+              <?php foreach ($plan_images as $image_url): // 画像URLの配列をループ
+              ?>
+                <li class="swiper-slide p-planPersonal__slide">
+                  <img src="<?php echo esc_url($image_url); ?>" class="p-planPersonal__imgBox" width="660" height="440" loading="lazy">
+                </li>
+              <?php endforeach; ?>
+            </ul>
+            <div class="p-planPersonal__paginationBox">
+              <div class="swiper-pagination p-planPersonal__pagination"></div>
+            </div>
+          </div>
+        </div>
+        <!-- ▲ Slide End -->
+      </div>
+
+      <div class="p-planPersonal__titleBox">
+        <h2 class="p-planPersonal__title">食べ放題プラン</h2>
+        <p class="p-planPersonal__text">10~15種のネタを好きなだけ、お召し上がりいただけます。</p>
+      </div>
+      <div id="plan7" class="p-planPersonal__planContainer">
+        <div class="p-planPersonal__headingBox">
+          <h3 class="p-planPersonal__heading">
+            15,000<span class="p-planPersonal__heading--fzSmall">円プラン</span>
+          </h3>
+          <span class="p-planPersonal__sub">1名様あたり</span>
+        </div>
+        <div class="p-planPersonal__textList">
+
+          <?php
+          $plan_images = array();
+          $args = array(
+            'post_type' => 'plan-cat',
+            'posts_per_page' => -1,
+            'meta_query' => array(
+              array(
+                'key' => 'plan_radio',
+                'value' => 'plan2_15000',
+                'compare' => '=',
+              ),
+            ),
+          );
+          $the_query = new WP_Query($args); ?>
+          <?php if ($the_query->have_posts()): $modal_count = 1; ?>
+            <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+
+              <?php
+              $plan_name = get_field('plan_name');
+              $plan_image_url = get_field('plan_image');
+              $plan_text = get_field('plan_text');
+              if ($plan_image_url) {
+                $plan_images[] = $plan_image_url;
+              }
+              $post_id = get_the_ID();
+              $modal_id = 'modal' . $post_id . '_' . $modal_count;
+              ?>
+
+              <div class="p-planPersonal__textItem">
+                <button class="p-planPersonal__textButton" data-modal-target="#<?php echo $modal_id; ?>">
+                  <?php echo esc_html($plan_name); ?>
+                </button>
+              </div>
+
+              <div id="<?php echo $modal_id; ?>" class="c-modal js-modal" data-modal-target="#<?php echo $modal_id; ?>">
+                <div class="c-modal__flex">
+                  <!-- ▼ Modal Contents Stat -->
+                  <div class="c-modal__card">
+                    <button class="c-modal__close js-close">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-close.svg" alt="" class="c-modal__closeIcon" width="63" height="63">
+                    </button>
+                    <div class="c-modal__container">
+                      <p class="c-modal__tag">15,000<span class="c-modal__tag--fzSmall">円プラン</span></p>
+                      <div class="c-modal__titleBox">
+                        <p class="c-modal__title"><?php echo esc_html($plan_name); ?></p>
+                      </div>
+                      <div class="c-modal__imgBox">
+                        <?php if (!empty($plan_image_url)): ?>
+                          <img src="<?php echo esc_url($plan_image_url); ?>" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
+                        <?php else: ?>
+                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-image.jpg" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
+                        <?php endif; ?>
+                      </div>
+                      <div class="c-modal__textBox">
+                        <p class="c-modal__text"><?php echo nl2br(esc_html($plan_text)); ?></p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ▲ Modal Contents End -->
+                </div>
+              </div>
+              <!-- ▲ Modal End -->
+
+            <?php
+              $modal_count++; // モーダルカウンターをインクリメント
+            endwhile; ?>
+          <?php else: ?>
+            <p class="c-noneTitle">コンテンツがありません。</p>
+          <?php wp_reset_postdata();
+          endif; ?>
+        </div>
+
+        <!-- ▼ Slide Stat -->
+        <div class="p-planPersonal__swiperContainer">
+          <div id="planPersonal4" class="swiper p-planPersonal__swiper">
+            <ul class="swiper-wrapper p-planPersonal__wrapper">
+              <?php foreach ($plan_images as $image_url): // 画像URLの配列をループ
+              ?>
+                <li class="swiper-slide p-planPersonal__slide">
+                  <img src="<?php echo esc_url($image_url); ?>" class="p-planPersonal__imgBox" width="660" height="440" loading="lazy">
+                </li>
+              <?php endforeach; ?>
+            </ul>
+            <div class="p-planPersonal__paginationBox">
+              <div class="swiper-pagination p-planPersonal__pagination"></div>
+            </div>
+          </div>
+        </div>
+        <!-- ▲ Slide End -->
+      </div>
+      <div id="plan8" class="p-planPersonal__planContainer">
+        <div class="p-planPersonal__headingBox">
+          <h3 class="p-planPersonal__heading">
+            20,000<span class="p-planPersonal__heading--fzSmall">円プラン</span>
+          </h3>
+          <span class="p-planPersonal__sub">1名様あたり</span>
+        </div>
+        <div class="p-planPersonal__textList">
+
+          <?php
+          $plan_images = array();
+          $args = array(
+            'post_type' => 'plan-cat',
+            'posts_per_page' => -1,
+            'meta_query' => array(
+              array(
+                'key' => 'plan_radio',
+                'value' => 'plan2_20000',
+                'compare' => '=',
+              ),
+            ),
+          );
+          $the_query = new WP_Query($args); ?>
+          <?php if ($the_query->have_posts()): $modal_count = 1; ?>
+            <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+
+              <?php
+              $plan_name = get_field('plan_name');
+              $plan_image_url = get_field('plan_image');
+              $plan_text = get_field('plan_text');
+              if ($plan_image_url) {
+                $plan_images[] = $plan_image_url;
+              }
+              $post_id = get_the_ID();
+              $modal_id = 'modal' . $post_id . '_' . $modal_count;
+              ?>
+
+              <div class="p-planPersonal__textItem">
+                <button class="p-planPersonal__textButton" data-modal-target="#<?php echo $modal_id; ?>">
                   <?php echo esc_html($plan_name); ?>
                 </button>
               </div>
@@ -595,42 +663,344 @@ Template Name: Plan Page
         </div>
 
         <!-- ▼ Slide Stat -->
-        <div class="p-planAlcohol__swiperContainer">
-          <div id="planAlcohol1" class="swiper p-planAlcohol__swiper">
-            <ul class="swiper-wrapper p-planAlcohol__wrapper">
-                <li class="swiper-slide p-planAlcohol__slide">
-                  <img src="<?php echo get_template_directory_uri();?>/assets/images/plan-alcohol-item1.jpg" class="p-planAlcohol__imgBox" width="660" height="440" loading="lazy">
+        <div class="p-planPersonal__swiperContainer">
+          <div id="planPersonal4" class="swiper p-planPersonal__swiper">
+            <ul class="swiper-wrapper p-planPersonal__wrapper">
+              <?php foreach ($plan_images as $image_url): // 画像URLの配列をループ
+              ?>
+                <li class="swiper-slide p-planPersonal__slide">
+                  <img src="<?php echo esc_url($image_url); ?>" class="p-planPersonal__imgBox" width="660" height="440" loading="lazy">
                 </li>
-                <li class="swiper-slide p-planAlcohol__slide">
-                  <img src="<?php echo get_template_directory_uri();?>/assets/images/plan-alcohol-item3.jpg" class="p-planAlcohol__imgBox" width="660" height="440" loading="lazy">
-                </li>
+              <?php endforeach; ?>
             </ul>
-            <div class="p-planAlcohol__paginationBox">
-              <div class="swiper-pagination p-planAlcohol__pagination"></div>
+            <div class="p-planPersonal__paginationBox">
+              <div class="swiper-pagination p-planPersonal__pagination"></div>
             </div>
           </div>
         </div>
         <!-- ▲ Slide End -->
       </div>
+    </div>
+  </section>
 
-      <div id="plan6" class="p-planAlcohol__planContainer">
-        <div class="p-planAlcohol__headingBox">
-          <h3 class="p-planAlcohol__heading--fzJp">パーティープラン</h3>
-          <span class="p-planAlcohol__sub--mtSmall">8名様～</span>
+  <!-- ▼ p-planBuffet -->
+  <section class="p-planBuffet">
+    <div class="p-planBuffet__inner">
+      <h2 class="p-planBuffet__title">食べ放題プラン</h2>
+      <p class="p-planBuffet__text">10~15種のネタを好きなだけ、お召し上がりいただけます。</p>
+      <div id="plan7" class="p-planBuffet__planContainer">
+        <div class="p-planBuffet__headingBox">
+          <h3 class="p-planBuffet__heading">
+            15,000<span class="p-planBuffet__heading--fzSmall">円プラン</span>
+          </h3>
+          <span class="p-planBuffet__sub">1名様あたり</span>
         </div>
-        <p class="p-planAlcohol__planRead--mtSmall">
-          お一人様3000円〜にてオリジナルプランのご相談をさせて頂きます。
-          <br>
-          何品にするか、ご希望のネタなどを相談の上、料金を決定いたします。
-          <br>
-          なお、個人宅プランと同じメニューもご提供は可能です。
-        </p>
-        <div class="p-planAlcohol__planImgBox">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/plan-alcohol-item2.jpg" alt="パーティープラン" class="p-planAlcohol__planImg"
-            width="660" height="440" loading="lazy">
+        <div class="p-planBuffet__textList">
+
+          <?php
+          $plan_images = array();
+          $args = array(
+            'post_type' => 'plan-cat',
+            'posts_per_page' => -1,
+            'meta_query' => array(
+              array(
+                'key' => 'plan_radio',
+                'value' => 'plan2_15000',
+                'compare' => '=',
+              ),
+            ),
+          );
+          $the_query = new WP_Query($args); ?>
+          <?php if ($the_query->have_posts()): $modal_count = 1; ?>
+            <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+
+              <?php
+              $plan_name = get_field('plan_name');
+              $plan_image_url = get_field('plan_image');
+              $plan_text = get_field('plan_text');
+              if ($plan_image_url) {
+                $plan_images[] = $plan_image_url;
+              }
+              $post_id = get_the_ID();
+              $modal_id = 'modal' . $post_id . '_' . $modal_count;
+              ?>
+
+              <div class="p-planBuffet__textItem">
+                <button class="p-planBuffet__textButton" data-modal-target="#<?php echo $modal_id; ?>">
+                  <?php echo esc_html($plan_name); ?>
+                </button>
+              </div>
+
+              <div id="<?php echo $modal_id; ?>" class="c-modal js-modal" data-modal-target="#<?php echo $modal_id; ?>">
+                <div class="c-modal__flex">
+                  <!-- ▼ Modal Contents Stat -->
+                  <div class="c-modal__card">
+                    <button class="c-modal__close js-close">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-close.svg" alt="" class="c-modal__closeIcon" width="63" height="63">
+                    </button>
+                    <div class="c-modal__container">
+                      <p class="c-modal__tag">15,000<span class="c-modal__tag--fzSmall">円プラン</span></p>
+                      <div class="c-modal__titleBox">
+                        <p class="c-modal__title"><?php echo esc_html($plan_name); ?></p>
+                      </div>
+                      <div class="c-modal__imgBox">
+                        <?php if (!empty($plan_image_url)): ?>
+                          <img src="<?php echo esc_url($plan_image_url); ?>" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
+                        <?php else: ?>
+                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-image.jpg" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
+                        <?php endif; ?>
+                      </div>
+                      <div class="c-modal__textBox">
+                        <p class="c-modal__text"><?php echo nl2br(esc_html($plan_text)); ?></p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ▲ Modal Contents End -->
+                </div>
+              </div>
+              <!-- ▲ Modal End -->
+
+            <?php
+              $modal_count++; // モーダルカウンターをインクリメント
+            endwhile; ?>
+          <?php else: ?>
+            <p class="c-noneTitle">コンテンツがありません。</p>
+          <?php wp_reset_postdata();
+          endif; ?>
         </div>
+
+        <!-- ▼ Slide Stat -->
+        <div class="p-planBuffet__swiperContainer">
+          <div id="planPersonal4" class="swiper p-planBuffet__swiper">
+            <ul class="swiper-wrapper p-planBuffet__wrapper">
+              <?php foreach ($plan_images as $image_url): // 画像URLの配列をループ
+              ?>
+                <li class="swiper-slide p-planBuffet__slide">
+                  <img src="<?php echo esc_url($image_url); ?>" class="p-planBuffet__imgBox" width="660" height="440" loading="lazy">
+                </li>
+              <?php endforeach; ?>
+            </ul>
+            <div class="p-planBuffet__paginationBox">
+              <div class="swiper-pagination p-planBuffet__pagination"></div>
+            </div>
+          </div>
+        </div>
+        <!-- ▲ Slide End -->
+      </div>
+      <div id="plan8" class="p-planBuffet__planContainer">
+        <div class="p-planBuffet__headingBox">
+          <h3 class="p-planBuffet__heading">
+            20,000<span class="p-planBuffet__heading--fzSmall">円プラン</span>
+          </h3>
+          <span class="p-planBuffet__sub">1名様あたり</span>
+        </div>
+        <div class="p-planBuffet__textList">
+
+          <?php
+          $plan_images = array();
+          $args = array(
+            'post_type' => 'plan-cat',
+            'posts_per_page' => -1,
+            'meta_query' => array(
+              array(
+                'key' => 'plan_radio',
+                'value' => 'plan2_20000',
+                'compare' => '=',
+              ),
+            ),
+          );
+          $the_query = new WP_Query($args); ?>
+          <?php if ($the_query->have_posts()): $modal_count = 1; ?>
+            <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+
+              <?php
+              $plan_name = get_field('plan_name');
+              $plan_image_url = get_field('plan_image');
+              $plan_text = get_field('plan_text');
+              if ($plan_image_url) {
+                $plan_images[] = $plan_image_url;
+              }
+              $post_id = get_the_ID();
+              $modal_id = 'modal' . $post_id . '_' . $modal_count;
+              ?>
+
+              <div class="p-planBuffet__textItem">
+                <button class="p-planBuffet__textButton" data-modal-target="#<?php echo $modal_id; ?>">
+                  <?php echo esc_html($plan_name); ?>
+                </button>
+              </div>
+
+              <div id="<?php echo $modal_id; ?>" class="c-modal js-modal" data-modal-target="#<?php echo $modal_id; ?>">
+                <div class="c-modal__flex">
+                  <!-- ▼ Modal Contents Stat -->
+                  <div class="c-modal__card">
+                    <button class="c-modal__close js-close">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-close.svg" alt="" class="c-modal__closeIcon" width="63" height="63">
+                    </button>
+                    <div class="c-modal__container">
+                      <p class="c-modal__tag">20,000<span class="c-modal__tag--fzSmall">円プラン</span></p>
+                      <div class="c-modal__titleBox">
+                        <p class="c-modal__title"><?php echo esc_html($plan_name); ?></p>
+                      </div>
+                      <div class="c-modal__imgBox">
+                        <?php if (!empty($plan_image_url)): ?>
+                          <img src="<?php echo esc_url($plan_image_url); ?>" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
+                        <?php else: ?>
+                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-image.jpg" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
+                        <?php endif; ?>
+                      </div>
+                      <div class="c-modal__textBox">
+                        <p class="c-modal__text"><?php echo nl2br(esc_html($plan_text)); ?></p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ▲ Modal Contents End -->
+                </div>
+              </div>
+              <!-- ▲ Modal End -->
+
+            <?php
+              $modal_count++; // モーダルカウンターをインクリメント
+            endwhile; ?>
+          <?php else: ?>
+            <p class="c-noneTitle">コンテンツがありません。</p>
+          <?php wp_reset_postdata();
+          endif; ?>
+        </div>
+
+        <!-- ▼ Slide Stat -->
+        <div class="p-planBuffet__swiperContainer">
+          <div id="planPersonal4" class="swiper p-planBuffet__swiper">
+            <ul class="swiper-wrapper p-planBuffet__wrapper">
+              <?php foreach ($plan_images as $image_url): // 画像URLの配列をループ
+              ?>
+                <li class="swiper-slide p-planBuffet__slide">
+                  <img src="<?php echo esc_url($image_url); ?>" class="p-planBuffet__imgBox" width="660" height="440" loading="lazy">
+                </li>
+              <?php endforeach; ?>
+            </ul>
+            <div class="p-planBuffet__paginationBox">
+              <div class="swiper-pagination p-planBuffet__pagination"></div>
+            </div>
+          </div>
+        </div>
+        <!-- ▲ Slide End -->
       </div>
     </div>
+  </section>
+  <!-- ▲ p-planBuffet -->
+
+  <!-- ▼ p-planAlcohol -->
+  <section id="alcohol" class="p-planAlcohol">
+    <!-- ▼ p-planAlcoholRiceWine -->
+    <div class="p-planAlcoholRiceWine">
+      <div class="p-planAlcohol__inner">
+        <h2 class="p-planAlcoholRiceWine__title">Drink</h2>
+        <p class="p-planAlcoholRiceWine__read">
+          日本酒ペアリングプラン
+        </p>
+        <p class="p-planAlcoholRiceWine__text">
+          各寿司コースの料金にプラスすることで、SAKE DIPLOMAの資格を持つスタッフが厳選した日本酒をお持ちします。<br>
+          選ばれたお寿司コースに併せて最適の日本酒をチョイスしますので、是非日本酒と併せてお寿司をお楽しみください。
+        </p>
+
+        <div class="p-planAlcoholRiceWine__imgBox">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/plan-RiceWine.webp" class="p-planAlcoholRiceWine__imgBox" width="660" height="440" loading="lazy">
+        </div>
+        <ul class="p-planAlcohol__list">
+          <li class="p-planAlcohol__item">
+            <div class="p-planAlcohol__headingBox">
+              <h3 class="p-planAlcohol__heading">
+                おすすめ3種ペアリングコース
+              </h3>
+              <p class="p-planAlcohol__sub">
+                <span class="p-planAlcohol__sub--fzBig">+3,000</span><span class="p-planAlcohol__sub--fzMidLarge">円</span> / 1名様あたり
+              </p>
+            </div>
+          </li>
+          <li class="p-planAlcohol__item">
+            <div class="p-planAlcohol__headingBox">
+              <h3 class="p-planAlcohol__heading">
+                厳選日本酒ペアリングコース
+              </h3>
+              <p class="p-planAlcohol__sub">
+                <span class="p-planAlcohol__sub--fzBig">+5,000</span><span class="p-planAlcohol__sub--fzMidLarge">円</span> / 1名様あたり
+              </p>
+            </div>
+          </li>
+          <li class="p-planAlcohol__item">
+            <div class="p-planAlcohol__headingBox">
+              <h3 class="p-planAlcohol__heading">
+                希少日本酒ペアリングコース
+              </h3>
+              <p class="p-planAlcohol__sub">
+                <span class="p-planAlcohol__sub--fzBig">+7,000</span><span class="p-planAlcohol__sub--fzMidLarge">円</span> / 1名様あたり
+              </p>
+            </div>
+          </li>
+          <li class="p-planAlcohol__item">
+            <div class="p-planAlcohol__headingBox">
+              <h3 class="p-planAlcohol__heading">
+                希少日本酒ペアリング飲み放題コース
+              </h3>
+              <p class="p-planAlcohol__sub">
+                <span class="p-planAlcohol__sub--fzBig">+10,000</span><span class="p-planAlcohol__sub--fzMidLarge">円</span> / 1名様あたり
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ▲ p-planAlcoholRiceWine -->
+
+    <!-- ▼ p-planAlcoholWine -->
+    <div class="p-planAlcoholWine">
+      <div class="p-planAlcohol__inner">
+        <p class="p-planAlcoholWine__read">
+          ワインペアリングプラン
+        </p>
+        <p class="p-planAlcoholWine__text">
+          各寿司コースの料金にプラスすることで、ワインソムリエの資格を持つスタッフが厳選したワインをお持ちします。<br>
+          選ばれたお寿司コースに併せて最適のワインをチョイスしますので、是非ワインと併せてお寿司をお楽しみください。
+        </p>
+        <div class="p-planAlcoholWine__imgBox">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/plan-alcoholWine.webp" class="p-planAlcoholWine__imgBox" width="660" height="440" loading="lazy">
+        </div>
+        <ul class="p-planAlcohol__list">
+          <li class="p-planAlcohol__item">
+            <div class="p-planAlcohol__headingBox">
+              <h3 class="p-planAlcohol__heading">
+                おすすめ3種ペアリングコース
+              </h3>
+              <p class="p-planAlcohol__sub">
+                <span class="p-planAlcohol__sub--fzBig">+5,000</span><span class="p-planAlcohol__sub--fzMidLarge">円</span> / 1名様あたり
+              </p>
+            </div>
+          </li>
+          <li class="p-planAlcohol__item">
+            <div class="p-planAlcohol__headingBox">
+              <h3 class="p-planAlcohol__heading">
+                厳選ワインペアリングコース
+              </h3>
+              <p class="p-planAlcohol__sub">
+                <span class="p-planAlcohol__sub--fzBig">+7,000</span><span class="p-planAlcohol__sub--fzMidLarge">円</span> / 1名様あたり
+              </p>
+            </div>
+          </li>
+          <li class="p-planAlcohol__item">
+            <div class="p-planAlcohol__headingBox">
+              <h3 class="p-planAlcohol__heading">
+                希少ワインペアリングコース
+              </h3>
+              <p class="p-planAlcohol__sub">
+                <span class="p-planAlcohol__sub--fzBig">+10,000</span><span class="p-planAlcohol__sub--fzMidLarge">円</span> / 1名様あたり
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ▲ p-planAlcoholWine -->
   </section>
   <!-- ▲ p-planAlcohol -->
 

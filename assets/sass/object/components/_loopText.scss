@@ -1,0 +1,43 @@
+/* c-loopText
+----------------------------------------------------------------- */
+@use "../../global" as g;
+
+.c-loopText {
+  /* Start swiperText */
+  &__textSwiperContainer {
+    overflow: hidden;
+  }
+
+  &__textSwiper {
+    overflow: visible;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    border-top: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
+  }
+
+  &__textWrapper {
+    transition-timing-function: linear;
+    align-items: center;
+  }
+
+  &__textSlide {
+    width: fit-content;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    margin-right: 3rem;
+
+    &--en {
+      @extend .c-loopText__textSlide;
+      font-family: var(--en);
+      font-size: 2.2rem;
+      font-weight: 500;
+      margin-bottom: -0.3rem;
+    }
+  }
+  /* End swiperText */
+}
