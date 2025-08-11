@@ -65,7 +65,7 @@
           $page_titles = array(
             'concept' => 'CONCEPT',
             'plan' => 'PLAN',
-            'profile' => 'PROFILE',
+            'profile' => 'CHEF',
             'faq' => 'FAQ',
             'contact' => 'CONTACT',
             'reservation' => 'RESERVATION',
@@ -88,6 +88,9 @@
           }
         ?>
         </p>
+        <?php if(is_page('profile')) :?>
+          <p class="l-fv__jpTitle">代表について</p>
+        <?php endif; ?>
       </div>
     </div>
     <!-- ▲ PC FV End-->

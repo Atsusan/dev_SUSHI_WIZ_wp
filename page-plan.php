@@ -34,7 +34,7 @@ Template Name: Plan Page
     </div>
     <ul class="p-planCourse__list">
       <li class="p-planCourse__item">
-        <a href="#plan1" class="p-planCourse__link">
+        <a href="#personal" class="p-planCourse__link">
           <p class="p-planCourse__price">
             個人プラン
           </p>
@@ -44,7 +44,7 @@ Template Name: Plan Page
         </a>
       </li>
       <li class="p-planCourse__item">
-        <a href="#plan2" class="p-planCourse__link">
+        <a href="#buffet" class="p-planCourse__link">
           <p class="p-planCourse__price">
             食べ放題プラン
           </p>
@@ -54,14 +54,14 @@ Template Name: Plan Page
         </a>
       </li>
       <li class="p-planCourse__item">
-        <a href="#plan3" class="p-planCourse__link">
+        <a href="#riceWine" class="p-planCourse__link">
           <p class="p-planCourse__price">
             日本酒ペアリングプラン
           </p>
         </a>
       </li>
       <li class="p-planCourse__item">
-        <a href="#plan4" class="p-planCourse__link">
+        <a href="#alcoholWine" class="p-planCourse__link">
           <p class="p-planCourse__price">
             ワインペアリングプラン
           </p>
@@ -684,7 +684,7 @@ Template Name: Plan Page
   </section>
 
   <!-- ▼ p-planBuffet -->
-  <section class="p-planBuffet">
+  <section id="buffet" class="p-planBuffet">
     <div class="p-planBuffet__inner">
       <h2 class="p-planBuffet__title">食べ放題プラン</h2>
       <p class="p-planBuffet__text">10~15種のネタを好きなだけ、お召し上がりいただけます。</p>
@@ -895,7 +895,7 @@ Template Name: Plan Page
     <!-- ▼ p-planAlcoholRiceWine -->
     <div class="p-planAlcoholRiceWine">
       <div class="p-planAlcohol__inner">
-        <h2 class="p-planAlcoholRiceWine__title">Drink</h2>
+        <h2 id="riceWine" class="p-planAlcoholRiceWine__title">Drink</h2>
         <p class="p-planAlcoholRiceWine__read">
           日本酒ペアリングプラン
         </p>
@@ -954,7 +954,7 @@ Template Name: Plan Page
     <!-- ▲ p-planAlcoholRiceWine -->
 
     <!-- ▼ p-planAlcoholWine -->
-    <div class="p-planAlcoholWine">
+    <div id="alcoholWine" class="p-planAlcoholWine">
       <div class="p-planAlcohol__inner">
         <p class="p-planAlcoholWine__read">
           ワインペアリングプラン
