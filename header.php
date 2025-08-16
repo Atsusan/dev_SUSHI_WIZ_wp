@@ -35,6 +35,7 @@
                       'concept' => 'concept',
                       'plan' => 'plan',
                       'profile' => 'profile',
+                      'profile-chef' => 'profile-chef',
                       'faq' => 'faq',
                       'contact' => 'contact',
                       'reservation' => 'contact',
@@ -66,6 +67,7 @@
             'concept' => 'CONCEPT',
             'plan' => 'PLAN',
             'profile' => 'CHEF',
+            'profile-chef' => 'CHEF',
             'faq' => 'FAQ',
             'contact' => 'CONTACT',
             'reservation' => 'RESERVATION',
@@ -90,6 +92,9 @@
         </p>
         <?php if(is_page('profile')) :?>
           <p class="l-fv__jpTitle">代表について</p>
+        <?php endif; ?>
+        <?php if(is_page('profile-chef')) :?>
+          <p class="l-fv__jpTitle">職人一覧</p>
         <?php endif; ?>
       </div>
     </div>

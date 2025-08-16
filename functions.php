@@ -62,6 +62,10 @@ function add_files() {
   if (is_page('profile')) {
     wp_enqueue_style('profile-css', get_template_directory_uri() . '/assets/css/profile.css', array('common-style'), '1.0.0');
   }
+  // Profile CSS
+  if (is_page('profile-chef')) {
+    wp_enqueue_style('profile-chef-css', get_template_directory_uri() . '/assets/css/profile-chef.css', array('common-style'), '1.0.0');
+  }
   // FAQ CSS
   if (is_page('faq')) {
     wp_enqueue_style('faq-css', get_template_directory_uri() . '/assets/css/faq.css', array('common-style'), '1.0.0');
@@ -94,7 +98,7 @@ function add_files() {
     wp_enqueue_script('accordion-js', get_template_directory_uri() . '/assets/js/accordion.js', array(), '1.0.0', true);
   }
   // modal JS
-  if(is_page('plan')) {
+  if(is_page('plan') || is_page('profile-chef')) {
     wp_enqueue_script('modal-js', get_template_directory_uri() .'/assets/js/modal.js', array(), '1.0.0', true);
   }
 

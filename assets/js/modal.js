@@ -47,7 +47,7 @@ window.addEventListener('click', (e) => {
 
 // モーダルの高さ調整関数
 function adjustModalAlignment() {
-  const modals = document.querySelectorAll('.c-modal');
+  const modals = document.querySelectorAll('.js-modal');
 
   modals.forEach(modal => {
     const modalFlex = modal.querySelector('.c-modal__flex');

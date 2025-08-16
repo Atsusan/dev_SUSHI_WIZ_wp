@@ -13,7 +13,8 @@ Template Name: Profile Page
         <div class="p-profileFv__textContents">
           <div class="p-profileFv__inner">
             <div class="p-profileFv__textBox">
-              <h2 class="p-profileFv__enTitle">PROFILE</h2>
+              <h2 class="p-profileFv__enTitle">CHEF</h2>
+              <h2 class="p-profileFv__jpTitle">代表について</h2>
             </div>
           </div>
         </div>

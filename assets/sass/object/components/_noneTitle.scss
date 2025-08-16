@@ -7,4 +7,9 @@
   color: var(--black);
   text-align: center;
   margin: 0 auto;
+
+  &--white {
+    @extend .c-noneTitle;
+    color: var(--white);
+  }
 }

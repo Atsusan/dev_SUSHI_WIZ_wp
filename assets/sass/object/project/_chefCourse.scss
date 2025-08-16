@@ -1,0 +1,120 @@
+/* p-chefCourse
+----------------------------------------------------------------- */
+@use "../../global" as g;
+
+.p-chefCourse {
+  background: url(../images/profile-chef-contents-bg.webp) repeat-y center top/cover;
+  padding-block: 8rem 4rem;
+  @include g.tabletS {
+    padding-top: 11.4rem;
+  }
+
+  &__inner {
+    padding-inline: 3rem;
+  }
+
+  &__title {
+    font-family: var(en);
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--white);
+  }
+
+  &__text {
+    margin-top: 0.4rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: calc(28 / 14);
+    color: var(--white);
+
+    & + & {
+      margin-top: 4rem;
+    }
+  }
+
+  &__list {
+    margin-top: 4.3rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    width: 100%;
+    border-top: 1px solid var(--white);
+
+    &--borderBm {
+      @extend .p-chefCourse__item;
+      border-bottom: 1px solid var(--white);
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 8.9rem;
+    transition: all 0.4s;
+    position: relative;
+    padding-inline: 2rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 2rem;
+      transform: translateY(-50%);
+      width: 3rem;
+      height: 3rem;
+      background: url(../images/common/icon_arrowRight.svg) no-repeat center center / contain;
+    }
+
+    &:hover {
+      @include g.hover {
+        background-color: var(--white);
+        color: var(--black);
+      }
+
+      &::before {
+        @include g.hover {
+          background-image: url(../images/common/icon_arrowRight-hover.svg);
+        }
+      }
+    }
+
+    &.is-current {
+      background-color: var(--white);
+      color: var(--black);
+
+      &::before {
+        background-image: url(../images/common/icon_arrowRight-hover.svg);
+      }
+    }
+  }
+
+  &__price {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: -0.1rem;
+    &--fzSmall {
+      @extend .p-chefCourse__price;
+      font-size: 0.6667em;
+    }
+  }
+
+  &__plan {
+    margin-top: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1;
+
+    &--en {
+      @extend .p-chefCourse__plan;
+
+      font-size: 1.6rem;
+      font-weight: 600;
+      font-family: var(--en);
+    }
+  }
+}

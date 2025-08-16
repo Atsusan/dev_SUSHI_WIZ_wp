@@ -1,0 +1,242 @@
+/* p-chefPersonal
+----------------------------------------------------------------- */
+@use "../../global" as g;
+
+.p-chefPersonal {
+  padding: 6rem 0 4.8rem;
+  background: url(../images/plan-personal-bg.jpg) no-repeat center top/cover;
+
+  &__inner {
+    padding: 0 3rem;
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--black);
+    text-align: center;
+  }
+
+  &__titleBox {
+    margin-top: 8rem;
+  }
+
+  &__text {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--black);
+  }
+
+  &__planContainer {
+    margin-top: 3rem;
+
+    & + & {
+      margin-top: 4rem;
+    }
+  }
+
+  &__headingBox {
+    min-height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--liteBlack);
+  }
+
+  &__heading {
+    margin-top: 0.4rem;
+    font-size: 3.2rem;
+    font-weight: 500;
+    font-family: var(--en);
+    line-height: 1;
+    color: var(--white);
+
+    &--fzSmall {
+      @extend .p-chefPersonal__heading;
+      font-size: 0.75em;
+      font-weight: 500;
+      font-family: var(--jp);
+    }
+  }
+
+  &__sub {
+    margin-top: 0.8rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--white);
+  }
+
+  &__textList {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__textItem {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: calc(24 / 14);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "・";
+      display: block;
+    }
+  }
+
+  &__textButton {
+    text-decoration: underline;
+    transition: opacity 0.4s;
+
+    &:hover {
+      @include g.hover {
+        opacity: 0.65;
+      }
+    }
+  }
+
+  &Card {
+    padding: 4rem 3rem 0;
+    &__card {
+      & + & {
+        margin-top: 4rem;
+      }
+    }
+
+    &__link {
+      display: flex;
+      flex-direction: column;
+      padding: 4rem 2rem;
+      background-color: #f3f3f4;
+      transition: opacity 0.4s;
+      position: relative;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        transition: all 0.4s;
+      }
+
+      &:hover {
+        &::after {
+          @include g.hover {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: all 0.4s;
+          }
+        }
+      }
+    }
+
+    &__job {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.05em;
+      background: var(--black);
+      padding: 0.4rem 1rem;
+      max-width: fit-content;
+    }
+
+    &__name {
+      margin-top: 2rem;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 150%;
+      color: var(--black);
+    }
+
+    &__imgBox {
+      margin-top: 2rem;
+      aspect-ratio: 1 / 1;
+      max-width: 28rem;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      margin-top: 2rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: calc(24 / 14);
+      color: var(--black);
+    }
+
+    &__plus {
+      display: block;
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-left: 0.5rem;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: var(--black);
+      }
+
+      &::before {
+        width: 100%;
+        height: 2px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        width: 2px;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__btnBox {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 23rem;
+      border: 2px solid var(--white);
+      padding: 2rem;
+      transition: opacity 0.4s;
+      font-size: 1.5rem;
+      font-weight: 500;
+
+      &:hover {
+        @include g.hover {
+          opacity: 0.65;
+        }
+      }
+    }
+  }
+}

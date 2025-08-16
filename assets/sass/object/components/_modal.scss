@@ -12,13 +12,154 @@
   height: 100%;
   overflow: auto;
   z-index: 100;
-  background-color: rgba(33, 30, 30,.5);
-  transition: opacity .4s, visibility .4s ease-in-out;
+  background-color: rgba(33, 30, 30, 0.5);
+  transition: opacity 0.4s, visibility 0.4s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
-  @media screen and (max-height: 600px) { /* tablet見切れ対策 */
+  @media screen and (max-height: 600px) {
+    /* tablet見切れ対策 */
     display: block;
+  }
+
+  &--chef {
+    @extend .c-modal;
+
+    .c-modal__card {
+      background: url(../images/profile-chef-contents-bg.webp) no-repeat center center / cover;
+      max-width: 39rem;
+      position: relative;
+      height: 100%;
+      @include g.tabletS {
+        height: auto;
+      }
+    }
+    .c-modal__close {
+      position: absolute;
+      top: 0rem;
+      right: 0rem;
+      width: 6.3rem;
+      height: 6.3rem;
+      transition: opacity 0.4s;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 65%;
+        height: 2px;
+        background: #f7f9f4;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        width: 65%;
+        height: 2px;
+        background: #f7f9f4;
+      }
+
+      &:hover {
+        @include g.hover {
+          opacity: 0.65;
+        }
+      }
+    }
+
+    .c-modal__container {
+      padding: 3rem 0 4rem;
+      @include g.tabletS {
+        padding: 6.2rem 0 4rem;
+      }
+    }
+
+    .c-modal__imgBox {
+      margin-top: 0;
+    }
+
+    .c-modal__contents {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 2rem 3rem 0;
+    }
+
+    .c-modal__name {
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 150%;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+    }
+
+    .c-modal__nameTag {
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 150%;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-left: 0.25em;
+
+      &::before {
+        content: ":";
+        display: block;
+        padding-right: 0.25em;
+      } 
+    }
+
+    .c-modal__job {
+      background-color: var(--white);
+      max-width: fit-content;
+      padding: 0.4rem 1rem;
+      font-weight: 400;
+      line-height: calc(24 / 14);
+      color: var(--white);
+      color: var(--black);
+      font-size: 1.4rem;
+    }
+
+    .c-modal__about {
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: calc(24 / 14);
+      color: var(--white);
+    }
+
+    .c-modal__comment {
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: calc(24 / 14);
+      color: var(--white);
+    }
+
+    .c-modal__spatialBox {
+      //
+    }
+
+    .c-modal__spatialTag {
+      padding: 0.4rem 1rem;
+      background-color: #6A6767;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 1;
+      color: var(--white);
+    }
+
+    .c-modal__spatial {
+      margin-top: 0.8rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: calc(24 / 14);
+      color: var(--white);
+    }
   }
 
   &__flex {
@@ -26,7 +167,8 @@
     justify-content: center;
     align-items: center;
     height: fit-content;
-    @media screen and (max-height: 600px) { /* tablet見切れ対策 */
+    @media screen and (max-height: 600px) {
+      /* tablet見切れ対策 */
       height: auto;
     }
   }
@@ -49,15 +191,15 @@
     width: 6.3rem;
     height: 6.3rem;
     border-radius: 50%;
-    transition: opacity .4s;
+    transition: opacity 0.4s;
 
     &:hover {
       @include g.hover {
-        opacity: .65;
+        opacity: 0.65;
       }
     }
   }
-  
+
   &__closeIcon {
     width: 100%;
   }

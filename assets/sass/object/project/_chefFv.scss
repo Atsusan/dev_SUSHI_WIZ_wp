@@ -1,12 +1,10 @@
-/* p-profileFv
+/* p-chefFv
 ----------------------------------------------------------------- */
 @use "../../global" as g;
 
-.p-profileFv {
+.p-chefFv {
   margin-top: 8.7rem;
-  background: url(../images/sp/profile-fv-bg.jpg) no-repeat center top/cover;
-  // height: calc(100vh - 8.7rem); // svhが効かない時の保険
-  // height: calc(100svh - 8.7rem);
+  background: url(../images/sp/profile-chef-fv-bg.webp) no-repeat center top/cover;
   min-height: 48.6rem;
   position: relative;
   @include g.tabletS {
