@@ -138,6 +138,20 @@
     }
   }
 
+    /* gallery FV */
+  &--gallery {
+    @extend .l-fv;
+
+    @include g.tabletS {
+      background: url(../images/gallery-fv-bg.webp) no-repeat center top/cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+    }
+  }
+
   &::after {
     @include g.tabletS {
       content: "";

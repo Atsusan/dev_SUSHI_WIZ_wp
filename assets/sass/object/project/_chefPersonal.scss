@@ -75,6 +75,7 @@
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
+    gap: 4rem;
   }
 
   &__textItem {
@@ -102,13 +103,18 @@
     }
   }
 
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__item {
+    //
+  }
+
   &Card {
-    padding: 4rem 3rem 0;
-    &__card {
-      & + & {
-        margin-top: 4rem;
-      }
-    }
+    padding: 0 3rem;
 
     &__link {
       display: flex;
@@ -235,6 +241,90 @@
       &:hover {
         @include g.hover {
           opacity: 0.65;
+        }
+      }
+    }
+
+    &__paginationBox {
+      display: flex;
+      justify-content: center;
+      color: var(--white);
+
+      .c-pagination {
+        /* プラグイン用のクラス */
+        .wp-pagenavi {
+          display: flex;
+          align-items: center;
+          gap: 1.4rem;
+          font-size: 1.5rem;
+          font-weight: bold;
+          font-family: var(--en);
+          line-height: 1;
+          color: var(--white);
+
+          a {
+            /* プラグインで制御するため要素で指定 */
+            transition: opacity 0.4s ease;
+            &:hover {
+              @include g.hover {
+                opacity: 0.65;
+              }
+            }
+          }
+        }
+
+        .previouspostslink,
+        .nextpostslink {
+          display: flex;
+          align-items: center;
+          gap: 1.6rem;
+          padding: 1rem;
+        }
+
+        .previouspostslink {
+          &::before {
+            content: "";
+            display: block;
+            width: 1rem;
+            height: 1.2rem;
+            background: url(../images/common/icon-arrow-roghtWhite.svg) no-repeat center center /
+              contain;
+            transform: rotate(180deg);
+          }
+        }
+
+        .nextpostslink {
+          &::after {
+            content: "";
+            display: block;
+            width: 1rem;
+            height: 1.2rem;
+            background: url(../images/common/icon-arrow-roghtWhite.svg) no-repeat center center /
+              contain;
+          }
+        }
+
+        .current {
+          width: 4.4rem;
+          height: 4.4rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          border: 1px solid var(--white);
+          margin: 0 -0.5rem;
+        }
+
+        .page {
+          padding: 1rem;
+        }
+
+        .extend {
+          font-size: 1.2rem;
+          font-weight: 400;
+          line-height: 1;
+          color: var(--white);
+          margin: 0 -1.2rem;
         }
       }
     }

@@ -44,16 +44,14 @@
       <?php
       $args = array(
         'post_type' => 'post',
-        'posts_per_page' => 8,
+        'posts_per_page' => 1,
         'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
         'category_name' => $current_category !== 'all' ? $current_category : '',
       );
-
-      $the_query = new WP_Query($args);
       ?>
 
-      <?php if ($the_query->have_posts()): ?>
-        <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+      <?php if (have_posts()): ?>
+        <?php while (have_posts()): the_post(); ?>
 
           <li class="p-articleContents__item">
             <a href="<?php the_permalink(); ?>" class="p-articleContents__link">
@@ -83,22 +81,18 @@
 
         <?php endwhile; ?>
       <?php else: ?>
-        <p class="c-noneTitle">記事が見つかりませんでした。</p>
+        <li class="c-noneTitle">記事が見つかりませんでした。</li>
       <?php endif; ?>
 
     </ul>
     <div class="p-articleContents__paginationBox">
       <div class="c-pagination">
         <?php if (function_exists('wp_pagenavi')) {
-          wp_pagenavi(array(
-            'query' => $the_query,
-            'add_args' => array('category' => $current_category),
-          ));
+          wp_pagenavi();
         } ?>
       </div>
     </div>
   </div>
-  <?php wp_reset_postdata(); ?>
   <!-- ▲ p-articleContents -->
 
   <?php get_footer(); ?>

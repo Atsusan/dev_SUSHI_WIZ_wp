@@ -1,0 +1,132 @@
+/* p-galleryList
+----------------------------------------------------------------- */
+@use "../../global" as g;
+
+.p-galleryList {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  &__item {
+    //
+  }
+
+  &__imgBox {
+    aspect-ratio: 390 / 260;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__textBox {
+    margin-top: 0.8rem;
+    padding-inline: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    width: 100%;
+  }
+
+  &__place {
+    padding: 0 1rem;
+    background-color: var(--white);
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: calc(24 / 14);
+    color: var(--black);
+    max-width: fit-content;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--white);
+  }
+
+  &__paginationBox {
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+
+    .c-pagination {
+      /* プラグイン用のクラス */
+      .wp-pagenavi {
+        display: flex;
+        align-items: center;
+        gap: 1.4rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: var(--en);
+        line-height: 1;
+        color: var(--white);
+
+        a {
+          /* プラグインで制御するため要素で指定 */
+          transition: opacity 0.4s ease;
+          &:hover {
+            @include g.hover {
+              opacity: 0.65;
+            }
+          }
+        }
+      }
+
+      .previouspostslink,
+      .nextpostslink {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        padding: 1rem;
+      }
+
+      .previouspostslink {
+        &::before {
+          content: "";
+          display: block;
+          width: 1rem;
+          height: 1.2rem;
+          background: url(../images/common/icon-arrow-roghtWhite.svg) no-repeat center center / contain;
+          transform: rotate(180deg);
+        }
+      }
+
+      .nextpostslink {
+        &::after {
+          content: "";
+          display: block;
+          width: 1rem;
+          height: 1.2rem;
+          background: url(../images/common/icon-arrow-roghtWhite.svg) no-repeat center center / contain;
+        }
+      }
+
+      .current {
+        width: 4.4rem;
+        height: 4.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 1px solid var(--white);
+        margin: 0 -0.5rem;
+      }
+
+      .page {
+        padding: 1rem;
+      }
+
+      .extend {
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 1;
+        color: var(--white);
+        margin: 0 -1.2rem;
+      }
+    }
+  }
+}

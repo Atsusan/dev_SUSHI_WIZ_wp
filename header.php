@@ -31,43 +31,45 @@
     <?php wp_body_open(); ?>
     <!-- ▼ PC FV Start -->
     <div class="l-fv--<?php
-                    $page_slugs = array(
-                      'concept' => 'concept',
-                      'plan' => 'plan',
-                      'profile' => 'profile',
-                      'profile-chef' => 'profile-chef',
-                      'faq' => 'faq',
-                      'contact' => 'contact',
-                      'reservation' => 'contact',
-                      'privacypolicy' => 'article',
-                    );
-                    $class_output = false; // ここで変数を初期化
-                    foreach ($page_slugs as $page => $class) {
-                      if (is_page($page)) {
-                        echo esc_html($class);
-                        $class_output = true;
-                        break;
+                      $page_slugs = array(
+                        'concept' => 'concept',
+                        'plan' => 'plan',
+                        'profile' => 'profile',
+                        'faq' => 'faq',
+                        'contact' => 'contact',
+                        'reservation' => 'contact',
+                        'privacypolicy' => 'article',
+                      );
+                      $class_output = false; // ここで変数を初期化
+                      foreach ($page_slugs as $page => $class) {
+                        if (is_page($page)) {
+                          echo esc_html($class);
+                          $class_output = true;
+                          break;
+                        }
                       }
-                    }
-                    if (!$class_output) {
-                      if (is_archive() || is_single() || is_404()) {
-                        echo esc_html('article');
+                      if (!$class_output) {
+                        if (is_post_type_archive('chef')) {
+                          echo esc_html('profile-chef');
+                        } elseif (is_post_type_archive('gallery')) {
+                          echo esc_html('gallery');
+                        } elseif (is_archive() || is_single() || is_404()) {
+                          echo esc_html('article');
+                        }
                       }
-                    }
-                    ?> u-displayNone--PU">
+                      ?> u-displayNone--PU">
       <h1 class="l-header__logoPc">
         <a href="<?php echo esc_url(home_url('/')); ?>" class="l-header__logoLink">
           <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo.svg" alt="<?php bloginfo('name'); ?>" class="l-header__logoImg" width="69" height="64">
         </a>
       </h1>
       <div class="l-fv__textBox">
-        <p class="l-fv__enTitle<?php if(is_page('privacypolicy') || is_page('reservation')) {echo esc_html('--fzSmall');} ?>">
-        <?php
+        <p class="l-fv__enTitle<?php if (is_page('privacypolicy') || is_page('reservation')) { echo esc_html('--fzSmall');} ?>">
+          <?php
           $page_titles = array(
             'concept' => 'CONCEPT',
             'plan' => 'PLAN',
             'profile' => 'CHEF',
-            'profile-chef' => 'CHEF',
             'faq' => 'FAQ',
             'contact' => 'CONTACT',
             'reservation' => 'RESERVATION',
@@ -82,18 +84,22 @@
             }
           }
           if (!$title_output) {
-            if (is_archive() || is_single()) {
+            if (is_post_type_archive('chef')) {
+              echo esc_html('CHEF');
+            } elseif (is_post_type_archive('gallery')) {
+              echo esc_html('GALLERY');
+            } elseif (is_archive() || is_single()) {
               echo esc_html('ARTICLE');
-            } elseif(is_404()) {
+            } elseif (is_404()) {
               echo esc_html('404 PAGE');
             }
           }
-        ?>
+          ?>
         </p>
-        <?php if(is_page('profile')) :?>
+        <?php if (is_page('profile')) : ?>
           <p class="l-fv__jpTitle">代表について</p>
         <?php endif; ?>
-        <?php if(is_page('profile-chef')) :?>
+        <?php if (is_archive('chef')) : ?>
           <p class="l-fv__jpTitle">職人一覧</p>
         <?php endif; ?>
       </div>

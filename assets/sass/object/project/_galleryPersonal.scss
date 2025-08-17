@@ -1,0 +1,73 @@
+/* p-galleryPersonal
+----------------------------------------------------------------- */
+@use "../../global" as g;
+
+.p-galleryPersonal {
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--black);
+    text-align: center;
+  }
+
+  &__titleBox {
+    margin-top: 8rem;
+  }
+
+  &__text {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--black);
+  }
+
+  &__planContainer {
+    margin-top: 3rem;
+
+    & + & {
+      margin-top: 4rem;
+    }
+  }
+
+  &__headingBox {
+    min-height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--liteBlack);
+  }
+
+  &__heading {
+    margin-top: 0.4rem;
+    font-size: 3.2rem;
+    font-weight: 500;
+    font-family: var(--en);
+    line-height: 1;
+    color: var(--white);
+
+    &--fzSmall {
+      @extend .p-galleryPersonal__heading;
+      font-size: 0.75em;
+      font-weight: 500;
+      font-family: var(--jp);
+    }
+  }
+
+  &__sub {
+    margin-top: 0.8rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--white);
+  }
+
+  &__textList {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
