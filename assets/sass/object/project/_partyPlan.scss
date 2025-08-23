@@ -1,0 +1,132 @@
+/* p-partyPlan
+----------------------------------------------------------------- */
+@use "../../global" as g;
+
+.p-partyPlan {
+  margin-bottom: 3rem;
+  padding-block: 6rem 4rem;
+  background: url(../images/common-contents-bg.webp) no-repeat center top / cover;
+  @include g.tabletS {
+    margin-top: 8.4rem;
+  }
+
+  &__inner {
+    padding-inline: 3rem;
+  }
+
+  &__heading {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--black);
+  }
+
+  &__read {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: calc(28 / 14);
+    color: var(--black);
+  }
+
+  &__imgBox {
+    margin-top: 0.8rem;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &List {
+    margin-top: 2rem;
+
+    &__top {
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 150%;
+      color: var(--black);
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+
+      &:first-of-type {
+        margin-top: 2rem;
+      }
+
+      & + & {
+        margin-top: 6rem;
+      }
+    }
+
+    &__item {
+      //
+    }
+
+    &__title {
+      padding: 0.9rem 2rem;
+      background-color: #363434;
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__titleText {
+      font-family: var(--en);
+      font-size: 3.2rem;
+      font-weight: 500;
+      line-height: 150%;
+      max-width: fit-content;
+      &--fzSmall {
+        @extend .p-partyPlanList__titleText;
+        font-size: 2.4rem;
+      }
+    }
+
+    &__subTitleText {
+      font-size: 2.4rem;
+      font-weight: 500;
+      line-height: 150%;
+    }
+
+    &__numberText {
+      font-family: var(--en);
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      &--fzSmall {
+        @extend .p-partyPlanList__numberText;
+        font-family: var(--jp);
+        font-size: 1.6rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+      }
+    }
+
+    &__text {
+      margin-top: 2rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: calc(24 / 14);
+      color: var(--black);
+    }
+
+    &__imgBox {
+      margin-top: 2rem;
+    }
+
+    &__img {
+      width: 100%;
+    }
+
+    &__middleImgBox {
+      margin-top: 4rem;
+      width: 100%;
+    }
+
+    &__middleImg {
+      width: 100%;
+    }
+  }
+}

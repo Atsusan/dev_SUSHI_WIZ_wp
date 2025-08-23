@@ -1,10 +1,12 @@
 @charset "UTF-8";
 /* l-header
 ----------------------------------------------------------------- */
-.l-fv, .l-fv--gallery, .l-fv--article, .l-fv--contact, .l-fv--faq, .l-fv--plan, .l-fv--profile-chef, .l-fv--profile, .l-fv--concept {
+.l-fv, .l-fv--gallery, .l-fv--article, .l-fv--contact, .l-fv--faq, .l-fv--plan, .l-fv--sushi-making, .l-fv--party-plan, .l-fv--profile-chef, .l-fv--profile, .l-fv--concept {
   /* concept FV */
   /* profile FV */
   /* profile-chef FV */
+  /* party-plan FV */
+  /* sushi-making FV */
   /* plan FV */
   /* faq FV */
   /* contact FV */
@@ -12,7 +14,7 @@
   /* gallery FV */
 }
 @media (min-width: 767px) {
-  .l-fv, .l-fv--gallery, .l-fv--article, .l-fv--contact, .l-fv--faq, .l-fv--plan, .l-fv--profile-chef, .l-fv--profile, .l-fv--concept {
+  .l-fv, .l-fv--gallery, .l-fv--article, .l-fv--contact, .l-fv--faq, .l-fv--plan, .l-fv--sushi-making, .l-fv--party-plan, .l-fv--profile-chef, .l-fv--profile, .l-fv--concept {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -72,6 +74,26 @@
   }
 }
 @media (min-width: 767px) {
+  .l-fv--party-plan {
+    background: url(../images/party-plan-fv-bg.webp) no-repeat center top/cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+  }
+}
+@media (min-width: 767px) {
+  .l-fv--sushi-making {
+    background: url(../images/sushi-making-fv-bg.webp) no-repeat center top/cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+  }
+}
+@media (min-width: 767px) {
   .l-fv--plan {
     background: url(../images/plan-fv-bg.jpg) no-repeat center top/cover;
     position: fixed;
@@ -122,7 +144,7 @@
   }
 }
 @media (min-width: 767px) {
-  .l-fv::after, .l-fv--concept::after, .l-fv--profile::after, .l-fv--profile-chef::after, .l-fv--plan::after, .l-fv--faq::after, .l-fv--contact::after, .l-fv--article::after, .l-fv--gallery::after {
+  .l-fv::after, .l-fv--concept::after, .l-fv--profile::after, .l-fv--profile-chef::after, .l-fv--party-plan::after, .l-fv--sushi-making::after, .l-fv--plan::after, .l-fv--faq::after, .l-fv--contact::after, .l-fv--article::after, .l-fv--gallery::after {
     content: "";
     position: absolute;
     top: 0;
@@ -219,7 +241,7 @@
 }
 
 @media (min-width: 767px) and (max-width: 920px) {
-  .top .l-fv, .top .l-fv--concept, .top .l-fv--profile, .top .l-fv--profile-chef, .top .l-fv--plan, .top .l-fv--faq, .top .l-fv--contact, .top .l-fv--article, .top .l-fv--gallery {
+  .top .l-fv, .top .l-fv--concept, .top .l-fv--profile, .top .l-fv--profile-chef, .top .l-fv--party-plan, .top .l-fv--sushi-making, .top .l-fv--plan, .top .l-fv--faq, .top .l-fv--contact, .top .l-fv--article, .top .l-fv--gallery {
     position: fixed;
     top: 0;
     left: 0;
@@ -254,7 +276,7 @@
     margin-top: 19.1657271702vh;
     margin-bottom: 7.4408117249vh;
   }
-  .top .l-fv::after, .top .l-fv--concept::after, .top .l-fv--profile::after, .top .l-fv--profile-chef::after, .top .l-fv--plan::after, .top .l-fv--faq::after, .top .l-fv--contact::after, .top .l-fv--article::after, .top .l-fv--gallery::after {
+  .top .l-fv::after, .top .l-fv--concept::after, .top .l-fv--profile::after, .top .l-fv--profile-chef::after, .top .l-fv--party-plan::after, .top .l-fv--sushi-making::after, .top .l-fv--plan::after, .top .l-fv--faq::after, .top .l-fv--contact::after, .top .l-fv--article::after, .top .l-fv--gallery::after {
     display: none;
   }
 }
@@ -269,7 +291,7 @@
   }
 }
 @media screen and (min-width: 1920px) {
-  .l-fv, .l-fv--concept, .l-fv--profile, .l-fv--profile-chef, .l-fv--plan, .l-fv--faq, .l-fv--contact, .l-fv--article, .l-fv--gallery {
+  .l-fv, .l-fv--concept, .l-fv--profile, .l-fv--profile-chef, .l-fv--party-plan, .l-fv--sushi-making, .l-fv--plan, .l-fv--faq, .l-fv--contact, .l-fv--article, .l-fv--gallery {
     max-width: 192rem;
     left: 50%;
     -webkit-transform: translateX(-50%);

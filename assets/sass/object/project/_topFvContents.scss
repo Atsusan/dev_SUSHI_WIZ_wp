@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   background: url(../images/top-fv-bg.jpg) no-repeat center top/cover;
-  @include g.tabletM {
+  @include g.tabletS {
     display: block;
     // min-height: max(100vh, 88.7rem);
     min-height: 88.7rem;
@@ -20,7 +20,7 @@
 
   &__textBox {
     padding-top: 10.2rem;
-    @include g.tabletM {
+    @include g.tabletS {
       padding-top: max(g.vh(170), 12rem);
     }
   }
@@ -49,10 +49,10 @@
   }
 }
 
-@media screen and (min-width: 767px) and (max-width: 920px) {
-  .p-topFvContents {
-    &__textBox {
-      padding-top: 11.7rem;
-    }
-  }
-}
+// @media screen and (min-width: 767px) and (max-width: 920px) {
+//   .p-topFvContents {
+//     &__textBox {
+//       padding-top: 11.7rem;
+//     }
+//   }
+// }

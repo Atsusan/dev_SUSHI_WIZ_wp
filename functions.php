@@ -64,6 +64,14 @@ function add_files()
   if (is_page('profile')) {
     wp_enqueue_style('profile-css', get_template_directory_uri() . '/assets/css/profile.css', array('common-style'), '1.0.0');
   }
+  // Sushi-Making CSS
+  if (is_page('sushi-making')) {
+    wp_enqueue_style('sushi-making-css', get_template_directory_uri() . '/assets/css/sushi-making.css', array('common-style'), '1.0.0');
+  }
+  // Party Plan CSS
+  if (is_page('party-plan')) {
+    wp_enqueue_style('party-plan-css', get_template_directory_uri() . '/assets/css/party-plan.css', array('common-style'), '1.0.0');
+  }
   // Chef CSS
   if (is_post_type_archive('chef')) {
     wp_enqueue_style('chef-css', get_template_directory_uri() . '/assets/css/profile-chef.css', array('common-style'), '1.0.0');

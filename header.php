@@ -35,6 +35,8 @@
                         'concept' => 'concept',
                         'plan' => 'plan',
                         'profile' => 'profile',
+                        'sushi-making' => 'sushi-making',
+                        'party-plan' => 'party-plan',
                         'faq' => 'faq',
                         'contact' => 'contact',
                         'reservation' => 'contact',
@@ -64,7 +66,9 @@
         </a>
       </h1>
       <div class="l-fv__textBox">
-        <p class="l-fv__enTitle<?php if (is_page('privacypolicy') || is_page('reservation')) { echo esc_html('--fzSmall');} ?>">
+        <p class="l-fv__enTitle<?php if (is_page('privacypolicy') || is_page('reservation')) {
+                                  echo esc_html('--fzSmall');
+                                } ?>">
           <?php
           $page_titles = array(
             'concept' => 'CONCEPT',
@@ -92,6 +96,10 @@
               echo esc_html('ARTICLE');
             } elseif (is_404()) {
               echo esc_html('404 PAGE');
+            } elseif (is_page('sushi-making')) {
+              echo wp_kses_post('SUSHI<br>MAKING<br>CLASS');
+            } elseif (is_page('party-plan')) {
+              echo wp_kses_post('PARTY<br>PLAN');
             }
           }
           ?>

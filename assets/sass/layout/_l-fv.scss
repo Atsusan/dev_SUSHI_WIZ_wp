@@ -82,6 +82,34 @@
     }
   }
 
+  /* party-plan FV */
+  &--party-plan {
+    @extend .l-fv;
+
+    @include g.tabletS {
+      background: url(../images/party-plan-fv-bg.webp) no-repeat center top/cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+    }
+  }
+
+  /* sushi-making FV */
+  &--sushi-making {
+    @extend .l-fv;
+
+    @include g.tabletS {
+      background: url(../images/sushi-making-fv-bg.webp) no-repeat center top/cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+    }
+  }
+
   /* plan FV */
   &--plan {
     @extend .l-fv;
@@ -138,7 +166,7 @@
     }
   }
 
-    /* gallery FV */
+  /* gallery FV */
   &--gallery {
     @extend .l-fv;
 
@@ -175,10 +203,10 @@
 
   .top &__textBox {
     /* TOPページのみ */
-    @include g.tabletS {
-      margin-top: auto;
-      margin-left: calc(118 / 1440 * 100vw);
-    }
+    // @include g.tabletS {
+    //   margin-top: auto;
+    //   margin-left: calc(118 / 1440 * 100vw);
+    // }
   }
 
   &__textBox {

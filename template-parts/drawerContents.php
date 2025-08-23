@@ -21,7 +21,15 @@
            </li>
            <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
              <a href="<?php echo esc_url(home_url('/profile')); ?>" class="c-drawerMenu__menuLink" onclick="drawerClose('drawerMenu')"><span
-                 class="c-drawerMenu__subText">シェフについて</span>PROFILE</a>
+                 class="c-drawerMenu__subText">シェフ</span>CHEF</a>
+             <ul class="c-drawerMenu__subList">
+                <li class="c-drawerMenu__subItem">
+                  <a href="<?php echo esc_url(home_url('/profile')); ?>" class="c-drawerMenu__subLink">代表について</a>
+                </li>
+                <li class="c-drawerMenu__subItem">
+                  <a href="<?php echo esc_url(home_url('/profile-chef')); ?>" class="c-drawerMenu__subLink">職人一覧</a>
+                </li>
+             </ul>
            </li>
            <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
              <a href="<?php echo esc_url(home_url('/faq')); ?>" class="c-drawerMenu__menuLink" onclick="drawerClose('drawerMenu')"><span
@@ -30,6 +38,10 @@
            <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
              <a href="<?php echo esc_url(home_url('/archive')); ?>" class="c-drawerMenu__menuLink" onclick="drawerClose('drawerMenu')"><span
                  class="c-drawerMenu__subText">トピックス</span>ARTICLE</a>
+           </li>
+           <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
+             <a href="<?php echo esc_url(home_url('/archive')); ?>" class="c-drawerMenu__menuLink" onclick="drawerClose('drawerMenu')"><span
+                 class="c-drawerMenu__subText">ギャラリー</span>GALLERY</a>
            </li>
            <li class="c-drawerMenu__menuItem u-displayNone--PO">
              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/drawer-item.jpg" alt="出張 寿司" class="c-drawerMenu__img" width="390"

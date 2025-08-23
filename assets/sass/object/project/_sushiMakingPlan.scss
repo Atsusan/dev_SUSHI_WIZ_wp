@@ -1,0 +1,148 @@
+/* p-sushiMakingFv
+----------------------------------------------------------------- */
+@use "../../global" as g;
+
+.p-sushiMakingPlan {
+  padding-block: 6rem;
+  background: url(../images/common-contents-bg.webp) no-repeat center top/cover;
+
+  &__inner {
+    padding-inline: 3rem;
+  }
+
+  &__headingBox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--black);
+  }
+
+  &__subText {
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--black);
+  }
+
+  &__topBox {
+    margin-top: 2rem;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: calc(28 / 14);
+    color: var(--black);
+
+    & + & {
+      margin-top: 0.8rem;
+    }
+  }
+
+  &__imgBox {
+    margin-top: 0.8rem;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &List {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+
+    &__item {
+    }
+
+    &__titleBox {
+      position: relative;
+      background-color: #494747;
+      padding: 2rem 2rem 1.6rem;
+    }
+
+    &__read {
+      position: absolute;
+      top: -1.6rem;
+      left: -1.3rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: calc(28 / 14);
+      color: var(--black);
+      padding: 0.4rem 1.6rem;
+      background-color: var(--white);
+      border: 1px solid var(--black);
+      border-radius: 4rem;
+    }
+
+    &__title {
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    &__titleText {
+      font-size: 2.4rem;
+      font-weight: 500;
+      line-height: 150%;
+      &--fzSmall {
+        @extend .p-sushiMakingPlanList__titleText;
+        font-size: 1.6rem;
+      }
+    }
+
+    &__titleFlex {
+      width: 100%;
+      display: flex;
+      align-items: baseline;
+      gap: 0.8rem;
+    }
+
+    &__titleEnText {
+      font-family: var(--en);
+      font-size: 3.2rem;
+      font-weight: 500;
+      line-height: 150%;
+    }
+
+    &__titleJpText {
+      font-family: var(--jp);
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 150%;
+    }
+
+    &__text {
+      margin-top: 2rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: calc(24 / 14);
+      color: var(--black);
+
+      &--en {
+        @extend .p-sushiMakingPlanList__text;
+      }
+    }
+
+    &__textGroup {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    &__imgBox {
+      margin-top: 2rem;
+    }
+
+    &__img {
+      width: 100%;
+    }
+  }
+}
