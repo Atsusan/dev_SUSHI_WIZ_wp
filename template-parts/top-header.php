@@ -98,6 +98,24 @@
     <main>
       <!-- ▼ p-topFv SP -->
       <section class="p-topFv">
+        <!-- ▼ Slide p-topFv Start -->
+        <div class="p-topFv__bg">
+          <div class="swiper js-swiperFv p-topFv__swiper">
+            <div class="swiper-wrapper p-topFv__wrapper">
+              <div class="swiper-slide p-topFv__slide">
+                <img class="p-topFv__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/fv.webp" alt="" width="2880" height="1774">
+              </div>
+              <div class="swiper-slide p-topFv__slide">
+                <img class="p-topFv__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/fv2.webp" alt="" width="2880" height="1774">
+              </div>
+              <div class="swiper-slide p-topFv__slide">
+                <img class="p-topFv__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/fv3.webp" alt="" width="2880" height="1774">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ▲ Slide l-fvBg END -->
+
         <div class="p-topFv__textSwiperBox">
           <!-- ▼ Slide Loop Text Start -->
           <div class="c-loopText__textSwiperContainer">

@@ -72,7 +72,7 @@
                  class="c-drawerMenu__subText">トピックス</span>ARTICLE</a>
            </li>
            <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
-             <a href="<?php echo esc_url(home_url('/archive')); ?>" class="c-drawerMenu__menuLink" onclick="drawerClose('drawerMenu')"><span
+             <a href="<?php echo esc_url(home_url('/gallery')); ?>" class="c-drawerMenu__menuLink" onclick="drawerClose('drawerMenu')"><span
                  class="c-drawerMenu__subText">ギャラリー</span>GALLERY</a>
            </li>
          </ul>

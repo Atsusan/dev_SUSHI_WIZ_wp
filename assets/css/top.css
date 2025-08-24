@@ -1183,6 +1183,27 @@
   opacity: 0.8;
   transform: skewX(12.5deg);
 }
+.p-topFv__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.p-topFv__swiper {
+  height: 100%;
+}
+.p-topFv__wrapper {
+  height: 100%;
+}
+.p-topFv__slide {
+  background-size: cover;
+  background-position: center top;
+}
+.p-topFv__img {
+  height: 100%;
+  object-fit: cover;
+}
 .p-topFv__textContents {
   position: relative;
   z-index: 10;

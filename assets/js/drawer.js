@@ -55,11 +55,11 @@ function setupMenu() {
     // menuTitle がない場合はスキップ
     if (!oldSubTitle) return;
 
-    // 🔄 多重登録防止のためクローンして置き換え
+    // 多重登録防止のためクローンして置き換え
     const newSubTitle = oldSubTitle.cloneNode(true);
     oldSubTitle.replaceWith(newSubTitle);
 
-    // 🔹 リセット：is-active と is-open を削除
+    // リセット：is-active と is-open を削除
     newSubTitle.classList.remove("is-active");
     subList.classList.remove("is-open");
 
@@ -70,7 +70,7 @@ function setupMenu() {
     }
 
     if (isMobileView) {
-      // 📱 スマホ：タップで開閉
+      // スマホ：タップで開閉
       newSubTitle.addEventListener("click", (e) => {
         e.preventDefault();
 
@@ -89,7 +89,7 @@ function setupMenu() {
       });
       console.log('タッチデバイス');
     } else {
-      // 🖥 PC：hoverで開閉
+      // PC：hoverで開閉
       subList.addEventListener("mouseenter", () => {
         newSubTitle.classList.add("is-active");
       });
