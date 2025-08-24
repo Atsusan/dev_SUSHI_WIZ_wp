@@ -111,7 +111,15 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
   // swiperPlan5
-  const swiperPlan5 = new Swiper("#planAlcohol1", {
+  const swiperPlan5 = new Swiper("#planBuffet1", {
+    ...defaultSwiperSettings,
+    pagination: {
+      el: "#planBuffet1 .p-planBuffet__pagination",
+      clickable: true,
+    },
+  });
+  // swiperPlan6
+  const swiperPlan6 = new Swiper("#planAlcohol1", {
     ...defaultSwiperSettings,
     pagination: {
       el: "#planAlcohol1 .p-planAlcohol__pagination",

@@ -673,6 +673,10 @@
   visibility: visible;
   opacity: 1;
 }
+.c-drawerMenu__menuItem--subList.is-active .c-drawerMenu__subList {
+  opacity: 1;
+  visibility: visible;
+}
 @media (min-width: 767px) {
   .c-drawerMenu__menuItem:not(:first-child), .c-drawerMenu__menuItem--subList:not(:first-child) {
     border-left: 1px solid var(--white);
@@ -821,8 +825,8 @@
   }
 }
 .c-drawerMenu__subList {
-  opacity: 1;
-  visibility: visible;
+  visibility: hidden;
+  opacity: 0;
   position: relative;
   top: unset;
   left: unset;
@@ -855,8 +859,6 @@
     width: calc(100% + 2px);
     border: 1px solid #211e1e;
     border-top: 2px solid #211e1e;
-    visibility: hidden;
-    opacity: 0;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
     min-width: 200px;

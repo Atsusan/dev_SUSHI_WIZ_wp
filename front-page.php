@@ -23,7 +23,7 @@
 <section class="p-topConcept">
   <div class="p-topConcept__head">
     <div class="p-topConcept__titleBox">
-      <h2 class="p-topConcept__title">鮨で人を笑顔にしたい<br>人と人を繋げたい</h2>
+      <h2 class="p-topConcept__title">鮨で人を笑顔にしたい<br>鮨で人とを繋げたい</h2>
     </div>
     <div class="p-topConcept__imgBox">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-concept-bg.jpg" alt="concept-bg" class="p-topConcept__img" width="780" height="676">
@@ -87,9 +87,9 @@
       </a>
     </li>
     <li class="p-topPlan__item">
-      <a href="<?php echo esc_url(home_url('/plan')); ?>#plan6" class="p-topPlan__link">
+      <a href="<?php echo esc_url(home_url('/party-plan')); ?>" class="p-topPlan__link">
         <div class="p-topPlan__textBox">
-          <h3 class="p-topPlan__title">パーティープラン</h3>
+          <h3 class="p-topPlan__title">法人向けプラン</h3>
           <span class="p-topPlan__headCount">( ８名様～ )</span>
           <p class="p-topPlan__text">お客様のご希望に合わせてメニューを考えます。</p>
         </div>
@@ -103,7 +103,7 @@
       <a href="<?php echo esc_url(home_url('/plan')); ?>#alcohol" class="p-topPlan__link">
         <div class="p-topPlan__textBox">
           <h3 class="p-topPlan__title">ペアリングプラン</h3>
-          <p class="p-topPlan__text">SAKE DIPLOMA の資格を持つスタッフが厳選した日本酒・ワインをペアリングしたコース。</p>
+          <p class="p-topPlan__text">SAKE DIPLOMA の資格を持つスタッフが厳選した<br>日本酒・ワインをペアリングしたコース。</p>
         </div>
         <div class="p-topPlan__moreBox">
           <span class="p-topPlan__more">VIEW MORE</span>

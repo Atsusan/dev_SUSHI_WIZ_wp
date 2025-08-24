@@ -128,13 +128,12 @@
 
     &--subList {
       @extend .c-drawerMenu__menuItem;
-
       grid-column: span 2;
       height: 0;
       visibility: hidden;
       opacity: 0;
       display: block;
-      transition: opacity .4s , visibility .4s;
+      transition: opacity 0.4s, visibility 0.4s;
       @include g.tabletS {
         display: none;
       }
@@ -144,6 +143,11 @@
         height: 100%;
         visibility: visible;
         opacity: 1;
+
+        .c-drawerMenu__subList {
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
 
@@ -278,10 +282,8 @@
   }
 
   &__subList {
-    // デバック用
-    opacity: 1;
-    visibility: visible;
-    // デバック用　END
+    visibility: hidden;
+    opacity: 0;
     position: relative;
     top: unset;
     left: unset;
@@ -289,8 +291,6 @@
     background-color: white;
     grid-column: span 2;
     border-top: 1px solid var(--black);
-
-    //　調査中
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -309,8 +309,6 @@
       width: calc(100% + 2px);
       border: 1px solid #211e1e;
       border-top: 2px solid #211e1e;
-      visibility: hidden;
-      opacity: 0;
       transition: all 0.4s;
       min-width: 200px;
     }
