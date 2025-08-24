@@ -1559,7 +1559,7 @@
   padding: 0 3rem;
 }
 .p-planAlcohol__list {
-  margin-top: 5rem;
+  margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1684,7 +1684,7 @@
   margin-top: 0.8rem;
   font-size: 1.6rem;
   font-weight: 500;
-  line-height: 180%;
+  line-height: 150%;
   color: var(--black);
 }
 .p-planAlcoholWine__planRead {

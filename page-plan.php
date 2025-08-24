@@ -776,7 +776,7 @@ Template Name: Plan Page
           選ばれたお寿司コースに併せて最適のワインをチョイスしますので、是非ワインと併せてお寿司をお楽しみください。
         </p>
         <div class="p-planAlcoholWine__imgBox">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/plan-alcoholWine.webp" class="p-planAlcoholWine__imgBox" width="660" height="440" loading="lazy">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/plan-alcoholWine.webp" class="p-planAlcoholWine__img" width="660" height="440" loading="lazy">
         </div>
         <ul class="p-planAlcohol__list">
           <li class="p-planAlcohol__item">
