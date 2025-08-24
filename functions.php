@@ -100,7 +100,7 @@ function add_files()
   wp_enqueue_script('smooth-scroll', get_template_directory_uri() . '/assets/js/smooth-scroll.js', array(), '1.0.0', true);
   // Drawer
   wp_enqueue_script('drawer', get_template_directory_uri() . '/assets/js/drawer.js', array(), '1.0.0', true);
-  if (is_front_page() || is_page('plan')) {
+  if (is_front_page() || is_page('plan') || is_page('party-plan')) {
     // Loop Slide
     wp_enqueue_script('loop-slide', get_template_directory_uri() . '/assets/js/loopSlide.js', array(), '1.0.0', true);
     // Swiper JS

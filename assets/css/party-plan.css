@@ -1124,9 +1124,12 @@
 /* p-partyPlan
 ----------------------------------------------------------------- */
 .p-partyPlan {
-  margin-bottom: 3rem;
   padding-block: 6rem 4rem;
   background: url(../images/common-contents-bg.webp) no-repeat center top/cover;
+  /* Swiper */
+  /* その他バレット調整 */
+  /* アクティブなバレットの調整 */
+  /* バレットの余白調整 */
 }
 @media (min-width: 767px) {
   .p-partyPlan {
@@ -1143,6 +1146,7 @@
   color: var(--black);
 }
 .p-partyPlan__read {
+  margin-top: 2rem;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2;
@@ -1163,7 +1167,7 @@
   line-height: 150%;
   color: var(--black);
 }
-.p-partyPlanList__list {
+.p-partyPlanList__list, .p-partyPlanList__list--mtLarge {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1172,11 +1176,9 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 4rem;
-}
-.p-partyPlanList__list:first-of-type {
   margin-top: 2rem;
 }
-.p-partyPlanList__list + .p-partyPlanList__list {
+.p-partyPlanList__list--mtLarge {
   margin-top: 6rem;
 }
 .p-partyPlanList__title {
@@ -1236,9 +1238,56 @@
 .p-partyPlanList__middleImgBox {
   margin-top: 4rem;
   width: 100%;
+  aspect-ratio: 390/220;
+  overflow: hidden;
 }
 .p-partyPlanList__middleImg {
   width: 100%;
+}
+.p-partyPlan__swiperContainer {
+  margin-top: 3rem;
+  overflow: hidden;
+  position: relative;
+}
+.p-partyPlan__swiper {
+  overflow: visible;
+}
+.p-partyPlan__slide {
+  width: 100%;
+}
+.p-partyPlan__imgBox {
+  width: 100%;
+}
+.p-partyPlan__paginationBox {
+  position: relative;
+  margin-top: 3rem;
+}
+.p-partyPlan__pagination {
+  position: relative;
+  top: unset !important;
+  bottom: unset !important;
+}
+.p-partyPlan .swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--black);
+  background-color: transparent;
+  opacity: 1;
+  margin: 0;
+}
+.p-partyPlan .swiper-pagination-bullet + .p-partyPlan .swiper-pagination-bullet {
+  margin-left: 12rem !important;
+}
+.p-partyPlan .swiper-pagination-bullet-active {
+  background-color: var(--black);
+}
+.p-partyPlan .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet .swiper-pagination-bullet,
+.p-partyPlan .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+}
+.p-partyPlan .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet .swiper-pagination-bullet:not(:first-child),
+.p-partyPlan .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:first-child) {
+  margin-left: 1.2rem;
 }
 
 /* p-planTrip

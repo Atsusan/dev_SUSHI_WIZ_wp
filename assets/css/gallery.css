@@ -1454,7 +1454,7 @@
 ----------------------------------------------------------------- */
 .p-galleryCourse {
   background: url(../images/gallery-contents-bg.webp) repeat-y center top/cover;
-  padding-block: 8rem 4rem;
+  padding-block: 4rem;
 }
 @media (min-width: 767px) {
   .p-galleryCourse {

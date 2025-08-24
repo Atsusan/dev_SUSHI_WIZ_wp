@@ -68,7 +68,7 @@ Template Name: Party Plan Page
       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/party-plan-item04.webp" alt="" class="p-partyPlanList__middleImg" width="780" height="434">
     </div>
     <div class="p-partyPlan__inner">
-      <ul class="p-partyPlanList__list">
+      <ul class="p-partyPlanList__list--mtLarge">
         <li class="p-partyPlanList__item">
           <h3 class="p-partyPlanList__title">
             <span class="p-partyPlanList__titleBox">
@@ -105,9 +105,26 @@ Template Name: Party Plan Page
           <p class="p-partyPlanList__text">
             玉子焼きや特製チャーシューなど先付けセットや生本鮪の赤身、中トロを始め新鮮なネタを豪華に盛り付けて大規模なパーティーを彩り致します。詳細は別途ご連絡下さい。
           </p>
-          <div class="p-partyPlanList__imgBox">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/party-plan-item07.webp" alt="1000貫特別コース" class="p-partyPlanList__img" width="660" height="440">
+          <!-- ▼ Slide Stat -->
+          <div class="p-partyPlan__swiperContainer">
+            <div id="partyPlan1" class="swiper p-partyPlan__swiper">
+              <ul class="swiper-wrapper p-partyPlan__wrapper">
+                <li class="swiper-slide p-partyPlan__slide">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/party-plan-item07.webp" alt="1000貫特別コース" class="p-partyPlanList__img" width="660" height="440">
+                </li>
+                <li class="swiper-slide p-partyPlan__slide">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/party-plan-item08.webp" alt="1000貫特別コース" class="p-partyPlanList__img" width="660" height="440">
+                </li>
+                <li class="swiper-slide p-partyPlan__slide">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/party-plan-item09.webp" alt="1000貫特別コース" class="p-partyPlanList__img" width="660" height="440">
+                </li>
+              </ul>
+              <div class="p-partyPlan__paginationBox">
+                <div class="swiper-pagination p-partyPlan__pagination"></div>
+              </div>
+            </div>
           </div>
+          <!-- ▲ Slide End -->
         </li>
       </ul>
     </div>

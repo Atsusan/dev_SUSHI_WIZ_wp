@@ -3,7 +3,6 @@
 @use "../../global" as g;
 
 .p-partyPlan {
-  margin-bottom: 3rem;
   padding-block: 6rem 4rem;
   background: url(../images/common-contents-bg.webp) no-repeat center top / cover;
   @include g.tabletS {
@@ -22,6 +21,7 @@
   }
 
   &__read {
+    margin-top: 2rem;
     font-size: 1.4rem;
     font-weight: 400;
     line-height: calc(28 / 14);
@@ -50,12 +50,10 @@
       display: flex;
       flex-direction: column;
       gap: 4rem;
+      margin-top: 2rem;
 
-      &:first-of-type {
-        margin-top: 2rem;
-      }
-
-      & + & {
+      &--mtLarge {
+        @extend .p-partyPlanList__list;
         margin-top: 6rem;
       }
     }
@@ -123,10 +121,78 @@
     &__middleImgBox {
       margin-top: 4rem;
       width: 100%;
+      aspect-ratio: 390 / 220;
+      overflow: hidden;
     }
 
     &__middleImg {
       width: 100%;
+    }
+  }
+
+
+  /* Swiper */
+  &__swiperContainer {
+    margin-top: 3rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__swiper {
+    overflow: visible;
+  }
+
+  &__wrapper {
+    //
+  }
+
+  &__slide {
+    width: 100%;
+  }
+
+  &__imgBox {
+    width: 100%;
+  }
+
+  &__paginationBox {
+    position: relative;
+    margin-top: 3rem;
+  }
+
+  &__pagination {
+    position: relative;
+    top: unset !important;
+    bottom: unset !important;
+  }
+
+  /* その他バレット調整 */
+  .swiper-pagination-bullet {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid var(--black);
+    background-color: transparent;
+    opacity: 1;
+    margin: 0;
+
+    & + & {
+      margin-left: 12rem !important;
+    }
+  }
+
+  /* アクティブなバレットの調整 */
+  .swiper-pagination-bullet-active {
+    background-color: var(--black);
+  }
+
+  /* バレットの余白調整 */
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets {
+    .swiper-pagination-bullet {
+      margin: 0;
+    }
+
+    .swiper-pagination-bullet:not(:first-child) {
+      margin-left: 1.2rem;
     }
   }
 }

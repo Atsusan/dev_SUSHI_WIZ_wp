@@ -126,4 +126,12 @@ document.addEventListener("DOMContentLoaded", function () {
       clickable: true,
     },
   });
+  // swiperPartyPlan1
+  const swiperPlan7 = new Swiper("#partyPlan1", {
+    ...defaultSwiperSettings,
+    pagination: {
+      el: "#partyPlan1 .p-partyPlan__pagination",
+      clickable: true,
+    },
+  });
 });
