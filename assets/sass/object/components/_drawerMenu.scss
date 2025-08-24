@@ -16,22 +16,21 @@
   background: transparent;
   opacity: 0;
   visibility: hidden;
-  transition:
-    opacity 0.8s ease,
-    visibility 0.8s ease;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
   @media screen and (min-width: 1920px) {
     max-width: 192rem;
     margin: 0 auto;
   }
 
-  &::after { // ドロワーを開いた時の背景
+  &::after {
+    // ドロワーを開いた時の背景
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.42);
+    background-color: rgba(0, 0, 0, 0.42);
     z-index: -1;
     opacity: 0;
     visibility: hidden;
@@ -40,16 +39,12 @@
   &.is-open {
     opacity: 1;
     visibility: visible;
-    transition:
-    opacity 0.6s ease,
-    visibility 0.6s ease;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
 
     &::after {
       opacity: 1;
       visibility: visible;
-      transition:
-        opacity 0.5s .2s ease,
-        visibility 0.5s .2s ease;
+      transition: opacity 0.5s 0.2s ease, visibility 0.5s 0.2s ease;
     }
   }
 
@@ -118,14 +113,38 @@
     grid-template-columns: repeat(2, 1fr);
     @include g.tabletS {
       display: flex;
+      flex-wrap: unset;
     }
   }
 
   &__menuItem {
     border-top: 1px solid var(--white);
     width: 100%;
+    position: relative;
+    display: grid;
     @include g.tabletS {
       border-bottom: 1px solid var(--white);
+    }
+
+    &--subList {
+      @extend .c-drawerMenu__menuItem;
+
+      grid-column: span 2;
+      height: 0;
+      visibility: hidden;
+      opacity: 0;
+      display: block;
+      transition: opacity .4s , visibility .4s;
+      @include g.tabletS {
+        display: none;
+      }
+
+      &.is-active {
+        border: unset;
+        height: 100%;
+        visibility: visible;
+        opacity: 1;
+      }
     }
 
     &:not(:first-child) {
@@ -135,7 +154,7 @@
     }
 
     /* SP時の指定 Start */
-    &:first-child {
+    &:nth-child(1) {
       @media screen and (max-width: 767px) {
         order: 1;
         border-right: 1px solid var(--white);
@@ -144,34 +163,50 @@
 
     &:nth-child(2) {
       @media screen and (max-width: 767px) {
-        order: 3;
-        border-right: 1px solid var(--white);
+        order: 2;
+        border-right: unset;
       }
     }
 
     &:nth-child(3) {
       @media screen and (max-width: 767px) {
-        order: 2;
+        order: 3;
       }
     }
 
     &:nth-child(4) {
       @media screen and (max-width: 767px) {
-        order: 5;
+        order: 10;
         border-right: 1px solid var(--white);
-        border-bottom: 1px solid var(--white);
+        border-bottom: unset;
       }
     }
 
     &:nth-child(5) {
       @media screen and (max-width: 767px) {
-        order: 4;
+        order: 12;
+        border-top: unset;
       }
     }
 
-    &:last-child {
+    &:nth-child(6) {
       @media screen and (max-width: 767px) {
-        order: 6;
+        order: 20;
+        border-right: 1px solid var(--white);
+        border-bottom: 1px solid var(--white);
+      }
+    }
+
+    &:nth-child(7) {
+      @media screen and (max-width: 767px) {
+        order: 11;
+      }
+    }
+
+    &:nth-child(8) {
+      @media screen and (max-width: 767px) {
+        order: 21;
+        border-bottom: 1px solid var(--white);
       }
     }
     /* SP時の指定 End */
@@ -192,7 +227,8 @@
     line-height: 1;
     color: var(--white);
 
-    &:active { // スマホ・タブレット タップ時の色
+    &:active {
+      // スマホ・タブレット タップ時の色
       background: var(--white);
       color: var(--black);
     }
@@ -205,6 +241,116 @@
     }
   }
 
+  &__menuTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+    height: 100%;
+    min-height: 8.3rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+    font-family: var(--en);
+    line-height: 1;
+    color: var(--white);
+    transition: background-color 0.4s, color 0.4s;
+    cursor: pointer;
+
+    &:hover {
+      @include g.hover {
+        background: var(--white);
+        color: var(--black);
+      }
+    }
+
+    &.is-active {
+      background: var(--white);
+      color: var(--black);
+      border-top: 1px solid var(--black);
+
+      @include g.hover {
+        background: var(--white);
+        color: var(--black);
+      }
+    }
+  }
+
+  &__subList {
+    // デバック用
+    opacity: 1;
+    visibility: visible;
+    // デバック用　END
+    position: relative;
+    top: unset;
+    left: unset;
+    z-index: unset;
+    background-color: white;
+    grid-column: span 2;
+    border-top: 1px solid var(--black);
+
+    //　調査中
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding-block: 2.6rem;
+    padding-inline: 4.8rem;
+
+    @include g.tabletS {
+      position: absolute;
+      left: -1px;
+      top: 100%;
+      z-index: 10;
+      padding-block: 1.6rem;
+      padding-inline: min(3rem, calc(30 / 1200 * 100vw)) 1rem;
+      background: var(--white);
+      width: calc(100% + 2px);
+      border: 1px solid #211e1e;
+      border-top: 2px solid #211e1e;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.4s;
+      min-width: 200px;
+    }
+
+    .c-drawerMenu__menuItem:hover & {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__subItem {
+    //
+  }
+
+  &__subLink {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #333;
+    position: relative;
+    margin-left: 1.6rem;
+    transition: opacity 0.4s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -1.6rem;
+      transform: translateY(-50%);
+      width: 0.8rem;
+      height: 0.8rem;
+      background: url(../images/common/icon-arrow-roght.svg) no-repeat center center / contain;
+    }
+
+    &:hover {
+      @include g.hover {
+        opacity: 0.65;
+      }
+    }
+  }
+
   &__subText {
     font-size: 0.5833em;
     font-weight: 500;
@@ -212,7 +358,7 @@
   }
 
   &__bottomContents {
-    margin-top: 1.6rem;
+    margin-top: 3.2rem;
     @include g.tabletS {
       margin-top: 4rem;
       display: flex;

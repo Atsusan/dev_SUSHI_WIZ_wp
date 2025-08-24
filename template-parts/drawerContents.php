@@ -15,20 +15,52 @@
              <a href="<?php echo esc_url(home_url('/concept')); ?>" class="c-drawerMenu__menuLink" onclick="drawerClose('drawerMenu')"><span
                  class="c-drawerMenu__subText">コンセプト</span>CONCEPT</a>
            </li>
-           <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
-             <a href="<?php echo esc_url(home_url('/plan')); ?>" class="c-drawerMenu__menuLink" onclick="drawerClose('drawerMenu')"><span
-                 class="c-drawerMenu__subText">プラン</span>PLAN</a>
+           <li class="c-drawerMenu__menuItem">
+             <div class="c-drawerMenu__menuTitle"><span class="c-drawerMenu__subText">プラン</span>PLAN</div>
+             <ul class="c-drawerMenu__subList u-displayNone--flexPU">
+               <li class="c-drawerMenu__subItem">
+                 <a href="<?php echo esc_url(home_url('/plan')); ?>" class="c-drawerMenu__subLink">個人宅プラン</a>
+               </li>
+               <li class="c-drawerMenu__subItem">
+                 <a href="<?php echo esc_url(home_url('/party-plan')); ?>" class="c-drawerMenu__subLink">法人向けプラン</a>
+               </li>
+               <li class="c-drawerMenu__subItem">
+                 <a href="<?php echo esc_url(home_url('/sushi-making')); ?>" class="c-drawerMenu__subLink">握りずし体験教室</a>
+               </li>
+             </ul>
            </li>
-           <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
-             <a href="<?php echo esc_url(home_url('/profile')); ?>" class="c-drawerMenu__menuLink" onclick="drawerClose('drawerMenu')"><span
-                 class="c-drawerMenu__subText">シェフ</span>CHEF</a>
+           <li class="c-drawerMenu__menuItem--subList">
              <ul class="c-drawerMenu__subList">
-                <li class="c-drawerMenu__subItem">
-                  <a href="<?php echo esc_url(home_url('/profile')); ?>" class="c-drawerMenu__subLink">代表について</a>
-                </li>
-                <li class="c-drawerMenu__subItem">
-                  <a href="<?php echo esc_url(home_url('/profile-chef')); ?>" class="c-drawerMenu__subLink">職人一覧</a>
-                </li>
+               <li class="c-drawerMenu__subItem">
+                 <a href="<?php echo esc_url(home_url('/plan')); ?>" class="c-drawerMenu__subLink">個人宅プラン</a>
+               </li>
+               <li class="c-drawerMenu__subItem">
+                 <a href="<?php echo esc_url(home_url('/party-plan')); ?>" class="c-drawerMenu__subLink">法人向けプラン</a>
+               </li>
+               <li class="c-drawerMenu__subItem">
+                 <a href="<?php echo esc_url(home_url('/sushi-making')); ?>" class="c-drawerMenu__subLink">握りずし体験教室</a>
+               </li>
+             </ul>
+           </li>
+           <li class="c-drawerMenu__menuItem">
+             <div class="c-drawerMenu__menuTitle"><span class="c-drawerMenu__subText">シェフ</span>CHEF</div>
+             <ul class="c-drawerMenu__subList u-displayNone--flexPU">
+               <li class="c-drawerMenu__subItem">
+                 <a href="<?php echo esc_url(home_url('/profile')); ?>" class="c-drawerMenu__subLink">代表について</a>
+               </li>
+               <li class="c-drawerMenu__subItem">
+                 <a href="<?php echo esc_url(home_url('/chef')); ?>" class="c-drawerMenu__subLink">職人一覧</a>
+               </li>
+             </ul>
+           </li>
+           <li class="c-drawerMenu__menuItem--subList">
+             <ul class="c-drawerMenu__subList">
+               <li class="c-drawerMenu__subItem">
+                 <a href="<?php echo esc_url(home_url('/profile')); ?>" class="c-drawerMenu__subLink">代表について</a>
+               </li>
+               <li class="c-drawerMenu__subItem">
+                 <a href="<?php echo esc_url(home_url('/chef')); ?>" class="c-drawerMenu__subLink">職人一覧</a>
+               </li>
              </ul>
            </li>
            <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
@@ -42,10 +74,6 @@
            <li class="c-drawerMenu__menuItem" onclick="drawerClose('drawerMenu')">
              <a href="<?php echo esc_url(home_url('/archive')); ?>" class="c-drawerMenu__menuLink" onclick="drawerClose('drawerMenu')"><span
                  class="c-drawerMenu__subText">ギャラリー</span>GALLERY</a>
-           </li>
-           <li class="c-drawerMenu__menuItem u-displayNone--PO">
-             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/drawer-item.jpg" alt="出張 寿司" class="c-drawerMenu__img" width="390"
-               height="166">
            </li>
          </ul>
        </nav>
