@@ -1465,7 +1465,7 @@
   padding-inline: 3rem;
 }
 .p-chefCourse__title {
-  font-family: var(en);
+  font-family: var(--en);
   font-size: 3.2rem;
   font-weight: 500;
   line-height: 150%;
@@ -1592,9 +1592,6 @@
   color: var(--black);
 }
 .p-chefPersonal__planContainer {
-  margin-top: 3rem;
-}
-.p-chefPersonal__planContainer + .p-chefPersonal__planContainer {
   margin-top: 4rem;
 }
 .p-chefPersonal__headingBox {
@@ -1635,7 +1632,6 @@
   color: var(--white);
 }
 .p-chefPersonal__textList {
-  margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1729,14 +1725,14 @@
   max-width: fit-content;
 }
 .p-chefPersonalCard__name {
-  margin-top: 2rem;
+  margin-top: 1.2rem;
   font-size: 2rem;
   font-weight: 500;
   line-height: 150%;
   color: var(--black);
 }
 .p-chefPersonalCard__imgBox {
-  margin-top: 2rem;
+  margin-top: 0.7rem;
   aspect-ratio: 1/1;
   max-width: 28rem;
   border-radius: 50%;
@@ -1758,7 +1754,7 @@
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
-  margin-top: 2rem;
+  margin-top: 0.8rem;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.7142857143;
@@ -1814,7 +1810,7 @@
   width: 100%;
   max-width: 23rem;
   border: 2px solid var(--white);
-  padding: 2rem;
+  padding: 1.3rem 2rem;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
   font-size: 1.5rem;

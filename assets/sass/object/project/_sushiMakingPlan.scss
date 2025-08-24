@@ -5,6 +5,9 @@
 .p-sushiMakingPlan {
   padding-block: 6rem;
   background: url(../images/common-contents-bg.webp) no-repeat center top/cover;
+  @include g.tabletS {
+    margin-top: 8.4rem;
+  }
 
   &__inner {
     padding-inline: 3rem;
@@ -69,13 +72,13 @@
 
     &__read {
       position: absolute;
-      top: -1.6rem;
+      top: -1.7rem;
       left: -1.3rem;
       font-size: 1.4rem;
       font-weight: 700;
       line-height: calc(28 / 14);
       color: var(--black);
-      padding: 0.4rem 1.6rem;
+      padding: 0 1.6rem;
       background-color: var(--white);
       border: 1px solid var(--black);
       border-radius: 4rem;
@@ -128,6 +131,7 @@
 
       &--en {
         @extend .p-sushiMakingPlanList__text;
+        margin-top: 0;
       }
     }
 

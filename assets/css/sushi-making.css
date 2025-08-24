@@ -1108,7 +1108,12 @@
   padding-left: 3rem;
 }
 .p-sushiMakingFv__textBox {
-  padding-top: 34rem;
+  padding-top: 30rem;
+}
+@media (min-width: 767px) {
+  .p-sushiMakingFv__textBox {
+    padding-top: 34rem;
+  }
 }
 .p-sushiMakingFv__enTitle {
   font-size: 3.2rem;
@@ -1126,6 +1131,11 @@
 .p-sushiMakingPlan {
   padding-block: 6rem;
   background: url(../images/common-contents-bg.webp) no-repeat center top/cover;
+}
+@media (min-width: 767px) {
+  .p-sushiMakingPlan {
+    margin-top: 8.4rem;
+  }
 }
 .p-sushiMakingPlan__inner {
   padding-inline: 3rem;
@@ -1187,13 +1197,13 @@
 }
 .p-sushiMakingPlanList__read {
   position: absolute;
-  top: -1.6rem;
+  top: -1.7rem;
   left: -1.3rem;
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 2;
   color: var(--black);
-  padding: 0.4rem 1.6rem;
+  padding: 0 1.6rem;
   background-color: var(--white);
   border: 1px solid var(--black);
   border-radius: 4rem;
@@ -1245,6 +1255,9 @@
   font-weight: 400;
   line-height: 1.7142857143;
   color: var(--black);
+}
+.p-sushiMakingPlanList__text--en {
+  margin-top: 0;
 }
 .p-sushiMakingPlanList__textGroup {
   display: -webkit-box;
@@ -1302,6 +1315,7 @@
   max-width: fit-content;
 }
 .p-sushiMakingFlow__list {
+  margin-top: 0.8rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1351,7 +1365,7 @@
   border-bottom: 2px solid #deb32e;
 }
 .p-sushiMakingFlowTop__title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 150%;
   color: var(--black);
@@ -1359,7 +1373,7 @@
 .p-sushiMakingFlowTop__text {
   font-size: 1.4rem;
   font-weight: 400;
-  line-height: 150%;
+  line-height: 1.7142857143;
   color: var(--black);
 }
 .p-sushiMakingFlowToday {
@@ -1381,12 +1395,13 @@
   line-height: 150%;
 }
 .p-sushiMakingFlowToday__read {
+  margin-top: 1.4rem;
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 1.7142857143;
 }
 .p-sushiMakingFlowToday__list {
-  margin-top: 2rem;
+  margin-top: 3.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

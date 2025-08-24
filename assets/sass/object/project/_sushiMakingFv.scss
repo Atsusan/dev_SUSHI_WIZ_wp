@@ -33,7 +33,10 @@
   }
 
   &__textBox {
-    padding-top: 34rem;
+    padding-top: 30rem;
+    @include g.tabletS {
+      padding-top: 34rem;
+    }
   }
 
   &__enTitle {
