@@ -50,7 +50,7 @@
         <li class="p-chefCourse__item">
           <?php $link_args = ($slug !== 'all') ? array('chef-cat' => $slug, 'paged' => 1) : array(); ?>
           <a href="<?php echo esc_url(add_query_arg($link_args, get_post_type_archive_link('chef'))); ?>"
-             class="p-chefCourse__link <?php echo ($current_cat === $slug) ? 'is-current' : ''; ?>">
+            class="p-chefCourse__link <?php echo ($current_cat === $slug) ? 'is-current' : ''; ?>">
             <p class="p-chefCourse__price"><?php echo esc_html($label); ?></p>
           </a>
         </li>
@@ -59,12 +59,13 @@
 
     <div class="p-chefPersonal__planContainer">
       <div class="p-chefPersonal__textList">
-        <?php if ( have_posts() ): $modal_count = 1; ?>
+        <?php if (have_posts()): $modal_count = 1; ?>
           <ul class="p-chefPersonal__list">
-            <?php while ( have_posts() ): the_post(); ?>
+            <?php while (have_posts()): the_post(); ?>
               <?php
               $chef_name      = get_field('chef_name');
               $chef_image_url = get_field('chef_img');
+              $chef_image_url2 = get_field('chef_img2');
               $chef_job       = get_field('chef_job');
               $chef_btn       = get_field('chef_btn');
               $chef_link      = get_field('chef_link');
@@ -106,7 +107,9 @@
                       <button class="c-modal__close js-close"></button>
                       <div class="c-modal__container">
                         <div class="c-modal__imgBox">
-                          <?php if (!empty($chef_image_url)): ?>
+                          <?php if (!empty($chef_image_url2)): ?>
+                            <img src="<?php echo esc_url($chef_image_url2); ?>" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
+                          <?php elseif (!empty($chef_image_url)): ?>
                             <img src="<?php echo esc_url($chef_image_url); ?>" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
                           <?php else: ?>
                             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/logo-image.jpg" alt="" class="c-modal__img" width="660" height="440" loading="lazy">
@@ -148,7 +151,9 @@
           <!-- ページネーション -->
           <div class="p-chefPersonalCard__paginationBox">
             <div class="c-pagination">
-              <?php if ( function_exists('wp_pagenavi') ) { wp_pagenavi(); } ?>
+              <?php if (function_exists('wp_pagenavi')) {
+                wp_pagenavi();
+              } ?>
             </div>
           </div>
 
@@ -160,4 +165,4 @@
   </section>
   <!-- ▲ p-chefCourse -->
 
-<?php get_footer(); ?>
+  <?php get_footer(); ?>
