@@ -24,9 +24,10 @@
 
   &--chef {
     @extend .c-modal;
+    align-items: flex-start;
 
     .c-modal__card {
-      background: url(../images/profile-chef-contents-bg.webp) no-repeat center center / cover;
+      background: url(../images/profile-chef-contents-bg.webp) no-repeat center top / cover;
       max-width: 39rem;
       position: relative;
       height: 100%;
@@ -72,7 +73,7 @@
     }
 
     .c-modal__container {
-      padding: 3rem 0 4rem;
+      padding: 6rem 0 4rem;
       @include g.tabletS {
         padding: 6.2rem 0 4rem;
       }
@@ -85,7 +86,7 @@
     .c-modal__contents {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1.6rem;
       padding: 2rem 3rem 0;
     }
 
@@ -96,24 +97,20 @@
       color: var(--white);
       display: flex;
       align-items: center;
+      gap: 0.8rem;
     }
 
-    .c-modal__nameTag {
-      font-size: 2rem;
+    .c-modal__nameKana {
+      font-size: 1.4rem;
       font-weight: 500;
-      line-height: 150%;
       color: var(--white);
+      flex: 1;
+    }
+
+    .c-modal__jobBox {
       display: flex;
       align-items: center;
-      flex: 1;
-      position: relative;
-      padding-left: 0.25em;
-
-      &::before {
-        content: ":";
-        display: block;
-        padding-right: 0.25em;
-      } 
+      gap: 2rem;
     }
 
     .c-modal__job {
@@ -122,19 +119,18 @@
       padding: 0.4rem 1rem;
       font-weight: 400;
       line-height: calc(24 / 14);
-      color: var(--white);
       color: var(--black);
       font-size: 1.4rem;
     }
 
-    .c-modal__about {
+    .c-modal__popular {
       font-size: 1.4rem;
-      font-weight: 400;
-      line-height: calc(24 / 14);
+      font-weight: 500;
       color: var(--white);
+      flex: 1;
     }
 
-    .c-modal__comment {
+    .c-modal__about {
       font-size: 1.4rem;
       font-weight: 400;
       line-height: calc(24 / 14);
@@ -147,7 +143,7 @@
 
     .c-modal__spatialTag {
       padding: 0.4rem 1rem;
-      background-color: #6A6767;
+      background-color: #6a6767;
       font-size: 1.4rem;
       font-weight: 400;
       line-height: 1;

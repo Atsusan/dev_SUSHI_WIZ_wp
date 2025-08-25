@@ -64,6 +64,7 @@
             <?php while (have_posts()): the_post(); ?>
               <?php
               $chef_name      = get_field('chef_name');
+              $chef_kana      = get_field('chef_kana');
               $chef_image_url = get_field('chef_img');
               $chef_image_url2 = get_field('chef_img2');
               $chef_job       = get_field('chef_job');
@@ -72,7 +73,6 @@
               $chef_cat_val   = wp_get_post_terms(get_the_ID(), 'chef-cat', array('fields' => 'slugs'));
               $chef_about     = get_field('chef_about');
               $chef_popular   = get_field('chef_popular');
-              $chef_comment   = get_field('chef_comment');
               $chef_spatial   = get_field('chef_spatial');
               $post_id        = get_the_ID();
               $modal_id       = 'modal' . $post_id . '_' . $modal_count;
@@ -92,11 +92,13 @@
                       </div>
                       <p class="p-chefPersonalCard__bottom">もっと詳しく<span class="p-chefPersonalCard__plus"></span></p>
                     </a>
+                    <?php if ($chef_btn): ?>
                     <div class="p-chefPersonalCard__btnBox">
                       <a href="<?php echo esc_url($chef_link); ?>" class="p-chefPersonalCard__btn">
                         <?php echo esc_html($chef_btn); ?>
                       </a>
                     </div>
+                    <?php endif; ?>
                   </div>
                 </div>
 
@@ -119,17 +121,19 @@
                           <?php if ($chef_name): ?>
                             <p class="c-modal__name">
                               <?php echo esc_html($chef_name); ?>
-                              <?php if ($chef_popular): ?><span class="c-modal__nameTag"><?php echo esc_html($chef_popular); ?></span><?php endif; ?>
+                              <?php if ($chef_kana): ?><span class="c-modal__nameKana"><?php echo esc_html($chef_kana); ?></span><?php endif; ?>
                             </p>
                           <?php endif; ?>
-                          <?php if ($chef_job): ?>
-                            <p class="c-modal__job"><?php echo nl2br(esc_html($chef_job)); ?></p>
-                          <?php endif; ?>
+                          <div class="c-modal__jobBox">
+                            <?php if ($chef_job): ?>
+                              <p class="c-modal__job"><?php echo nl2br(esc_html($chef_job)); ?></p>
+                            <?php endif; ?>
+                            <?php if ($chef_popular): ?>
+                              <span class="c-modal__popular"><?php echo nl2br(esc_html($chef_popular)); ?></span>
+                            <?php endif;?>
+                          </div>
                           <?php if ($chef_about): ?>
                             <p class="c-modal__about"><?php echo nl2br(esc_html($chef_about)); ?></p>
-                          <?php endif; ?>
-                          <?php if ($chef_comment): ?>
-                            <p class="c-modal__comment"><?php echo nl2br(esc_html($chef_comment)); ?></p>
                           <?php endif; ?>
                           <?php if ($chef_spatial): ?>
                             <div class="c-modal__spatialBox">
